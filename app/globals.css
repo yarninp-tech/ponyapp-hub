@@ -29,7 +29,7 @@ html:not(.light) .glass-card {
 }
 
 /* =========================================================
-   LIGHT MODE STYLES (html.light) - Clean, bright, dark text
+   LIGHT MODE STYLES (html.light) - High Contrast & High Visibility
    ========================================================= */
 html.light body {
   background-color: #f8fafc !important;
@@ -37,81 +37,103 @@ html.light body {
 }
 
 html.light header {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  border-color: #e2e8f0 !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: #cbd5e1 !important;
 }
 
 html.light footer {
   background-color: #f1f5f9 !important;
   border-color: #cbd5e1 !important;
-  color: #475569 !important;
+  color: #334155 !important;
 }
 
 html.light .glass-panel {
   background: #ffffff !important;
   backdrop-filter: none !important;
-  border: 1px solid #e2e8f0 !important;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01) !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05) !important;
 }
 
 html.light .glass-card {
   background: #ffffff !important;
   backdrop-filter: none !important;
-  border: 1px solid #e2e8f0 !important;
+  border: 1px solid #cbd5e1 !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
 }
 
-/* Light mode text color overrides */
-html.light .text-white {
-  color: #0f172a !important;
-}
-
-html.light .text-slate-100 {
-  color: #0f172a !important;
-}
-
-html.light .text-slate-200 {
-  color: #1e293b !important;
-}
-
-html.light .text-slate-300 {
-  color: #334155 !important;
-}
-
-html.light .text-slate-400 {
-  color: #64748b !important;
-}
-
-/* Light mode background overrides */
-html.light .bg-slate-950 {
-  background-color: #f8fafc !important;
-}
-
-html.light .bg-slate-900 {
+/* Fix inner boxes inside cards in Light mode */
+html.light .bg-slate-950,
+html.light .bg-slate-950\/80,
+html.light .bg-slate-900,
+html.light .bg-slate-900\/50,
+html.light .bg-slate-900\/60,
+html.light .bg-indigo-950\/60,
+html.light .bg-emerald-950\/60,
+html.light .bg-purple-950\/60 {
   background-color: #f1f5f9 !important;
   border-color: #cbd5e1 !important;
 }
 
-html.light .bg-slate-800 {
-  background-color: #e2e8f0 !important;
+/* Light mode text color overrides for 100% visibility */
+html.light .text-white,
+html.light .text-slate-100,
+html.light .text-slate-200,
+html.light .text-slate-300 {
   color: #0f172a !important;
 }
 
+html.light .text-slate-400,
+html.light .text-slate-500 {
+  color: #475569 !important;
+}
+
+html.light .text-indigo-200,
+html.light .text-indigo-300,
+html.light .text-indigo-400 {
+  color: #3730a3 !important;
+}
+
+html.light .text-violet-200,
+html.light .text-violet-300,
+html.light .text-violet-400 {
+  color: #5b21b6 !important;
+}
+
+html.light .text-purple-200,
+html.light .text-purple-300,
+html.light .text-purple-400 {
+  color: #6b21a8 !important;
+}
+
+html.light .text-emerald-300,
+html.light .text-emerald-400 {
+  color: #065f46 !important;
+}
+
+/* Light mode buttons & CTA boxes */
+html.light .bg-indigo-600\/20,
+html.light .bg-violet-600\/20,
+html.light .bg-purple-600\/20,
+html.light .bg-emerald-600\/20 {
+  background-color: #e0e7ff !important;
+  border-color: #a5b4fc !important;
+  color: #3730a3 !important;
+}
+
+html.light .bg-indigo-600\/20 span,
+html.light .bg-violet-600\/20 span,
+html.light .bg-purple-600\/20 span,
+html.light .bg-emerald-600\/20 span {
+  color: #3730a3 !important;
+  font-weight: 700 !important;
+}
+
+/* Light mode borders */
 html.light .border-slate-800,
-html.light .border-slate-900 {
+html.light .border-slate-900,
+html.light .border-slate-800\/80,
+html.light .border-white\/10 {
   border-color: #cbd5e1 !important;
-}
-
-html.light .border-white\/10,
-html.light .border-white\/5 {
-  border-color: #e2e8f0 !important;
-}
-
-/* Light mode gradients */
-html.light .bg-gradient-to-r.from-white {
-  --tw-gradient-from: #0f172a !important;
-  --tw-gradient-to: #4338ca !important;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
 }
 
 /* Custom scrollbar */
