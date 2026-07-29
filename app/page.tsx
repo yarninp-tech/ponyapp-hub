@@ -23,6 +23,8 @@ import {
   ShieldCheck,
   Cpu,
   ArrowUpRight,
+  Workflow,
+  Globe,
 } from 'lucide-react';
 import { ARTICLES_DATA } from '@/lib/articlesData';
 import { PROJECTS_DATA } from '@/lib/projectsData';
@@ -38,9 +40,9 @@ export default function HomePage() {
 
       {/* 1. Asymmetric Hero & Executive Portfolio Intro */}
       <section className="max-w-7xl mx-auto px-6 pt-16 pb-20 z-10 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Oversized Editorial Typography */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-6 space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full editorial-card border border-indigo-200 dark:border-indigo-500/30 text-indigo-700 dark:text-indigo-300 text-xs font-bold shadow-sm">
               <Sparkles className="w-4 h-4 text-indigo-600 dark:text-indigo-400 animate-pulse" />
               <span>Executive Portfolio & Technology Innovation Hub</span>
@@ -75,7 +77,7 @@ export default function HomePage() {
                 className="flex items-center gap-2.5 editorial-card hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold py-4 px-6 rounded-2xl transition-all text-sm"
               >
                 <Layers className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-                <span>Explore Ecosystem Apps</span>
+                <span>Explore Apps</span>
               </Link>
 
               <Link
@@ -83,7 +85,7 @@ export default function HomePage() {
                 className="flex items-center gap-2 bg-zinc-900 dark:bg-zinc-800 hover:bg-zinc-800 text-white font-bold py-4 px-6 rounded-2xl transition-all text-sm"
               >
                 <UserCheck className="w-4 h-4 text-emerald-400" />
-                <span>About & Leadership CV</span>
+                <span>Leadership CV</span>
               </Link>
             </div>
 
@@ -101,42 +103,63 @@ export default function HomePage() {
               <span>•</span>
               <a href="https://www.linkedin.com/in/yarnin-peled" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-indigo-600 dark:hover:text-blue-400 transition-colors">
                 <Linkedin className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                <span>LinkedIn Profile</span>
+                <span>LinkedIn</span>
                 <ArrowUpRight className="w-3 h-3" />
               </a>
             </div>
           </div>
 
-          {/* Right Column: Floating Executive Stats Cards */}
-          <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="editorial-card p-6 rounded-3xl space-y-2 animate-float">
-              <div className="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
+          {/* Right Column: 5 Executive KPI Cards Grid */}
+          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* KPI 1 */}
+            <div className="editorial-card p-5 rounded-3xl space-y-2 animate-float">
+              <div className="w-9 h-9 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
                 <Building2 className="w-5 h-5" />
               </div>
-              <span className="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">10M+ ILS</span>
+              <span className="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">10M+ ILS</span>
               <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-400 block">Multi-Year Tech Budgets Managed</span>
             </div>
 
-            <div className="editorial-card p-6 rounded-3xl space-y-2 animate-float-delayed">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
+            {/* KPI 2 */}
+            <div className="editorial-card p-5 rounded-3xl space-y-2 animate-float-delayed">
+              <div className="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
                 <Zap className="w-5 h-5" />
               </div>
-              <span className="text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">20-25%</span>
+              <span className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">20-25%</span>
               <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-400 block">Annual OPEX Energy Reduction</span>
             </div>
 
-            <div className="editorial-card p-6 rounded-3xl space-y-2 animate-float-delayed sm:col-span-2">
+            {/* KPI 3 - NEW */}
+            <div className="editorial-card p-5 rounded-3xl space-y-2 animate-float">
+              <div className="w-9 h-9 rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold">
+                <Workflow className="w-5 h-5" />
+              </div>
+              <span className="text-2xl font-extrabold text-purple-600 dark:text-purple-400">10-15%</span>
+              <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-400 block">CRM Friction & Process Efficiency</span>
+            </div>
+
+            {/* KPI 4 - NEW */}
+            <div className="editorial-card p-5 rounded-3xl space-y-2 animate-float-delayed">
+              <div className="w-9 h-9 rounded-xl bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold">
+                <Globe className="w-5 h-5" />
+              </div>
+              <span className="text-2xl font-extrabold text-blue-600 dark:text-blue-400">25% Margin</span>
+              <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-400 block">Global Supply Chain Optimization</span>
+            </div>
+
+            {/* KPI 5 - Span 2 Columns */}
+            <div className="editorial-card p-5 rounded-3xl space-y-2 animate-float-delayed sm:col-span-2">
               <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold">
+                <div className="w-9 h-9 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
                   <Cpu className="w-5 h-5" />
                 </div>
-                <span className="text-xs font-bold text-purple-700 dark:text-purple-300 bg-purple-100 dark:bg-purple-950 px-3 py-1 rounded-full border border-purple-200 dark:border-purple-800">
-                  Published Author
+                <span className="text-xs font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-950 px-3 py-1 rounded-full border border-indigo-200 dark:border-indigo-800">
+                  Published AI Research
                 </span>
               </div>
-              <span className="text-2xl font-extrabold text-zinc-900 dark:text-white block pt-1">Enterprise AI & Autonomous Agents</span>
+              <span className="text-xl font-extrabold text-zinc-900 dark:text-white block pt-1">Enterprise AI & Agentic Workflows</span>
               <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Practitioner of high-ROI agentic workflows as strategic alternatives to capital-intensive legacy software procurement.
+                Practitioner of high-ROI autonomous AI agents as strategic alternatives to capital-intensive legacy software procurement.
               </p>
             </div>
           </div>
@@ -227,7 +250,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Photo Showcase Cards with Real Images */}
+          {/* Photo Showcase Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
             <div className="relative h-64 rounded-2xl overflow-hidden group shadow-lg">
               <Image
