@@ -2,61 +2,83 @@ export interface Article {
   id: string;
   title: string;
   subtitle: string;
+  author: string;
+  authorRole: string;
   readTime: string;
   date: string;
   summary: string;
-  content: string;
+  content: string[];
   tags: string[];
+  linkedinUrl?: string;
 }
 
 export const ARTICLES_DATA: Article[] = [
   {
-    id: 'enterprise-ai-strategy',
-    title: 'Enterprise AI Strategy: Navigating Adoption & Operational Scale',
-    subtitle: 'A practical framework for integrating Generative AI into enterprise workflows responsibly.',
-    readTime: '4 min read',
-    date: 'July 2026',
-    summary: 'Key operational considerations for deploying AI models at scale while maintaining data privacy, governance, and user trust.',
-    content: `Generative AI and Large Language Models (LLMs) have shifted from experimental prototypes to core enterprise infrastructure. However, successful organization-wide adoption requires more than just API integration.
-
-### 1. Data Governance & Privacy First
-Enterprise AI must respect data isolation. Deploying models via private endpoints (or enterprise API contracts) ensures internal knowledge bases remain confidential.
-
-### 2. Augmenting Workflows, Not Replacing People
-The highest return on investment comes from "Human-in-the-Loop" architectures. AI excels at rapid synthesis, pattern recognition, and initial drafting—leaving judgment and final decision-making to domain experts.
-
-### 3. Measuring Impact & Reliability
-Deploying AI requires rigorous telemetry. Monitoring hallucination rates, response latency, and user feedback loops ensures continuous improvement over time.`,
-    tags: ['Enterprise AI', 'AI Strategy', 'Governance'],
-  },
-  {
-    id: 'ai-assisted-collaborative-workflows',
-    title: 'AI-Assisted Collaboration: Enhancing Organization Velocity',
-    subtitle: 'How real-time AI co-creators transform traditional brainstorming and team planning.',
-    readTime: '3 min read',
-    date: 'June 2026',
-    summary: 'Examining how embedding intelligent assistants directly into collaborative tools accelerates concept ideation and consensus building.',
-    content: `Traditional team meetings often suffer from low engagement and fragmented action items. Embedding AI assistants directly into real-time collaborative workspaces shifts the paradigm from passive note-taking to active co-creation.
-
-### Key Takeaways:
-- **Instant Idea Synthesis**: Summarizing unstructured sticky notes into structured action plans in seconds.
-- **Overcoming the Blank Page**: Providing instant prompt pills to kickstart creative discussion.
-- **Frictionless Knowledge Distribution**: Generating automated session reports for stakeholders immediately after workshops.`,
-    tags: ['Collaborative Tools', 'Gen AI', 'Productivity'],
-  },
-  {
-    id: 'human-in-the-loop-architecture',
-    title: 'Human-in-the-Loop AI Architecture for Trusted Systems',
-    subtitle: 'Designing resilient software interfaces where human expertise validates model output.',
+    id: 'stop-buying-software-start-deploying-agents',
+    title: 'Stop buying software. Start deploying agents',
+    subtitle: 'Rethinking operational tech: Why enterprise AI agents outperform monolithic legacy systems.',
+    author: 'Yarnin Peled',
+    authorRole: 'Head of IT & Technology Projects | IMBA Candidate, Bar-Ilan University',
     readTime: '5 min read',
-    date: 'May 2026',
-    summary: 'Architectural patterns for embedding validation gates, fallback mechanisms, and user feedback in mission-critical applications.',
-    content: `Building reliable enterprise AI applications requires designing for model non-determinism. A robust Human-in-the-Loop (HITL) pattern balances automation with human verification.
-
-### Core Architectural Principles:
-1. **Explicit Confidence Thresholds**: Route low-confidence predictions to human review queues.
-2. **Transparent Prompt Engineering**: Displaying context sources to build user confidence.
-3. **Graceful Degradation**: Providing reliable fallback outputs whenever model API quotas or rate limits occur.`,
-    tags: ['AI Architecture', 'HITL', 'Software Engineering'],
+    date: 'July 2026',
+    summary: 'A strategic framework examining why organizations should transition from costly legacy software licenses to autonomous AI agents that streamline real estate, accounting, and operational workflows.',
+    tags: ['AI Agents', 'Digital Transformation', 'Enterprise IT', 'Operational Excellence'],
+    linkedinUrl: 'https://www.linkedin.com/in/yarnin-peled',
+    content: [
+      'Is it necessary to deploy large-scale systems merely for data retrieval, or to invest heavily in comprehensive, all-in-one solutions?',
+      'Are our current expenditures on legacy technology justifiable simply by familiarity?',
+      'Our focus during system reviews is frequently confined to maintaining operational continuity or implementing minor procedural adjustments.',
+      'Organisations typically exhibit caution regarding significant transformation, requiring clear justification and absolute certainty about the anticipated return on investment before commitment.',
+      'A fundamental challenge is inherent organisational bias. A thorough evaluation of processes, structural models, and the rationales underlying long-standing practices requires substantial effort.',
+      'Driving behavioural change is notoriously difficult. Successful implementation of significant transformations requires comprehensive organisational buy-in, with management providing active leadership or unwavering endorsement.',
+      'The prevailing managerial perspective often holds that current performance is sufficient, thereby calling into question the need to invest in systemic transformation.',
+      'A frequent preference is capacity augmentation through additional headcount, viewed as a more direct and less financially volatile solution to mitigate departmental strain. This avoids the substantial capital investment, associated implementation risks, and ongoing operational expenditure inherent in major change initiatives.',
+      'The increasing integration of AI agents provides unprecedented access to expansive datasets and information resources.',
+      'Contemporary AI capabilities enable operation across diverse infrastructural environments, synthesising disparate data streams to generate novel insights and opportunities. This paradigm shift mitigates the requirement for overly complex systems characterised by cluttered interfaces and protracted workflows.',
+      'AI automates routine, time-intensive processes, executing them seamlessly in the background to ensure timely and precise information delivery.',
+      'Consider the intricate management of real estate portfolios for large-scale corporations and their distributed branch networks. Currently, this function relies upon robust, legacy systems integrated with accounting and documentation repositories. This manual, resource-intensive process requires exhaustive data entry for each new tenancy agreement, consuming significant administrative capacity and introducing risks of human error.',
+      'Conversely, the advent of AI agents facilitates a more streamlined and efficient workflow. These agents autonomously extract critical data from complex legal agreements and load it directly into SQL or other enterprise databases, eliminating manual input.',
+      'Furthermore, proactive scheduling agents can monitor these datasets to provide automated notifications of forthcoming critical events, such as lease renewals or scheduled fee escalations, and even initiate necessary correspondence to ensure compliance.',
+      'A dedicated, distinct agent further streamlines financial operations by directly integrating with the enterprise accounting platform to systematically generate and dispatch invoices. This capability automates the entire billing cycle, ensuring prompt and accurate processing of financial transactions.',
+      'Management can retrieve comprehensive, strategic insights through simple natural language queries, as the AI synthesises data across accounting and operational databases to uncover previously hidden trends and opportunities.',
+      'The fiscal advantages of this transition are twofold: first, the substantial reduction in direct labour expenditures associated with manual data processing; and second, the avoidance of capital-intensive development or licensing fees for monolithic legacy systems. This dual cost-mitigation strategy enables a significantly faster return on investment, redirecting financial resources toward core strategic objectives.',
+      'Furthermore, the strategic value of high-fidelity, real-time data streaming cannot be overstated. By synthesising information with a depth and velocity unattainable through manual extraction, AI agents empower leadership with sophisticated, plain-language insights. This enhanced clarity and informational precision drive superior decision-making, transforming raw data into a potent catalyst for competitive advantage and operational excellence.',
+      'A critical challenge resides in navigating the human element of organisational change; indeed, cultural resistance often constitutes the primary impediment to successful digital transformation. This hesitation is fundamentally rooted in a deep-seated human bias favouring the familiar, in which the established, known difficulty is often deemed preferable to the uncertainty that accompanies profound systemic improvements.',
+      'For personnel accustomed to basing critical operational and strategic decisions on well-validated information and proven methodologies, embracing a novel technological environment represents a significant intellectual and fiduciary hurdle.',
+      'They struggle to intuitively grasp the full magnitude of the AI system\'s power and its potential to drive the organisation forward in ways that are currently beyond conventional imagination.',
+    ],
+  },
+  {
+    id: 'human-centric-c-suite-ai-cfo-role',
+    title: 'The Human-Centric C-Suite: How AI is Reshaping Executive Leadership and the CFO Role',
+    subtitle: 'From financial compliance steward to strategic culture-setter: How AI liberates executive decision-making.',
+    author: 'Yarnin Peled',
+    authorRole: 'Head of IT & Technology Projects | IMBA Candidate, Bar-Ilan University',
+    readTime: '6 min read',
+    date: 'June 2026',
+    summary: 'Analyzing how autonomous leadership models and scenario analytics compress financial close cycles, automate 60% of routine CFO tasks, and empower executives to focus on strategy, M&A, and culture.',
+    tags: ['Executive Leadership', 'CFO Role', 'Strategic Finance', 'AI Strategy', 'Change Management'],
+    linkedinUrl: 'https://www.linkedin.com/in/yarnin-peled',
+    content: [
+      'Is the C-suite being displaced by artificial intelligence, or is it being liberated by it?',
+      'Are executives spending the majority of their time on work that only they can perform, or are they consumed by processes a machine could execute with greater precision?',
+      'The prevailing concern about AI in corporate leadership is one of substitution. The evidence suggests something considerably more nuanced.',
+      'The fundamental constraint facing executive decision-making has never been intelligence. It has been time. Gathering, verifying, and reconciling organisational data across disparate systems consumes a disproportionate share of leadership capacity.',
+      'In the AI era, this constraint is being systematically dismantled.',
+      'Contemporary AI capabilities enable what practitioners describe as "autonomous leadership" models—continuous analytics engines that synthesise disparate data streams and deliver scenario modelling on demand. Executives no longer await the end-of-month report. They query the present state of the organisation and receive an immediate, high-fidelity response.',
+      'The implications for the CFO function are particularly significant.',
+      'Traditionally positioned as a backward-looking steward of financial compliance and cost oversight, the modern CFO is undergoing one of the most profound role transformations in corporate governance. AI is not merely accelerating existing workflows; it is fundamentally restructuring what the CFO role is for.',
+      'Consider the operational reality of a technology CFO who automated sixty per cent of routine financial tasks. This is not a marginal efficiency gain. It represents a wholesale reallocation of cognitive capacity—away from data reconciliation and toward Mergers and Acquisitions, Environmental, Social, and Governance strategy, and board-level advisory functions.',
+      'AI observability tools and finance analytics platforms now enable CFOs to measure forecast cycle time, scenario planning speed, and data quality with structured precision. Monthly financial close cycles that once required fifteen days are being compressed to five.',
+      'This does not make the CFO less relevant. It makes the CFO far more consequential.',
+      'The critical advantage of this shift is not strictly financial; it is cultural.',
+      'When data gathering and routine analysis are delegated to AI, executives recover something that no process redesign can manufacture: genuine presence. They are no longer arbiters of spreadsheet disputes. They become listeners, observers, and connectors—executives with the bandwidth to understand frontline challenges and engage meaningfully with the workforce.',
+      'Industry frameworks are explicit on this point. AI-era leadership is defined not by technical depth but by curiosity, ethical sensemaking, and the capacity to foster human connection across the organisation.',
+      'By offloading repetitive operational tasks, executives transition into roles as culture-setters and strategic integrators. They have the capacity to sponsor responsible innovation, define ethical guardrails, and synthesise insight flows across HR, operations, and commercial functions—dissolving the silos that have historically constrained collaborative leadership.',
+      'A critical challenge resides in the human dimension of this transition. Cultural resistance often constitutes the primary impediment to adoption, rooted in a deep-seated organisational preference for the familiar over the uncertain.',
+      'For executives accustomed to grounding decisions in well-validated data and proven methodologies, entrusting a novel analytical infrastructure with operational and strategic outputs represents a significant intellectual and fiduciary adjustment.',
+      'They struggle to fully internalise the magnitude of what AI can surface—insights of a depth and velocity that are simply unattainable through conventional means.',
+      'The executives who will thrive in the AI era are not those who deploy the technology most aggressively. They are those who use it with the clearest sense of purpose: not to reduce headcount, but to reclaim the time required to be deeply present, genuinely empathetic, and profoundly human-oriented leaders.',
+    ],
   },
 ];
