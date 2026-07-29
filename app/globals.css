@@ -4,171 +4,129 @@
 
 @layer base {
   :root {
-    --bg-main: #f8fafc;
-    --text-main: #0f172a;
-    --text-muted: #475569;
+    --bg-main: #fafafa;
+    --text-primary: #09090b;
+    --text-secondary: #52525b;
     --card-bg: #ffffff;
-    --card-border: #e2e8f0;
-    --inner-bg: #f1f5f9;
+    --card-border: #e4e4e7;
+    --accent-indigo: #4f46e5;
+    --inner-bg: #f4f4f5;
   }
 
   html.dark {
-    --bg-main: #030712;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --card-bg: #0f172a;
-    --card-border: rgba(255, 255, 255, 0.1);
-    --inner-bg: #020617;
+    --bg-main: #09090b;
+    --text-primary: #fafafa;
+    --text-secondary: #a1a1aa;
+    --card-bg: #18181b;
+    --card-border: #27272a;
+    --accent-indigo: #818cf8;
+    --inner-bg: #18181b;
   }
 
   body {
     background-color: var(--bg-main);
-    color: var(--text-main);
-    @apply antialiased selection:bg-indigo-600 selection:text-white transition-colors duration-300;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    color: var(--text-primary);
+    @apply antialiased selection:bg-indigo-600 selection:text-white transition-colors duration-500;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
 
 /* =========================================================
-   LIGHT MODE (DEFAULT) - Crisp Executive Aesthetic
+   LIGHT MODE (DEFAULT) - Framer/Webflow Editorial Luxury
    ========================================================= */
 html:not(.dark) body,
 html.light body {
-  background-color: #f8fafc !important;
-  color: #0f172a !important;
+  background-color: #fafafa !important;
+  color: #09090b !important;
 }
 
 html:not(.dark) header,
 html.light header {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  border-color: #e2e8f0 !important;
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border-color: #e4e4e7 !important;
 }
 
 html:not(.dark) footer,
 html.light footer {
-  background-color: #f1f5f9 !important;
-  border-color: #e2e8f0 !important;
-  color: #475569 !important;
+  background-color: #f4f4f5 !important;
+  border-color: #e4e4e7 !important;
+  color: #52525b !important;
 }
 
-html:not(.dark) .glass-panel,
-html.light .glass-panel {
+html:not(.dark) .editorial-card,
+html.light .editorial-card {
   background: #ffffff !important;
-  backdrop-filter: none !important;
-  border: 1px solid #e2e8f0 !important;
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05), 0 0 15px rgba(99, 102, 241, 0.05) !important;
+  border: 1px solid #e4e4e7 !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05), 0 0 20px rgba(79, 70, 229, 0.04) !important;
 }
 
-html:not(.dark) .glass-card,
-html.light .glass-card {
-  background: #ffffff !important;
-  backdrop-filter: none !important;
-  border: 1px solid #e2e8f0 !important;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04) !important;
+html:not(.dark) .editorial-inner,
+html.light .editorial-inner {
+  background-color: #f4f4f5 !important;
+  border: 1px solid #e4e4e7 !important;
+  color: #09090b !important;
 }
 
-/* Light mode text colors */
-html:not(.dark) .text-white,
-html:not(.dark) .text-slate-100,
-html:not(.dark) .text-slate-200,
-html:not(.dark) .text-slate-300,
-html.light .text-white,
-html.light .text-slate-100,
-html.light .text-slate-200,
-html.light .text-slate-300 {
-  color: #0f172a !important;
-}
-
-html:not(.dark) .text-slate-400,
-html:not(.dark) .text-slate-500,
-html.light .text-slate-400,
-html.light .text-slate-500 {
-  color: #475569 !important;
-}
-
-/* Light mode inner elements */
-html:not(.dark) .bg-slate-950,
-html:not(.dark) .bg-slate-950\/80,
-html:not(.dark) .bg-slate-900,
-html:not(.dark) .bg-slate-900\/50,
-html:not(.dark) .bg-slate-900\/60,
-html:not(.dark) .bg-indigo-950\/60,
-html:not(.dark) .bg-emerald-950\/60,
-html:not(.dark) .bg-purple-950\/60,
-html.light .bg-slate-950,
-html.light .bg-slate-950\/80,
-html.light .bg-slate-900,
-html.light .bg-slate-900\/50,
-html.light .bg-slate-900\/60,
-html.light .bg-indigo-950\/60,
-html.light .bg-emerald-950\/60,
-html.light .bg-purple-950\/60 {
-  background-color: #f1f5f9 !important;
-  border-color: #cbd5e1 !important;
-}
-
-/* Light mode gradient heading */
-html:not(.dark) .brand-gradient,
-html.light .brand-gradient {
-  background: linear-gradient(135deg, #0f172a 0%, #3730a3 50%, #4338ca 100%) !important;
+html:not(.dark) .hero-headline,
+html.light .hero-headline {
+  background: linear-gradient(135deg, #09090b 0%, #312e81 60%, #4338ca 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
 }
 
-/* Light mode CTAs */
-html:not(.dark) .cta-btn-subtle,
-html.light .cta-btn-subtle {
-  background-color: #e0e7ff !important;
-  border-color: #c7d2fe !important;
-  color: #3730a3 !important;
-}
-
 /* =========================================================
-   DARK MODE (html.dark) - Midnight Glow & Glassmorphism
+   DARK MODE (html.dark) - Midnight Neon & Glassmorphism
    ========================================================= */
 html.dark body {
-  background-color: #030712 !important;
-  color: #f8fafc !important;
+  background-color: #09090b !important;
+  color: #fafafa !important;
 }
 
 html.dark header {
-  background-color: rgba(3, 7, 18, 0.85) !important;
+  background-color: rgba(9, 9, 11, 0.85) !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 html.dark footer {
-  background-color: #030712 !important;
+  background-color: #09090b !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
-  color: #94a3b8 !important;
+  color: #a1a1aa !important;
 }
 
-html.dark .glass-panel {
-  background: rgba(15, 23, 42, 0.75) !important;
+html.dark .editorial-card {
+  background: rgba(24, 24, 27, 0.7) !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
 }
 
-html.dark .glass-card {
-  background: rgba(15, 23, 42, 0.6) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+html.dark .editorial-inner {
+  background-color: #18181b !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #fafafa !important;
 }
 
-html.dark .brand-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 40%, #818cf8 100%) !important;
+html.dark .hero-headline {
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 50%, #818cf8 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
 }
 
-html.dark .cta-btn-subtle {
-  background-color: rgba(99, 102, 241, 0.15) !important;
-  border-color: rgba(99, 102, 241, 0.3) !important;
-  color: #a5b4fc !important;
+/* Custom Micro-Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 7s ease-in-out 2s infinite;
 }
 
 /* Custom scrollbar */
@@ -180,9 +138,9 @@ html.dark .cta-btn-subtle {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(79, 70, 229, 0.3);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.6);
+  background: rgba(79, 70, 229, 0.6);
 }
