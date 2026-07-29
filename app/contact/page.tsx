@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Mail, ChevronLeft, Send, Check, Linkedin, Phone, MapPin, UserCheck } from 'lucide-react';
+import { Mail, ChevronLeft, Send, Check, Linkedin, Phone, MapPin, UserCheck, Smartphone } from 'lucide-react';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -25,7 +25,7 @@ export default function ContactPage() {
           className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors"
         >
           <ChevronLeft className="w-4 h-4" />
-          <span>Back to Hub</span>
+          <span>Back to Home</span>
         </Link>
 
         {/* Contact Header */}
@@ -35,13 +35,28 @@ export default function ContactPage() {
               <Mail className="w-6 h-6" />
             </div>
             <div>
-              <h1 className="text-3xl font-extrabold text-white">Contact & Professional Inquiries</h1>
-              <p className="text-xs text-slate-400">Direct contact channels for Yarnin Peled</p>
+              <h1 className="text-3xl font-extrabold text-white">Contact & Direct Inquiries</h1>
+              <p className="text-xs text-slate-400">Senior Technology & Operations Leadership | Enterprise AI Strategy</p>
             </div>
           </div>
 
-          {/* Contact Details Cards */}
+          {/* Contact Details Cards with Cell Phone */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+            {/* Phone Card */}
+            <a
+              href="tel:0547918818"
+              className="glass-card p-5 rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all flex items-center gap-3 group"
+            >
+              <div className="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                <Smartphone className="w-5 h-5" />
+              </div>
+              <div className="overflow-hidden">
+                <span className="text-[10px] text-slate-400 font-medium uppercase tracking-wider block">Cell Phone</span>
+                <span className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors truncate block">054-7918818</span>
+              </div>
+            </a>
+
+            {/* Email Card */}
             <a
               href="mailto:yarninp@gmail.com"
               className="glass-card p-5 rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all flex items-center gap-3 group"
@@ -55,6 +70,7 @@ export default function ContactPage() {
               </div>
             </a>
 
+            {/* LinkedIn Card */}
             <a
               href="https://www.linkedin.com/in/yarnin-peled"
               target="_blank"
@@ -65,20 +81,10 @@ export default function ContactPage() {
                 <Linkedin className="w-5 h-5" />
               </div>
               <div className="overflow-hidden">
-                <span className="text-[10px] text-slate-400 font-medium uppercase tracking-wider block">LinkedIn</span>
-                <span className="text-xs font-bold text-white group-hover:text-blue-300 transition-colors truncate block">linkedin.com/in/yarnin-peled</span>
+                <span className="text-[10px] text-slate-400 font-medium uppercase tracking-wider block">LinkedIn Profile</span>
+                <span className="text-xs font-bold text-white group-hover:text-blue-300 transition-colors truncate block">yarnin-peled</span>
               </div>
             </a>
-
-            <div className="glass-card p-5 rounded-2xl border border-white/10 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
-                <UserCheck className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="text-[10px] text-slate-400 font-medium uppercase tracking-wider block">Professional Role</span>
-                <span className="text-xs font-bold text-white block">Head of IT & Tech Projects</span>
-              </div>
-            </div>
           </div>
 
           {/* Form */}
@@ -88,7 +94,7 @@ export default function ContactPage() {
                 <Check className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white">Message Sent Successfully!</h3>
-              <p className="text-xs text-slate-300">Thank you for reaching out. I will get back to you directly via email.</p>
+              <p className="text-xs text-slate-300">Thank you for reaching out. I will get back to you directly via phone or email.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4 border-t border-slate-800/80 pt-6">
@@ -125,7 +131,7 @@ export default function ContactPage() {
                 <textarea
                   required
                   rows={4}
-                  placeholder="Inquire about enterprise AI strategy, software projects, consulting, or photography..."
+                  placeholder="Inquire about enterprise AI strategy, technology leadership, software projects, or consulting..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="w-full bg-slate-900 border border-slate-800 focus:border-indigo-500 text-white placeholder-slate-500 px-4 py-2.5 rounded-xl text-sm outline-none"
