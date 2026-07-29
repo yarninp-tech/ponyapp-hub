@@ -15,8 +15,13 @@ import {
   Linkedin,
   Phone,
   UserCheck,
-  ChevronRight,
+  CheckCircle2,
+  TrendingUp,
+  Award,
+  Zap,
+  Building2,
   ShieldCheck,
+  Cpu,
 } from 'lucide-react';
 import { ARTICLES_DATA } from '@/lib/articlesData';
 import { PROJECTS_DATA } from '@/lib/projectsData';
@@ -26,96 +31,166 @@ export default function HomePage() {
   const liveApp = PROJECTS_DATA.find((p) => p.isLive) || PROJECTS_DATA[0];
 
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100 relative overflow-hidden transition-colors duration-300">
-      {/* Dynamic Background Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-600/10 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute top-3/4 right-10 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[140px] pointer-events-none" />
+    <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 relative overflow-hidden transition-colors duration-300">
+      {/* Background Accent Glows */}
+      <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-r from-indigo-500/10 via-violet-500/10 to-blue-500/10 rounded-full blur-[140px] pointer-events-none" />
 
-      {/* Main Hero Banner */}
-      <section className="max-w-7xl mx-auto px-6 pt-16 pb-16 z-10 relative text-center max-w-4xl">
-        <div className="space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-indigo-500/30 text-indigo-300 text-xs font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-indigo-500 dark:text-indigo-400 animate-pulse" />
-            <span className="font-extrabold text-slate-900 dark:text-white">Yarnin Peled</span>
-            <span className="text-slate-600 dark:text-slate-400">| Product, Technology & Enterprise AI Innovations</span>
+      {/* 1. Hero Section - Executive Portfolio Spotlight */}
+      <section className="max-w-7xl mx-auto px-6 pt-12 pb-12 z-10 relative">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-indigo-200 dark:border-indigo-500/30 text-indigo-700 dark:text-indigo-300 text-xs font-bold shadow-sm">
+            <Sparkles className="w-4 h-4 text-indigo-600 dark:text-indigo-400 animate-pulse" />
+            <span>Executive Portfolio & Technology Innovation Hub</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-            <span className="text-slate-900 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-indigo-100 dark:to-indigo-300">
-              Yarnin Peled
-            </span>
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+            <span className="brand-gradient">Yarnin Peled</span>
             <br />
-            <span className="text-slate-800 dark:text-white text-3xl sm:text-4xl lg:text-5xl font-bold">
-              Personal Innovation Portal
+            <span className="text-slate-800 dark:text-slate-200 text-2xl sm:text-4xl font-bold mt-1 block">
+              Senior Technology Projects & Operations Leader
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-700 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-normal">
-            Welcome to <span className="text-indigo-600 dark:text-indigo-400 font-semibold">ponyapp.net</span>. Explore dedicated pages for enterprise AI articles, web applications, engineering case studies, and fine art photography by <span className="text-slate-900 dark:text-white font-extrabold">Yarnin Peled</span>.
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
+            Head of IT & Technology Projects at <span className="font-semibold text-slate-900 dark:text-white">National Sport Center Tel Aviv</span> | <span className="font-semibold text-slate-900 dark:text-white">IMBA Candidate</span> at Bar-Ilan University. Specializing in digital transformation, multi-million ILS tech roadmaps, and AI agent deployment.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <Link
               href="/articles"
-              className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-indigo-600/25 transform hover:-translate-y-0.5"
+              className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-indigo-600/20 transform hover:-translate-y-0.5 text-sm"
             >
               <BookOpen className="w-4 h-4" />
-              <span>Explore AI Articles</span>
+              <span>Read AI Strategy Articles</span>
             </Link>
 
             <Link
               href="/apps"
-              className="flex items-center gap-2 glass-panel hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-900 dark:text-slate-200 font-semibold py-3.5 px-5 rounded-xl border border-slate-300 dark:border-slate-700 transition-all"
+              className="flex items-center gap-2 glass-panel hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-900 dark:text-slate-100 font-semibold py-3.5 px-6 rounded-xl border border-slate-300 dark:border-slate-700 transition-all text-sm"
             >
               <Layers className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-              <span>Explore Applications</span>
+              <span>Explore Ecosystem Apps</span>
             </Link>
+
+            <Link
+              href="/about"
+              className="flex items-center gap-2 bg-slate-900 dark:bg-slate-800 hover:bg-slate-800 text-white font-semibold py-3.5 px-6 rounded-xl transition-all text-sm"
+            >
+              <UserCheck className="w-4 h-4 text-emerald-400" />
+              <span>About & Leadership CV</span>
+            </Link>
+          </div>
+
+          {/* Quick Contact Ribbon */}
+          <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 dark:text-slate-400 font-semibold border-t border-slate-200 dark:border-slate-800/80 max-w-xl mx-auto">
+            <a href="tel:0547918818" className="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-emerald-400 transition-colors">
+              <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span>054-7918818</span>
+            </a>
+            <span>•</span>
+            <a href="mailto:yarninp@gmail.com" className="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+              <Mail className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+              <span>yarninp@gmail.com</span>
+            </a>
+            <span>•</span>
+            <a href="https://www.linkedin.com/in/yarnin-peled" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-blue-400 transition-colors">
+              <Linkedin className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              <span>LinkedIn</span>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Multi-Page Teaser Grid */}
-      <section className="max-w-7xl mx-auto px-6 py-12 space-y-10 border-t border-slate-300 dark:border-slate-900">
+      {/* 2. Executive Bio & Metrics Card (About Me directly on Main Page) */}
+      <section className="max-w-7xl mx-auto px-6 py-10">
+        <div className="glass-panel p-8 md:p-12 rounded-3xl border border-indigo-200 dark:border-indigo-500/30 bg-white dark:bg-slate-900/80 shadow-xl space-y-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="space-y-3 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 text-xs font-bold">
+                <UserCheck className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+                <span>About Yarnin Peled</span>
+              </div>
+              <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">
+                Technology Leadership & Operational Excellence
+              </h2>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                With extensive experience directing multi-million budget technological roadmaps, energy-efficiency IoT command centers, and AI agent architectures, I bridge strategic vision with high-ROI execution.
+              </p>
+            </div>
+
+            <Link
+              href="/about"
+              className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-5 rounded-xl transition-all shadow-md text-xs flex-shrink-0"
+            >
+              <span>View Full Leadership CV</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Metrics Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+            <div className="p-4 rounded-2xl bg-slate-100 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 text-center">
+              <span className="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">10M+ ILS</span>
+              <span className="text-xs text-slate-600 dark:text-slate-400 font-medium block mt-0.5">Budget Managed</span>
+            </div>
+            <div className="p-4 rounded-2xl bg-slate-100 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 text-center">
+              <span className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">20-25%</span>
+              <span className="text-xs text-slate-600 dark:text-slate-400 font-medium block mt-0.5">OPEX Energy Savings</span>
+            </div>
+            <div className="p-4 rounded-2xl bg-slate-100 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 text-center">
+              <span className="text-2xl font-extrabold text-purple-600 dark:text-purple-400">AI Agents</span>
+              <span className="text-xs text-slate-600 dark:text-slate-400 font-medium block mt-0.5">Deployment Specialist</span>
+            </div>
+            <div className="p-4 rounded-2xl bg-slate-100 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 text-center">
+              <span className="text-2xl font-extrabold text-blue-600 dark:text-blue-400">IMBA</span>
+              <span className="text-xs text-slate-600 dark:text-slate-400 font-medium block mt-0.5">Bar-Ilan University</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Multi-Page Promotional Portals */}
+      <section className="max-w-7xl mx-auto px-6 py-10 space-y-8">
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Portal Navigation & Sections</h2>
-          <p className="text-xs text-slate-600 dark:text-slate-400">Discover dedicated pages across AI publications, software apps, creative media, and contact details.</p>
+          <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">Portal Navigation & Sections</h2>
+          <p className="text-xs text-slate-600 dark:text-slate-400">Explore dedicated pages across enterprise AI publications, software apps, photography, and contact options.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Teaser 1: Enterprise AI Articles Page */}
-          <div className="glass-card p-8 rounded-3xl border border-indigo-500/30 bg-slate-900/50 flex flex-col justify-between space-y-6 hover:border-indigo-500/60 transition-all hover:-translate-y-1 group">
+          {/* Portal 1: Enterprise AI Articles */}
+          <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 flex flex-col justify-between space-y-6 hover:border-indigo-500 transition-all hover:-translate-y-1 group">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <div className="w-12 h-12 rounded-2xl bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400">
+                <div className="w-12 h-12 rounded-2xl bg-indigo-100 dark:bg-indigo-600/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
                   <BookOpen className="w-6 h-6" />
                 </div>
-                <span className="text-xs font-semibold text-indigo-300 bg-indigo-950/60 px-3 py-1 rounded-full border border-indigo-800">
-                  {ARTICLES_DATA.length} Articles
+                <span className="text-xs font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-950 px-3 py-1 rounded-full border border-indigo-200 dark:border-indigo-800">
+                  {ARTICLES_DATA.length} Articles Published
                 </span>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">
-                  Enterprise AI Insights
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors">
+                  Enterprise AI Strategy & Research
                 </h3>
-                <p className="text-xs text-indigo-400 font-medium mt-1">
-                  Published research & operational AI strategy
+                <p className="text-xs text-indigo-600 dark:text-indigo-400 font-semibold mt-1">
+                  Published research on AI agents & executive leadership
                 </p>
-                <p className="text-xs text-slate-300 mt-3 leading-relaxed">
-                  Deep-dive articles on autonomous AI agents, practical enterprise economics, CFO task automation, and change management.
+                <p className="text-xs text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+                  Deep-dive articles examining the practical economics of AI, autonomous agent workflows as alternatives to legacy software, and CFO task automation.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-xs space-y-1">
-                <span className="text-[10px] text-slate-500 uppercase font-semibold">Latest Article</span>
-                <p className="font-bold text-slate-200 line-clamp-1">{featuredArticle.title}</p>
+              <div className="p-4 rounded-2xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1">
+                <span className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider">Featured Paper</span>
+                <p className="text-xs font-bold text-slate-900 dark:text-slate-100 line-clamp-1">{featuredArticle.title}</p>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-slate-800">
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
               <Link
                 href="/articles"
-                className="w-full flex items-center justify-between bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-5 rounded-xl transition-all text-xs shadow-md"
+                className="w-full flex items-center justify-between bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3.5 px-5 rounded-xl transition-all text-xs shadow-md"
               >
                 <span>Go to Enterprise AI Articles Page</span>
                 <ArrowRight className="w-4 h-4" />
@@ -123,43 +198,43 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Teaser 2: Applications & Projects Page */}
-          <div className="glass-card p-8 rounded-3xl border border-white/10 bg-slate-900/50 flex flex-col justify-between space-y-6 hover:border-indigo-500/60 transition-all hover:-translate-y-1 group">
+          {/* Portal 2: Applications & Projects */}
+          <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 flex flex-col justify-between space-y-6 hover:border-violet-500 transition-all hover:-translate-y-1 group">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <div className="w-12 h-12 rounded-2xl bg-violet-600/20 border border-violet-500/40 flex items-center justify-center text-violet-400">
+                <div className="w-12 h-12 rounded-2xl bg-violet-100 dark:bg-violet-600/20 text-violet-600 dark:text-violet-400 flex items-center justify-center">
                   <Layers className="w-6 h-6" />
                 </div>
-                <span className="text-xs font-semibold text-emerald-400 bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-800">
-                  Live & Upcoming Apps
+                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
+                  Live Platform
                 </span>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-white group-hover:text-violet-300 transition-colors">
-                  Ecosystem Applications
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-300 transition-colors">
+                  Ecosystem Applications & Case Studies
                 </h3>
-                <p className="text-xs text-indigo-400 font-medium mt-1">
-                  Web apps & engineering case studies
+                <p className="text-xs text-indigo-600 dark:text-indigo-400 font-semibold mt-1">
+                  Web apps & engineering case studies hosted on ponyapp.net
                 </p>
-                <p className="text-xs text-slate-300 mt-3 leading-relaxed">
-                  Interactive platforms including <span className="text-white font-semibold">brain-room</span> (AI collaborative brainstorming), inventory intelligence, and shift schedulers.
+                <p className="text-xs text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+                  Interactive applications including <span className="font-semibold text-slate-900 dark:text-white">brain-room</span> (Real-Time AI Collaborative Brainstorming Platform), inventory systems, and shift schedulers.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-xs flex items-center justify-between">
+              <div className="p-4 rounded-2xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] text-emerald-400 uppercase font-semibold">Live App</span>
-                  <p className="font-bold text-slate-200">{liveApp.title}</p>
+                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-wider">Featured App</span>
+                  <p className="text-xs font-bold text-slate-900 dark:text-slate-100">{liveApp.title}</p>
                 </div>
-                <ExternalLink className="w-4 h-4 text-slate-500" />
+                <ExternalLink className="w-4 h-4 text-slate-400" />
               </div>
             </div>
 
-            <div className="pt-4 border-t border-slate-800">
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
               <Link
                 href="/apps"
-                className="w-full flex items-center justify-between bg-violet-600 hover:bg-violet-500 text-white font-semibold py-3 px-5 rounded-xl transition-all text-xs shadow-md"
+                className="w-full flex items-center justify-between bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3.5 px-5 rounded-xl transition-all text-xs shadow-md"
               >
                 <span>Go to Applications & Projects Page</span>
                 <ArrowRight className="w-4 h-4" />
@@ -167,124 +242,93 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Teaser 3: Photography Showcase Page */}
-          <div className="glass-card p-8 rounded-3xl border border-white/10 bg-slate-900/50 flex flex-col justify-between space-y-6 hover:border-purple-500/60 transition-all hover:-translate-y-1 group">
+          {/* Portal 3: Photography Portfolio */}
+          <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 flex flex-col justify-between space-y-6 hover:border-purple-500 transition-all hover:-translate-y-1 group">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <div className="w-12 h-12 rounded-2xl bg-purple-600/20 border border-purple-500/40 flex items-center justify-center text-purple-400">
+                <div className="w-12 h-12 rounded-2xl bg-purple-100 dark:bg-purple-600/20 text-purple-600 dark:text-purple-400 flex items-center justify-center">
                   <Camera className="w-6 h-6" />
                 </div>
-                <span className="text-xs font-semibold text-purple-300 bg-purple-950/60 px-3 py-1 rounded-full border border-purple-800">
+                <span className="text-xs font-bold text-purple-700 dark:text-purple-300 bg-purple-100 dark:bg-purple-950 px-3 py-1 rounded-full border border-purple-200 dark:border-purple-800">
                   yarninpeled.com
                 </span>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
-                  Photography Showcase
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors">
+                  Photography & Fine Art
                 </h3>
-                <p className="text-xs text-purple-400 font-medium mt-1">
-                  Fine art, landscape & architecture
+                <p className="text-xs text-purple-600 dark:text-purple-400 font-semibold mt-1">
+                  Landscape, architecture & visual storytelling
                 </p>
-                <p className="text-xs text-slate-300 mt-3 leading-relaxed">
-                  Curated visual storytelling and sample galleries from personal photography portfolio <span className="text-purple-300 font-semibold">yarninpeled.com</span>.
+                <p className="text-xs text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+                  Curated photography galleries showcasing fine art, urban architecture, and visual storytelling from personal portfolio site <span className="font-semibold text-purple-600 dark:text-purple-300">yarninpeled.com</span>.
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-2 text-center text-[11px]">
-                <div className="p-2.5 rounded-lg bg-slate-950/80 border border-slate-800 text-purple-200">Urban & Architecture</div>
-                <div className="p-2.5 rounded-lg bg-slate-950/80 border border-slate-800 text-purple-200">Landscape & Nature</div>
+              <div className="grid grid-cols-2 gap-2 text-center text-xs font-semibold">
+                <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-purple-700 dark:text-purple-300">Urban & Architecture</div>
+                <div className="p-3 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-purple-700 dark:text-purple-300">Landscape & Nature</div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-slate-800">
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
               <Link
                 href="/photography"
-                className="w-full flex items-center justify-between bg-purple-600 hover:bg-purple-500 text-white font-semibold py-3 px-5 rounded-xl transition-all text-xs shadow-md"
+                className="w-full flex items-center justify-between bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3.5 px-5 rounded-xl transition-all text-xs shadow-md"
               >
-                <span>Go to Photography Gallery Page</span>
+                <span>Go to Photography Showcase Page</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
 
-          {/* Teaser 4: About & Leadership Page */}
-          <div className="glass-card p-8 rounded-3xl border border-white/10 bg-slate-900/50 flex flex-col justify-between space-y-6 hover:border-indigo-500/60 transition-all hover:-translate-y-1 group">
+          {/* Portal 4: Contact & Inquiries */}
+          <div className="glass-card p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 flex flex-col justify-between space-y-6 hover:border-emerald-500 transition-all hover:-translate-y-1 group">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-600/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
-                  <UserCheck className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-600/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+                  <Mail className="w-6 h-6" />
                 </div>
-                <span className="text-xs font-semibold text-emerald-300 bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-800">
-                  Background & Bio
+                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
+                  Direct Contact
                 </span>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-white group-hover:text-emerald-300 transition-colors">
-                  About Yarnin Peled
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors">
+                  Contact & Direct Channels
                 </h3>
-                <p className="text-xs text-indigo-400 font-medium mt-1">
-                  IT leadership, IMBA Candidate & Product Philosophy
+                <p className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold mt-1">
+                  Enterprise AI consulting & technology leadership
                 </p>
-                <p className="text-xs text-slate-300 mt-3 leading-relaxed">
-                  Head of IT & Technology Projects at National Sport Center Tel Aviv | IMBA Candidate at Bar-Ilan University.
+                <p className="text-xs text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+                  Available for enterprise digital transformation, AI strategy, technology project leadership, and consulting inquiries.
                 </p>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 text-xs text-slate-300 space-y-1">
-                <p className="font-semibold text-white">Product Philosophy:</p>
-                <p className="text-[11px] text-slate-400">Building intuitive software that simplifies complex enterprise workflows.</p>
+              <div className="p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 space-y-1.5">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <span>Cell: 054-7918818</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
+                  <span>yarninp@gmail.com</span>
+                </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-slate-800">
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
               <Link
-                href="/about"
-                className="w-full flex items-center justify-between bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 px-5 rounded-xl transition-all text-xs shadow-md"
+                href="/contact"
+                className="w-full flex items-center justify-between bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 px-5 rounded-xl transition-all text-xs shadow-md"
               >
-                <span>Go to About Yarnin Peled Page</span>
+                <span>Open Contact & Form Page</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
-        </div>
-
-        {/* Teaser 5: Direct Contact Section Card */}
-        <div className="glass-panel p-8 md:p-12 rounded-3xl border border-indigo-500/30 bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="space-y-3 max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">
-              <Mail className="w-3.5 h-3.5 text-indigo-400" />
-              <span>Direct Inquiries</span>
-            </div>
-            <h3 className="text-3xl font-extrabold text-white">Contact & Professional Channels</h3>
-            <p className="text-xs text-slate-300 leading-relaxed">
-              Reach out directly for enterprise AI strategy consulting, technology project leadership, software engineering, or photography inquiries.
-            </p>
-            <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-semibold">
-              <a href="tel:0547918818" className="text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
-                <Phone className="w-3.5 h-3.5" />
-                <span>054-7918818</span>
-              </a>
-              <a href="mailto:yarninp@gmail.com" className="text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
-                <Mail className="w-3.5 h-3.5" />
-                <span>yarninp@gmail.com</span>
-              </a>
-              <a href="https://www.linkedin.com/in/yarnin-peled" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 flex items-center gap-1.5">
-                <Linkedin className="w-3.5 h-3.5" />
-                <span>LinkedIn</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
-            </div>
-          </div>
-
-          <Link
-            href="/contact"
-            className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-indigo-600/25 text-sm flex-shrink-0"
-          >
-            <span>Open Contact & Form Page</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
         </div>
       </section>
     </main>
