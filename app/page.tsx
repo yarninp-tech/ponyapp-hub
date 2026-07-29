@@ -25,6 +25,7 @@ import {
   ArrowUpRight,
   Workflow,
   Globe,
+  Compass,
 } from 'lucide-react';
 import { ARTICLES_DATA } from '@/lib/articlesData';
 import { PROJECTS_DATA } from '@/lib/projectsData';
@@ -39,7 +40,7 @@ export default function HomePage() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-r from-indigo-500/10 via-violet-500/10 to-blue-500/10 rounded-full blur-[160px] pointer-events-none" />
 
       {/* 1. Asymmetric Hero & Executive Portfolio Intro */}
-      <section className="max-w-7xl mx-auto px-6 pt-16 pb-20 z-10 relative">
+      <section className="max-w-7xl mx-auto px-6 pt-16 pb-16 z-10 relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Column: Oversized Editorial Typography */}
           <div className="lg:col-span-6 space-y-8">
@@ -129,7 +130,7 @@ export default function HomePage() {
               <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-400 block">Annual OPEX Energy Reduction</span>
             </div>
 
-            {/* KPI 3 - NEW */}
+            {/* KPI 3 */}
             <div className="editorial-card p-5 rounded-3xl space-y-2 animate-float">
               <div className="w-9 h-9 rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold">
                 <Workflow className="w-5 h-5" />
@@ -138,7 +139,7 @@ export default function HomePage() {
               <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-400 block">CRM Friction & Process Efficiency</span>
             </div>
 
-            {/* KPI 4 - NEW */}
+            {/* KPI 4 */}
             <div className="editorial-card p-5 rounded-3xl space-y-2 animate-float-delayed">
               <div className="w-9 h-9 rounded-xl bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold">
                 <Globe className="w-5 h-5" />
@@ -166,8 +167,14 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Editorial Chapter Divider 01 */}
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-4 text-xs font-mono tracking-widest text-zinc-400 uppercase">
+        <span>01 // Executive Spotlight</span>
+        <div className="flex-1 h-[1px] bg-zinc-200 dark:bg-zinc-800" />
+      </div>
+
       {/* 2. Executive Bio Spotlight (About Me) */}
-      <section className="max-w-7xl mx-auto px-6 py-10">
+      <section className="max-w-7xl mx-auto px-6 pb-12">
         <div className="editorial-card p-8 md:p-12 rounded-3xl space-y-8 relative overflow-hidden">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="space-y-3 max-w-2xl">
@@ -214,14 +221,20 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Editorial Chapter Divider 02 */}
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-4 text-xs font-mono tracking-widest text-zinc-400 uppercase">
+        <span>02 // Creative Media</span>
+        <div className="flex-1 h-[1px] bg-zinc-200 dark:bg-zinc-800" />
+      </div>
+
       {/* 3. Immersive Photography Showcase Spotlight (yarninpeled.com) */}
-      <section className="max-w-7xl mx-auto px-6 py-10">
+      <section className="max-w-7xl mx-auto px-6 pb-12">
         <div className="editorial-card p-8 md:p-12 rounded-3xl space-y-8">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="space-y-3 max-w-xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 text-xs font-bold">
                 <Camera className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-                <span>Creative Media & Fine Art</span>
+                <span>Visual Storytelling & Fine Art</span>
               </div>
               <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-white">
                 Photography Portfolio Showcase
@@ -281,13 +294,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Multi-Page Promotional Portals */}
-      <section className="max-w-7xl mx-auto px-6 py-10 space-y-8">
-        <div className="text-center max-w-2xl mx-auto space-y-2">
-          <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-white">Portal Navigation & Publications</h2>
-          <p className="text-xs text-zinc-600 dark:text-zinc-400">Discover dedicated pages across AI research, software apps, and direct contact options.</p>
-        </div>
+      {/* Editorial Chapter Divider 03 */}
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-4 text-xs font-mono tracking-widest text-zinc-400 uppercase">
+        <span>03 // Publications & Apps</span>
+        <div className="flex-1 h-[1px] bg-zinc-200 dark:bg-zinc-800" />
+      </div>
 
+      {/* 4. Multi-Page Promotional Portals */}
+      <section className="max-w-7xl mx-auto px-6 pb-12 space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Portal 1: Enterprise AI Articles */}
           <div className="editorial-card p-8 rounded-3xl flex flex-col justify-between space-y-6 hover:border-indigo-500 transition-all hover:-translate-y-1 group">
