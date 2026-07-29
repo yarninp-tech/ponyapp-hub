@@ -55,32 +55,32 @@ export default function RootLayout({
                 <span className="font-extrabold text-white text-sm font-mono tracking-tighter">YP</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-extrabold text-xl leading-none tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300 group-hover:to-indigo-200 transition-colors">
+                <span className="font-extrabold text-xl leading-none tracking-tight text-slate-900 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-indigo-100 dark:to-indigo-300">
                   Yarnin Peled
                 </span>
-                <span className="text-[10px] text-indigo-400/80 font-mono tracking-wider">ponyapp.net</span>
+                <span className="text-[10px] text-indigo-600 dark:text-indigo-400/80 font-mono tracking-wider">ponyapp.net</span>
               </div>
             </Link>
 
-            {/* Navigation Links to Multi-Page Routes */}
+            {/* Navigation Links */}
             <div className="flex items-center gap-2 md:gap-4">
-              <nav className="flex items-center gap-1 md:gap-3 text-sm font-medium text-slate-300">
-                <Link href="/" className="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-900 transition-all">
+              <nav className="flex items-center gap-1 md:gap-3 text-sm font-medium text-slate-700 dark:text-slate-300">
+                <Link href="/" className="px-3 py-1.5 rounded-lg hover:text-indigo-600 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-900 transition-all">
                   Home
                 </Link>
-                <Link href="/apps" className="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-900 transition-all flex items-center gap-1.5">
-                  <Layers className="w-3.5 h-3.5 text-indigo-400" />
+                <Link href="/apps" className="px-3 py-1.5 rounded-lg hover:text-indigo-600 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-900 transition-all flex items-center gap-1.5">
+                  <Layers className="w-3.5 h-3.5 text-indigo-500 dark:text-indigo-400" />
                   <span>Apps</span>
                 </Link>
-                <Link href="/articles" className="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-900 transition-all flex items-center gap-1.5">
-                  <BookOpen className="w-3.5 h-3.5 text-indigo-400" />
+                <Link href="/articles" className="px-3 py-1.5 rounded-lg hover:text-indigo-600 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-900 transition-all flex items-center gap-1.5">
+                  <BookOpen className="w-3.5 h-3.5 text-indigo-500 dark:text-indigo-400" />
                   <span>Articles</span>
                 </Link>
-                <Link href="/photography" className="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-900 transition-all flex items-center gap-1.5">
-                  <Camera className="w-3.5 h-3.5 text-indigo-400" />
+                <Link href="/photography" className="px-3 py-1.5 rounded-lg hover:text-indigo-600 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-900 transition-all flex items-center gap-1.5">
+                  <Camera className="w-3.5 h-3.5 text-indigo-500 dark:text-indigo-400" />
                   <span>Photography</span>
                 </Link>
-                <Link href="/about" className="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-900 transition-all">
+                <Link href="/about" className="px-3 py-1.5 rounded-lg hover:text-indigo-600 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-900 transition-all">
                   About
                 </Link>
                 <Link href="/contact" className="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-all shadow-md shadow-indigo-600/20">
@@ -91,7 +91,7 @@ export default function RootLayout({
               {/* Dark / Light Mode Toggle Button */}
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-indigo-500/50 transition-all ml-2"
+                className="p-2 rounded-xl bg-slate-200 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-indigo-500/50 transition-all ml-2"
                 title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
               >
                 {isDarkMode ? (
@@ -114,16 +114,16 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-indigo-400" />
-              <span className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-white to-indigo-300">Yarnin Peled Innovation Hub</span>
+              <span className="font-extrabold text-slate-900 dark:text-white">Yarnin Peled Innovation Hub</span>
               <span>&copy; {new Date().getFullYear()}</span>
             </div>
             <div className="flex items-center gap-6 text-xs text-slate-400">
-              <Link href="/apps" className="hover:text-indigo-300 transition-colors">Apps</Link>
-              <Link href="/articles" className="hover:text-indigo-300 transition-colors">Articles</Link>
-              <Link href="/photography" className="hover:text-indigo-300 transition-colors">Photography</Link>
-              <Link href="/about" className="hover:text-indigo-300 transition-colors">About</Link>
-              <Link href="/contact" className="hover:text-indigo-300 transition-colors">Contact</Link>
-              <a href="https://yarninpeled.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-300 transition-colors flex items-center gap-1">
+              <Link href="/apps" className="hover:text-indigo-400 transition-colors">Apps</Link>
+              <Link href="/articles" className="hover:text-indigo-400 transition-colors">Articles</Link>
+              <Link href="/photography" className="hover:text-indigo-400 transition-colors">Photography</Link>
+              <Link href="/about" className="hover:text-indigo-400 transition-colors">About</Link>
+              <Link href="/contact" className="hover:text-indigo-400 transition-colors">Contact</Link>
+              <a href="https://yarninpeled.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors flex items-center gap-1">
                 <span>yarninpeled.com</span>
                 <ExternalLink className="w-3 h-3" />
               </a>

@@ -61,6 +61,14 @@ html.light .glass-card {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
 }
 
+/* FIX GRADIENT TEXT FOR LIGHT MODE - Make Yarnin Peled 100% Bold Dark */
+html.light .bg-clip-text {
+  background-image: linear-gradient(to right, #0f172a, #3730a3) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
 /* Fix inner boxes inside cards in Light mode */
 html.light .bg-slate-950,
 html.light .bg-slate-950\/80,

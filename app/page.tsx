@@ -35,29 +35,29 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-6 pt-16 pb-16 z-10 relative text-center max-w-4xl">
         <div className="space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-indigo-500/30 text-indigo-300 text-xs font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-indigo-400 animate-pulse" />
-            <span className="font-extrabold text-white">Yarnin Peled</span>
-            <span className="text-slate-400">| Product, Technology & Enterprise AI Innovations</span>
+            <Sparkles className="w-3.5 h-3.5 text-indigo-500 dark:text-indigo-400 animate-pulse" />
+            <span className="font-extrabold text-slate-900 dark:text-white">Yarnin Peled</span>
+            <span className="text-slate-600 dark:text-slate-400">| Product, Technology & Enterprise AI Innovations</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-indigo-300">
+            <span className="text-slate-900 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:via-indigo-100 dark:to-indigo-300">
               Yarnin Peled
             </span>
             <br />
-            <span className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold">
+            <span className="text-slate-800 dark:text-white text-3xl sm:text-4xl lg:text-5xl font-bold">
               Personal Innovation Portal
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed font-normal">
-            Welcome to <span className="text-indigo-400 font-semibold">ponyapp.net</span>. Explore dedicated pages for enterprise AI articles, web applications, engineering case studies, and fine art photography by <span className="text-white font-extrabold">Yarnin Peled</span>.
+          <p className="text-base sm:text-lg text-slate-700 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-normal">
+            Welcome to <span className="text-indigo-600 dark:text-indigo-400 font-semibold">ponyapp.net</span>. Explore dedicated pages for enterprise AI articles, web applications, engineering case studies, and fine art photography by <span className="text-slate-900 dark:text-white font-extrabold">Yarnin Peled</span>.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <Link
               href="/articles"
-              className="flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white font-semibold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-indigo-600/25 transform hover:-translate-y-0.5"
+              className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-indigo-600/25 transform hover:-translate-y-0.5"
             >
               <BookOpen className="w-4 h-4" />
               <span>Explore AI Articles</span>
@@ -65,20 +65,20 @@ export default function HomePage() {
 
             <Link
               href="/apps"
-              className="flex items-center gap-2 glass-panel hover:bg-slate-800 text-slate-200 font-medium py-3.5 px-5 rounded-xl border border-slate-700 transition-all"
+              className="flex items-center gap-2 glass-panel hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-900 dark:text-slate-200 font-semibold py-3.5 px-5 rounded-xl border border-slate-300 dark:border-slate-700 transition-all"
             >
-              <Layers className="w-4 h-4 text-indigo-400" />
+              <Layers className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
               <span>Explore Applications</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Multi-Page Teaser Grid (Promotions to pages) */}
-      <section className="max-w-7xl mx-auto px-6 py-12 space-y-10 border-t border-slate-900">
+      {/* Multi-Page Teaser Grid */}
+      <section className="max-w-7xl mx-auto px-6 py-12 space-y-10 border-t border-slate-300 dark:border-slate-900">
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Portal Navigation & Sections</h2>
-          <p className="text-xs text-slate-400">Discover dedicated pages across AI publications, software apps, creative media, and contact details.</p>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Portal Navigation & Sections</h2>
+          <p className="text-xs text-slate-600 dark:text-slate-400">Discover dedicated pages across AI publications, software apps, creative media, and contact details.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -106,7 +106,6 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* Sample Teaser Highlight */}
               <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-xs space-y-1">
                 <span className="text-[10px] text-slate-500 uppercase font-semibold">Latest Article</span>
                 <p className="font-bold text-slate-200 line-clamp-1">{featuredArticle.title}</p>
@@ -116,10 +115,10 @@ export default function HomePage() {
             <div className="pt-4 border-t border-slate-800">
               <Link
                 href="/articles"
-                className="w-full flex items-center justify-between bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-200 border border-indigo-500/30 font-semibold py-3 px-5 rounded-xl transition-all text-xs"
+                className="w-full flex items-center justify-between bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-5 rounded-xl transition-all text-xs shadow-md"
               >
                 <span>Go to Enterprise AI Articles Page</span>
-                <ArrowRight className="w-4 h-4 text-indigo-400" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -148,7 +147,6 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* Sample Teaser Highlight */}
               <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-xs flex items-center justify-between">
                 <div>
                   <span className="text-[10px] text-emerald-400 uppercase font-semibold">Live App</span>
@@ -161,10 +159,10 @@ export default function HomePage() {
             <div className="pt-4 border-t border-slate-800">
               <Link
                 href="/apps"
-                className="w-full flex items-center justify-between bg-violet-600/20 hover:bg-violet-600/30 text-violet-200 border border-violet-500/30 font-semibold py-3 px-5 rounded-xl transition-all text-xs"
+                className="w-full flex items-center justify-between bg-violet-600 hover:bg-violet-500 text-white font-semibold py-3 px-5 rounded-xl transition-all text-xs shadow-md"
               >
                 <span>Go to Applications & Projects Page</span>
-                <ArrowRight className="w-4 h-4 text-violet-400" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -202,10 +200,10 @@ export default function HomePage() {
             <div className="pt-4 border-t border-slate-800">
               <Link
                 href="/photography"
-                className="w-full flex items-center justify-between bg-purple-600/20 hover:bg-purple-600/30 text-purple-200 border border-purple-500/30 font-semibold py-3 px-5 rounded-xl transition-all text-xs"
+                className="w-full flex items-center justify-between bg-purple-600 hover:bg-purple-500 text-white font-semibold py-3 px-5 rounded-xl transition-all text-xs shadow-md"
               >
                 <span>Go to Photography Gallery Page</span>
-                <ArrowRight className="w-4 h-4 text-purple-400" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -243,10 +241,10 @@ export default function HomePage() {
             <div className="pt-4 border-t border-slate-800">
               <Link
                 href="/about"
-                className="w-full flex items-center justify-between bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-200 border border-emerald-500/30 font-semibold py-3 px-5 rounded-xl transition-all text-xs"
+                className="w-full flex items-center justify-between bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 px-5 rounded-xl transition-all text-xs shadow-md"
               >
                 <span>Go to About Yarnin Peled Page</span>
-                <ArrowRight className="w-4 h-4 text-emerald-400" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -264,6 +262,10 @@ export default function HomePage() {
               Reach out directly for enterprise AI strategy consulting, technology project leadership, software engineering, or photography inquiries.
             </p>
             <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-semibold">
+              <a href="tel:0547918818" className="text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+                <Phone className="w-3.5 h-3.5" />
+                <span>054-7918818</span>
+              </a>
               <a href="mailto:yarninp@gmail.com" className="text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
                 <Mail className="w-3.5 h-3.5" />
                 <span>yarninp@gmail.com</span>
