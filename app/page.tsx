@@ -369,7 +369,7 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* APP CARD 1: brain-room (Clean White Card in Light Mode, Dark Card in Dark Mode, Black Headings & Charcoal Text) */}
+          {/* APP CARD 1: brain-room */}
           <div className="p-8 rounded-3xl border-2 border-indigo-200 dark:border-indigo-500/40 bg-white dark:bg-zinc-900 shadow-xl space-y-6 flex flex-col justify-between transition-all hover:border-indigo-500">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
@@ -404,12 +404,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* APP CARD 2: PDF Editor (Clean White Card in Light Mode, Dark Card in Dark Mode, Black Headings & Charcoal Text) */}
+          {/* APP CARD 2: PDF Editor (Links directly to https://pony4app.web.app while pdf-editor.ponyapp.net CNAME propagates) */}
           <div className="p-8 rounded-3xl border-2 border-purple-200 dark:border-purple-500/40 bg-white dark:bg-zinc-900 shadow-xl space-y-6 flex flex-col justify-between transition-all hover:border-purple-500">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 text-xs font-bold font-mono border border-emerald-200 dark:border-emerald-800">
-                  ● LIVE APP • pdf-editor.ponyapp.net
+                  ● LIVE APP • pony4app.web.app
                 </span>
                 <span className="text-xs font-mono font-bold text-purple-700 dark:text-purple-300">PDF.js & Document AI</span>
               </div>
@@ -421,7 +421,7 @@ export default function HomePage() {
 
             <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-zinc-200 dark:border-zinc-800">
               <a
-                href="https://pdf-editor.ponyapp.net"
+                href="https://pony4app.web.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3.5 px-6 rounded-2xl text-xs transition-all shadow-md"
@@ -504,7 +504,7 @@ export default function HomePage() {
               <div className="editorial-inner p-3 rounded-xl space-y-1 text-xs">
                 <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block">2 Live Ecosystem Sub-Apps</span>
                 <p className="font-semibold text-zinc-900 dark:text-white">• brain-room.ponyapp.net</p>
-                <p className="font-semibold text-zinc-900 dark:text-white">• pdf-editor.ponyapp.net</p>
+                <p className="font-semibold text-zinc-900 dark:text-white">• pony4app.web.app</p>
               </div>
             </div>
 
