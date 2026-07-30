@@ -404,7 +404,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* APP CARD 2: PDF Editor */}
+          {/* APP CARD 2: PDF Editor (Links directly to https://pdf-editor.ponyapp.net) */}
           <div className="p-8 rounded-3xl border-2 border-purple-200 dark:border-purple-500/40 bg-white dark:bg-zinc-900 shadow-xl space-y-6 flex flex-col justify-between transition-all hover:border-purple-500">
             <div className="space-y-4">
               <div className="flex items-center justify-between">

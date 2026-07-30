@@ -41,7 +41,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     title: 'PDF Editor',
     subtitle: 'Browser-Based PDF Editing, Form Filling & Contract Data Extraction',
     category: 'Ecosystem App',
-    description: 'Full-featured browser PDF editor and AI document reader deployed at pdf-editor.ponyapp.net.',
+    description: 'Full-featured browser PDF editor and AI document reader deployed live at pdf-editor.ponyapp.net.',
     fullOverview: 'Deploys an autonomous PDF editor and document intelligence workspace where users edit PDFs, fill forms, extract structured contract data into enterprise databases, and automate document workflows.',
     highlights: [
       'Browser-based PDF form filling, page manipulation, and document annotation',
