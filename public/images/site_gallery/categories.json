@@ -1,0 +1,8 @@
+[
+  { "id": "portraits", "label": "Portraits & People" },
+  { "id": "street", "label": "Urban & Street Life" },
+  { "id": "seascapes", "label": "Seascapes & Coastal Light" },
+  { "id": "landscapes", "label": "Landscapes & Nature" },
+  { "id": "architecture", "label": "Architecture & Structures" },
+  { "id": "monochrome", "label": "Monochrome Studies" }
+]
