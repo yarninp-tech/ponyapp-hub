@@ -25,7 +25,10 @@ import {
   ArrowUpRight,
   Workflow,
   Globe,
-  Compass,
+  Database,
+  Play,
+  Terminal,
+  BarChart3,
 } from 'lucide-react';
 import { ARTICLES_DATA } from '@/lib/articlesData';
 import { PROJECTS_DATA } from '@/lib/projectsData';
@@ -39,14 +42,14 @@ export default function HomePage() {
       {/* Ambient Radial Gradient Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-r from-indigo-500/10 via-violet-500/10 to-blue-500/10 rounded-full blur-[160px] pointer-events-none" />
 
-      {/* 1. Asymmetric Hero & Executive Portfolio Intro */}
+      {/* 1. Asymmetric Hero — Multidisciplinary Systems Pioneer */}
       <section className="max-w-7xl mx-auto px-6 pt-16 pb-16 z-10 relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left Column: Oversized Editorial Typography */}
+          {/* Left Column: Oversized Narrative Headline */}
           <div className="lg:col-span-6 space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full editorial-card border border-indigo-200 dark:border-indigo-500/30 text-indigo-700 dark:text-indigo-300 text-xs font-bold shadow-sm">
               <Sparkles className="w-4 h-4 text-indigo-600 dark:text-indigo-400 animate-pulse" />
-              <span>Executive Portfolio & Technology Innovation Hub</span>
+              <span>Multidisciplinary Systems Leader & Enterprise AI Strategist</span>
             </div>
 
             <div className="space-y-3">
@@ -59,26 +62,26 @@ export default function HomePage() {
             </div>
 
             <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 leading-relaxed max-w-2xl font-normal">
-              Head of IT & Technology Projects at <span className="font-bold text-zinc-900 dark:text-white">National Sport Center Tel Aviv</span> | <span className="font-bold text-zinc-900 dark:text-white">IMBA Candidate</span> at Bar-Ilan University. Specializing in digital transformation, multi-million ILS tech roadmaps, and AI agent architecture.
+              Connecting isolated systems to reduce labor, cut costs, and increase profitability. From photographer, graphic automation pioneer, and big data programmer to <span className="font-bold text-zinc-900 dark:text-white">Head of IT & Tech Projects</span> at National Sport Center Tel Aviv.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
-                href="/articles"
+                href="/apps"
                 className="flex items-center gap-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-7 rounded-2xl transition-all shadow-xl shadow-indigo-600/25 transform hover:-translate-y-0.5 text-sm"
               >
-                <BookOpen className="w-4 h-4" />
-                <span>Read AI Strategy Research</span>
+                <Play className="w-4 h-4" />
+                <span>Test-Drive AI Playground</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
 
               <Link
-                href="/apps"
+                href="/articles"
                 className="flex items-center gap-2.5 editorial-card hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold py-4 px-6 rounded-2xl transition-all text-sm"
               >
-                <Layers className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-                <span>Explore Apps</span>
+                <BookOpen className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+                <span>AI Strategy Research</span>
               </Link>
 
               <Link
@@ -86,11 +89,11 @@ export default function HomePage() {
                 className="flex items-center gap-2 bg-zinc-900 dark:bg-zinc-800 hover:bg-zinc-800 text-white font-bold py-4 px-6 rounded-2xl transition-all text-sm"
               >
                 <UserCheck className="w-4 h-4 text-emerald-400" />
-                <span>Leadership CV</span>
+                <span>Story & CV</span>
               </Link>
             </div>
 
-            {/* Quick Contact Ribbon */}
+            {/* Direct Contact Ribbon */}
             <div className="pt-6 flex flex-wrap items-center gap-6 text-xs font-bold text-zinc-700 dark:text-zinc-300 border-t border-zinc-200 dark:border-zinc-800">
               <a href="tel:0547918818" className="flex items-center gap-2 hover:text-indigo-600 dark:hover:text-emerald-400 transition-colors">
                 <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
@@ -110,7 +113,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Column: 5 Executive KPI Cards Grid */}
+          {/* Right Column: 5 Executive Impact KPI Grid */}
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* KPI 1 */}
             <div className="editorial-card p-5 rounded-3xl space-y-2 animate-float">
@@ -167,13 +170,43 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 2. Interactive "Test-Drive AI Playground" Banner */}
+      <section className="max-w-7xl mx-auto px-6 py-8">
+        <div className="editorial-card p-8 md:p-10 rounded-3xl border-2 border-indigo-500/40 bg-gradient-to-r from-indigo-900 via-indigo-950 to-slate-900 text-white shadow-2xl space-y-6">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="space-y-3 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/20 border border-indigo-400/40 text-indigo-300 text-xs font-bold">
+                <Play className="w-4 h-4 text-indigo-400 fill-indigo-400" />
+                <span>Interactive AI Playground & Living Applications</span>
+              </div>
+              <h2 className="text-3xl font-extrabold text-white">
+                Don't Just Read About AI—Test Drive It Hands-On Right Here
+              </h2>
+              <p className="text-sm text-indigo-200 leading-relaxed">
+                This hub is a living demonstration. Experience live AI tools embedded directly into the portal—including <span className="text-white font-bold">brain-room</span> (Real-Time Gemini 2.5 AI Canvas) and document intelligence extractors.
+              </p>
+            </div>
+
+            <a
+              href="https://brain-room.ponyapp.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-4 px-7 rounded-2xl transition-all shadow-xl text-sm flex-shrink-0"
+            >
+              <span>Launch Live brain-room App</span>
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Editorial Chapter Divider 01 */}
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-4 text-xs font-mono tracking-widest text-zinc-400 uppercase">
-        <span>01 // Executive Spotlight</span>
+        <span>01 // The Story & Systems Evolution</span>
         <div className="flex-1 h-[1px] bg-zinc-200 dark:bg-zinc-800" />
       </div>
 
-      {/* 2. Executive Bio Spotlight (About Me) */}
+      {/* 3. Executive Story Spotlight (About Yarnin Peled) */}
       <section className="max-w-7xl mx-auto px-6 pb-12">
         <div className="editorial-card p-8 md:p-12 rounded-3xl space-y-8 relative overflow-hidden">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -183,10 +216,10 @@ export default function HomePage() {
                 <span>Executive Leadership & Background</span>
               </div>
               <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-white">
-                About Yarnin Peled
+                Decades of Connecting Systems & Driving ROI
               </h2>
               <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Senior Technology & Operations Leader with a practitioner's command of digital transformation, custom CRM implementation, Cloud/SaaS migration, and global supply chain management.
+                From graphic process automation and big data programming at Beeri Printers to building global supply chains (Italy & Asia) and directing Israel's Olympic Velodrome infrastructure.
               </p>
             </div>
 
@@ -194,7 +227,7 @@ export default function HomePage() {
               href="/about"
               className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-md text-xs flex-shrink-0"
             >
-              <span>View Executive Leadership CV</span>
+              <span>Read Full Story & CV</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -223,11 +256,11 @@ export default function HomePage() {
 
       {/* Editorial Chapter Divider 02 */}
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-4 text-xs font-mono tracking-widest text-zinc-400 uppercase">
-        <span>02 // Creative Media</span>
+        <span>02 // Fine Art Photography</span>
         <div className="flex-1 h-[1px] bg-zinc-200 dark:bg-zinc-800" />
       </div>
 
-      {/* 3. Immersive Photography Showcase Spotlight (yarninpeled.com) */}
+      {/* 4. Fine Art Photography Spotlight (yarninpeled.com) */}
       <section className="max-w-7xl mx-auto px-6 pb-12">
         <div className="editorial-card p-8 md:p-12 rounded-3xl space-y-8">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -263,7 +296,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Photo Showcase Cards */}
+          {/* Photo Showcase Cards with Real Images */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
             <div className="relative h-64 rounded-2xl overflow-hidden group shadow-lg">
               <Image
@@ -296,11 +329,11 @@ export default function HomePage() {
 
       {/* Editorial Chapter Divider 03 */}
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-4 text-xs font-mono tracking-widest text-zinc-400 uppercase">
-        <span>03 // Publications & Apps</span>
+        <span>03 // Research & Applications</span>
         <div className="flex-1 h-[1px] bg-zinc-200 dark:bg-zinc-800" />
       </div>
 
-      {/* 4. Multi-Page Promotional Portals */}
+      {/* 5. Multi-Page Promotional Portals */}
       <section className="max-w-7xl mx-auto px-6 pb-12 space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Portal 1: Enterprise AI Articles */}
