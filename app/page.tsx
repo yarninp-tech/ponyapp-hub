@@ -370,33 +370,33 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* APP CARD 1: brain-room */}
-          <div className="editorial-card p-8 rounded-3xl border-2 border-indigo-500/30 bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-900 text-white shadow-2xl space-y-6 flex flex-col justify-between">
+          <div className="p-8 rounded-3xl border-2 border-indigo-500/40 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-xl space-y-6 flex flex-col justify-between transition-all hover:border-indigo-600">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold font-mono">
+                <span className="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 text-xs font-bold font-mono">
                   ● LIVE APP • brain-room.ponyapp.net
                 </span>
-                <span className="text-xs font-mono text-indigo-300">Gemini 2.5 Flash</span>
+                <span className="text-xs font-mono font-bold text-indigo-600 dark:text-indigo-400">Gemini 2.5 Flash</span>
               </div>
-              <h3 className="text-2xl font-extrabold text-white">brain-room</h3>
-              <p className="text-xs text-indigo-200 leading-relaxed">
+              <h3 className="text-2xl font-extrabold text-zinc-900 dark:text-white">brain-room</h3>
+              <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 leading-relaxed">
                 Real-Time AI Collaborative Brainstorming Platform. Features infinite zoomable canvas sticky notes with live Firebase Firestore sync and Gemini 2.5 Flash AI co-creator.
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-indigo-800/60">
+            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-zinc-200 dark:border-zinc-800">
               <a
                 href="https://brain-room.ponyapp.net"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all shadow-lg"
+                className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-2xl text-xs transition-all shadow-md"
               >
                 <span>Launch brain-room App</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
               <Link
                 href="/projects/brain-room"
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all"
+                className="flex items-center gap-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-900 dark:text-white font-bold py-3.5 px-6 rounded-2xl text-xs transition-all"
               >
                 <span>View Architecture</span>
                 <ArrowRight className="w-4 h-4" />
@@ -405,33 +405,33 @@ export default function HomePage() {
           </div>
 
           {/* APP CARD 2: PDF Editor */}
-          <div className="editorial-card p-8 rounded-3xl border-2 border-purple-500/30 bg-gradient-to-br from-purple-900 via-purple-950 to-slate-900 text-white shadow-2xl space-y-6 flex flex-col justify-between">
+          <div className="p-8 rounded-3xl border-2 border-purple-500/40 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-xl space-y-6 flex flex-col justify-between transition-all hover:border-purple-600">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold font-mono">
+                <span className="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 text-xs font-bold font-mono">
                   ● LIVE APP • pdf-editor.ponyapp.net
                 </span>
-                <span className="text-xs font-mono text-purple-300">PDF.js & Document AI</span>
+                <span className="text-xs font-mono font-bold text-purple-600 dark:text-purple-400">PDF.js & Document AI</span>
               </div>
-              <h3 className="text-2xl font-extrabold text-white">PDF Editor & Document Intelligence</h3>
-              <p className="text-xs text-purple-200 leading-relaxed">
+              <h3 className="text-2xl font-extrabold text-zinc-900 dark:text-white">PDF Editor & Document Intelligence</h3>
+              <p className="text-sm font-semibold text-zinc-700 dark:text-zinc-300 leading-relaxed">
                 Browser-Based PDF Editing, Form Filling & Contract Data Extraction. Autonomous extraction of tenancy terms, legal agreement dates, and automated form fields into SQL.
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-purple-800/60">
+            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-zinc-200 dark:border-zinc-800">
               <a
                 href="https://pdf-editor.ponyapp.net"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all shadow-lg"
+                className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3.5 px-6 rounded-2xl text-xs transition-all shadow-md"
               >
                 <span>Launch PDF Editor App</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
               <Link
                 href="/projects/pdf-editor"
-                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all"
+                className="flex items-center gap-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-900 dark:text-white font-bold py-3.5 px-6 rounded-2xl text-xs transition-all"
               >
                 <span>View Architecture</span>
                 <ArrowRight className="w-4 h-4" />
