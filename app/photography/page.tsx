@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Camera, ChevronLeft, ArrowUpRight, Maximize2, X, Sparkles, Layers, Filter, Grid, Edit3 } from 'lucide-react';
+import { Camera, ChevronLeft, ArrowUpRight, Maximize2, X, Sparkles, Layers, Filter, Grid } from 'lucide-react';
 import photoManifest from '@/public/images/site_gallery/manifest.json';
 import categoryConfig from '@/public/images/site_gallery/categories.json';
 
@@ -47,7 +47,7 @@ export default function PhotographyPage() {
   return (
     <main className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 py-12 px-6 transition-colors duration-500">
       <div className="max-w-7xl mx-auto space-y-10">
-        {/* Back Navigation Link & Admin Organizer Link */}
+        {/* Back Navigation Link */}
         <div className="flex items-center justify-between">
           <Link
             href="/"
@@ -55,14 +55,6 @@ export default function PhotographyPage() {
           >
             <ChevronLeft className="w-4 h-4" />
             <span>Back to Journey Home</span>
-          </Link>
-
-          <Link
-            href="/admin/gallery"
-            className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow-md"
-          >
-            <Edit3 className="w-3.5 h-3.5" />
-            <span>Organize Categories Visually</span>
           </Link>
         </div>
 
