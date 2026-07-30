@@ -36,7 +36,46 @@
 }
 
 /* =========================================================
-   LIGHT MODE (DEFAULT) - Framer/Webflow Editorial Luxury
+   SILVER THREAD JOURNEY DESIGN SYSTEM
+   ========================================================= */
+.silver-thread-line {
+  background: linear-gradient(
+    180deg,
+    rgba(226, 232, 240, 0.2) 0%,
+    rgba(148, 163, 184, 0.9) 15%,
+    rgba(203, 213, 225, 1) 50%,
+    rgba(148, 163, 184, 0.9) 85%,
+    rgba(226, 232, 240, 0.2) 100%
+  );
+  box-shadow: 0 0 15px rgba(203, 213, 225, 0.6);
+}
+
+html.dark .silver-thread-line {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(226, 232, 240, 0.9) 20%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(226, 232, 240, 0.9) 80%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.silver-node-badge {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 50%, #94a3b8 100%);
+  color: #0f172a;
+  box-shadow: 0 0 20px rgba(148, 163, 184, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+html.dark .silver-node-badge {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 60%, #94a3b8 100%);
+  color: #09090b;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), inset 0 1px 2px rgba(255, 255, 255, 1);
+}
+
+/* =========================================================
+   LIGHT MODE (DEFAULT) - Editorial Luxury
    ========================================================= */
 html:not(.dark) body,
 html.light body {
@@ -119,7 +158,7 @@ html.dark .hero-headline {
   color: transparent !important;
 }
 
-/* Smooth Micro-Animations inspired by HeyFriends & Somefolk */
+/* Micro-Animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-6px); }

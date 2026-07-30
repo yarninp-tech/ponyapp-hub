@@ -49,7 +49,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full editorial-card border border-indigo-200 dark:border-indigo-500/30 text-indigo-700 dark:text-indigo-300 text-xs font-bold shadow-sm">
             <Compass className="w-4 h-4 text-indigo-600 dark:text-indigo-400 animate-spin-slow" />
-            <span>Interactive Journey: Connecting Systems, Code & Creative Art</span>
+            <span>The Winding Silver Journey: Systems, Code, Art & Infrastructure</span>
           </div>
 
           <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight leading-[1.05]">
@@ -61,11 +61,46 @@ export default function HomePage() {
           </p>
 
           <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto leading-relaxed font-normal">
-            Scroll through the interactive journey below—from photographer and big data programmer to national Olympic Velodrome setup and enterprise AI transformation leader.
+            Follow the metallic silver line down the page—a continuous visual journey through 25+ years of graphic process automation, big data server engineering, global supply chains, Olympic Velodrome infrastructure, and enterprise AI transformation.
           </p>
 
+          {/* Quick Portal Navigation Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+            <Link
+              href="/articles"
+              className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shadow-lg text-xs"
+            >
+              <BookOpen className="w-4 h-4" />
+              <span>Enterprise AI Articles</span>
+            </Link>
+
+            <Link
+              href="/apps"
+              className="flex items-center gap-2 editorial-card hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold py-3.5 px-6 rounded-2xl transition-all text-xs"
+            >
+              <Layers className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+              <span>Interactive Apps</span>
+            </Link>
+
+            <Link
+              href="/photography"
+              className="flex items-center gap-2 editorial-card hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold py-3.5 px-6 rounded-2xl transition-all text-xs"
+            >
+              <Camera className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+              <span>Photography Gallery</span>
+            </Link>
+
+            <Link
+              href="/about"
+              className="flex items-center gap-2 bg-zinc-900 dark:bg-zinc-800 hover:bg-zinc-800 text-white font-bold py-3.5 px-6 rounded-2xl transition-all text-xs"
+            >
+              <UserCheck className="w-4 h-4 text-emerald-400" />
+              <span>Leadership Story & CV</span>
+            </Link>
+          </div>
+
           {/* Quick Contact Ribbon */}
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs font-bold text-zinc-700 dark:text-zinc-300">
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs font-bold text-zinc-700 dark:text-zinc-300 border-t border-zinc-200 dark:border-zinc-800">
             <a href="tel:0547918818" className="flex items-center gap-2 hover:text-indigo-600 dark:hover:text-emerald-400 transition-colors">
               <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               <span>054-7918818</span>
@@ -78,220 +113,273 @@ export default function HomePage() {
             <span>•</span>
             <a href="https://www.linkedin.com/in/yarnin-peled" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-indigo-600 dark:hover:text-blue-400 transition-colors">
               <Linkedin className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-              <span>LinkedIn Profile</span>
+              <span>LinkedIn</span>
               <ArrowUpRight className="w-3 h-3" />
             </a>
           </div>
         </div>
       </section>
 
-      {/* 2. THE CONTINUOUS JOURNEY TIMELINE (Flowing Single-Page Experience) */}
-      <section className="max-w-5xl mx-auto px-6 py-12 relative">
-        {/* Glowing Vertical Journey Line */}
-        <div className="absolute left-6 md:left-1/2 top-12 bottom-12 w-[3px] bg-gradient-to-b from-indigo-500 via-purple-500 via-emerald-500 to-indigo-600 -translate-x-1/2 opacity-40 dark:opacity-60" />
+      {/* 2. THE SILVER THREAD JOURNEY PATHWAY (Full-Bleed Winding Flow) */}
+      <section className="max-w-6xl mx-auto px-6 py-12 relative">
+        {/* Metallic Silver Thread Line Line */}
+        <div className="absolute left-6 md:left-1/2 top-10 bottom-10 w-[4px] silver-thread-line -translate-x-1/2 z-0" />
 
-        <div className="space-y-16 relative z-10">
+        <div className="space-y-28 relative z-10">
 
-          {/* MILESTONE 1: Creative Origin & Process Automation */}
+          {/* CHAPTER 01: Creative Origin & Process Automation */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-6 md:text-right space-y-3">
-              <span className="text-xs font-mono font-extrabold text-purple-600 dark:text-purple-400 uppercase tracking-widest block">
-                1997 – 2005 • Milestone 01
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white">
+            <div className="md:col-span-6 md:text-right space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 text-xs font-bold">
+                <Camera className="w-3.5 h-3.5" />
+                <span>1997 – 2005 • Chapter 01</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white">
                 The Creative Origin & Process Automation
               </h2>
-              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Started as a photographer and graphic designer. Realizing that repeating manual work was inefficient, Yarnin pioneered graphic process automation to connect creative workflows and eliminate redundant labor.
+              <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                Yarnin began his career as a photographer and graphic designer. Realizing that repeating manual work was inefficient, he pioneered graphic process automation to connect creative workflows and eliminate redundant labor.
               </p>
-              <div className="pt-2">
+              <div className="pt-2 flex flex-wrap items-center md:justify-end gap-3">
                 <Link
                   href="/photography"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 dark:text-purple-400 hover:underline"
+                  className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all shadow-md"
                 >
-                  <span>Explore Fine Art Photography Gallery</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Photography Gallery</span>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
+                <a
+                  href="https://yarninpeled.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold text-zinc-700 dark:text-zinc-300 hover:text-purple-600 dark:hover:text-purple-400 flex items-center gap-1"
+                >
+                  <span>yarninpeled.com</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
               </div>
             </div>
 
-            {/* Timeline Node Center */}
+            {/* Silver Node Badge Center */}
             <div className="hidden md:flex md:col-span-0 items-center justify-center">
-              <div className="w-10 h-10 rounded-full bg-purple-600 text-white font-extrabold text-xs flex items-center justify-center shadow-lg border-4 border-zinc-50 dark:border-zinc-950">
+              <div className="w-12 h-12 rounded-full silver-node-badge font-extrabold text-sm flex items-center justify-center z-10">
                 01
               </div>
             </div>
 
-            {/* Visual Card */}
+            {/* Visual Photo Card */}
             <div className="md:col-span-6">
-              <div className="relative h-56 rounded-3xl overflow-hidden shadow-lg group editorial-card">
+              <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-purple-500/20">
                 <Image
                   src="/images/architecture.jpg"
                   alt="Architecture & Fine Art Photography by Yarnin Peled"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-end">
-                  <span className="text-xs font-bold text-purple-300 uppercase tracking-wider">Visual Media & Geometry</span>
-                  <h3 className="text-sm font-bold text-white">Fine Art Architectural Photography</h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end">
+                  <span className="text-xs font-bold text-purple-300 uppercase tracking-widest">Fine Art Photography</span>
+                  <h3 className="text-base font-bold text-white">Urban Geometry & Visual Process Automation</h3>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* MILESTONE 2: Big Data & Systems Programming */}
+          {/* CHAPTER 02: Big Data & Systems Programming */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            {/* Visual Card */}
+            {/* Visual Photo Card */}
             <div className="md:col-span-6 md:order-1 order-2">
-              <div className="editorial-card p-6 rounded-3xl space-y-4">
-                <div className="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold">
-                      <Database className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold text-zinc-900 dark:text-white">Beeri Printers</h3>
-                      <p className="text-xs text-zinc-500">Big Data & Statement Lifecycles</p>
-                    </div>
-                  </div>
-                  <span className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">DATA PROGRAMMER</span>
+              <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-blue-500/20">
+                <Image
+                  src="/images/server.jpg"
+                  alt="Big Data & Server Infrastructure at Beeri Printers"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end">
+                  <span className="text-xs font-bold text-blue-300 uppercase tracking-widest">Beeri Printers</span>
+                  <h3 className="text-base font-bold text-white">Big Data Ingestion & Server Lifecycles</h3>
                 </div>
-                <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                  Managed big data ingestion, servers, and databases—controlling raw data from ingestion into print facilities until it exited as automated variable data print statements in sealed envelopes.
-                </p>
               </div>
             </div>
 
-            {/* Timeline Node Center */}
+            {/* Silver Node Badge Center */}
             <div className="hidden md:flex md:col-span-0 items-center justify-center md:order-2">
-              <div className="w-10 h-10 rounded-full bg-blue-600 text-white font-extrabold text-xs flex items-center justify-center shadow-lg border-4 border-zinc-50 dark:border-zinc-950">
+              <div className="w-12 h-12 rounded-full silver-node-badge font-extrabold text-sm flex items-center justify-center z-10">
                 02
               </div>
             </div>
 
-            <div className="md:col-span-6 md:order-3 order-1 space-y-3">
-              <span className="text-xs font-mono font-extrabold text-blue-600 dark:text-blue-400 uppercase tracking-widest block">
-                2008 – 2014 • Milestone 02
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white">
+            <div className="md:col-span-6 md:order-3 order-1 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-xs font-bold">
+                <Database className="w-3.5 h-3.5" />
+                <span>2008 – 2014 • Chapter 02</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white">
                 Big Data Programming & Server Engineering
               </h2>
-              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Returned to technical execution as a Data Programmer at Beeri Printers, managing end-to-end data pipelines, database servers, and high-volume statement processing.
-              </p>
-            </div>
-          </div>
-
-          {/* MILESTONE 3: Entrepreneurship & Supply Chain */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-6 md:text-right space-y-3">
-              <span className="text-xs font-mono font-extrabold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">
-                2006 – 2019 • Milestone 03
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white">
-                Entrepreneurship & Global Supply Chains
-              </h2>
-              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Owned a retail bike shop & co-founded PONY Cycling (cycling apparel venture with manufacturing in Italy and mass production in Asia, achieving a 25% profit margin). Led motorcycle gear import operations at Ofnoit.
-              </p>
-            </div>
-
-            {/* Timeline Node Center */}
-            <div className="hidden md:flex md:col-span-0 items-center justify-center">
-              <div className="w-10 h-10 rounded-full bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center shadow-lg border-4 border-zinc-50 dark:border-zinc-950">
-                03
-              </div>
-            </div>
-
-            {/* Visual Card */}
-            <div className="md:col-span-6">
-              <div className="editorial-card p-6 rounded-3xl space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">25% Margin</span>
-                  <span className="text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950 px-3 py-1 rounded-full">Global Supply Chain</span>
-                </div>
-                <h3 className="text-sm font-bold text-zinc-900 dark:text-white">PONY Cycling & Ofnoit Import</h3>
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Optimized international vendor logistics, product mix demand forecasting, and eliminated dead stock.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* MILESTONE 4: National Infrastructure & Olympic Velodrome */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            {/* Visual Card */}
-            <div className="md:col-span-6 md:order-1 order-2">
-              <div className="editorial-card p-6 rounded-3xl space-y-3">
-                <span className="text-2xl font-extrabold text-amber-600 dark:text-amber-400">Olympic Velodrome</span>
-                <h3 className="text-sm font-bold text-zinc-900 dark:text-white">National Sport Center Tel Aviv Setup</h3>
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Directed end-to-end technology and operational setup of Israel's national Velodrome, UCI sporting technology localization, and international championship logistics.
-                </p>
-              </div>
-            </div>
-
-            {/* Timeline Node Center */}
-            <div className="hidden md:flex md:col-span-0 items-center justify-center md:order-2">
-              <div className="w-10 h-10 rounded-full bg-amber-600 text-white font-extrabold text-xs flex items-center justify-center shadow-lg border-4 border-zinc-50 dark:border-zinc-950">
-                04
-              </div>
-            </div>
-
-            <div className="md:col-span-6 md:order-3 order-1 space-y-3">
-              <span className="text-xs font-mono font-extrabold text-amber-600 dark:text-amber-400 uppercase tracking-widest block">
-                2019 – 2024 • Milestone 04
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white">
-                National Infrastructure & Technology Setup
-              </h2>
-              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Appointed Manager of Israel's National Velodrome facility, managing complex communications, global UCI sporting standards compliance, and international tech partner RFPs.
-              </p>
-            </div>
-          </div>
-
-          {/* MILESTONE 5: Enterprise AI & Digital Transformation (Present) */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-6 md:text-right space-y-3">
-              <span className="text-xs font-mono font-extrabold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest block">
-                2024 – Present • Milestone 05
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white">
-                Enterprise AI Transformation & IT Leadership
-              </h2>
-              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Head of IT & Tech Projects | International MBA Candidate at Bar-Ilan. Manages 10M+ ILS tech roadmaps, LED/Solar PV IoT (20-25% OPEX reduction), custom CRM platforms, and published research on AI autonomous agents.
+              <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                As a Data Programmer at Beeri Printers, Yarnin managed raw data ingestion across databases and high-scale server environments—controlling the complete end-to-end lifecycle until data exited as automated variable print statement envelopes.
               </p>
               <div className="pt-2">
                 <Link
-                  href="/about"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+                  href="/apps"
+                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all shadow-md"
                 >
-                  <span>Read Full Executive CV & Qualifications</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>View Data Systems & Apps</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* CHAPTER 03: Entrepreneurship & Supply Chain */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div className="md:col-span-6 md:text-right space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
+                <Globe className="w-3.5 h-3.5" />
+                <span>2006 – 2019 • Chapter 03</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white">
+                Entrepreneurship & Global Supply Chains
+              </h2>
+              <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                Owned a technical retail bike store & co-founded PONY Cycling—building a global supply chain with mass production in Asia and specialized manufacturing in Italy (25% profit margin). Later managed motorcycle gear import operations at Ofnoit.
+              </p>
+              <div className="pt-2 flex flex-wrap items-center md:justify-end gap-3">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all shadow-md"
+                >
+                  <span>Supply Chain Case Study</span>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
 
-            {/* Timeline Node Center */}
+            {/* Silver Node Badge Center */}
             <div className="hidden md:flex md:col-span-0 items-center justify-center">
-              <div className="w-10 h-10 rounded-full bg-indigo-600 text-white font-extrabold text-xs flex items-center justify-center shadow-lg border-4 border-zinc-50 dark:border-zinc-950">
+              <div className="w-12 h-12 rounded-full silver-node-badge font-extrabold text-sm flex items-center justify-center z-10">
+                03
+              </div>
+            </div>
+
+            {/* Visual Photo Card */}
+            <div className="md:col-span-6">
+              <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-emerald-500/20">
+                <Image
+                  src="/images/cycling.jpg"
+                  alt="Aerodynamic Cycling & Global Supply Chain Management"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end">
+                  <span className="text-xs font-bold text-emerald-300 uppercase tracking-widest">PONY Cycling & Ofnoit Import</span>
+                  <h3 className="text-base font-bold text-white">25% Margin Global Supply Logistics</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CHAPTER 04: National Infrastructure & Tel Aviv Velodrome */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            {/* Visual Photo Card */}
+            <div className="md:col-span-6 md:order-1 order-2">
+              <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-amber-500/20">
+                <Image
+                  src="/images/velodrome.jpg"
+                  alt="Olympic Velodrome Architecture & Technology Setup"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end">
+                  <span className="text-xs font-bold text-amber-300 uppercase tracking-widest">National Sport Center Tel Aviv</span>
+                  <h3 className="text-base font-bold text-white">Olympic Velodrome Infrastructure & UCI Tech</h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Silver Node Badge Center */}
+            <div className="hidden md:flex md:col-span-0 items-center justify-center md:order-2">
+              <div className="w-12 h-12 rounded-full silver-node-badge font-extrabold text-sm flex items-center justify-center z-10">
+                04
+              </div>
+            </div>
+
+            <div className="md:col-span-6 md:order-3 order-1 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 text-xs font-bold">
+                <Building2 className="w-3.5 h-3.5" />
+                <span>2019 – 2024 • Chapter 04</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white">
+                National Infrastructure & Technology Setup
+              </h2>
+              <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                Directed end-to-end technology setup of Israel's National Olympic Velodrome, managing UCI sporting standards compliance, timing scoring networks, communications, and international RFPs.
+              </p>
+              <div className="pt-2">
+                <Link
+                  href="/apps"
+                  className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all shadow-md"
+                >
+                  <span>Velodrome & Infrastructure Case Study</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* CHAPTER 05: Enterprise AI Transformation & IT Leadership */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div className="md:col-span-6 md:text-right space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs font-bold">
+                <Cpu className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
+                <span>2024 – Present • Chapter 05</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white">
+                Enterprise AI Transformation & IT Leadership
+              </h2>
+              <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                Head of IT & Tech Projects | International MBA Candidate at Bar-Ilan. Manages 10M+ ILS tech roadmaps, LED/Solar PV IoT (20-25% OPEX reduction), custom CRM platforms, and published research on AI autonomous agents.
+              </p>
+              <div className="pt-2 flex flex-wrap items-center md:justify-end gap-3">
+                <Link
+                  href="/articles"
+                  className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-2xl text-xs transition-all shadow-lg"
+                >
+                  <BookOpen className="w-4 h-4" />
+                  <span>Read Published AI Articles</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 bg-zinc-900 dark:bg-zinc-800 hover:bg-zinc-800 text-white font-bold py-3.5 px-6 rounded-2xl text-xs transition-all"
+                >
+                  <UserCheck className="w-4 h-4 text-emerald-400" />
+                  <span>Executive Leadership CV</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Silver Node Badge Center */}
+            <div className="hidden md:flex md:col-span-0 items-center justify-center">
+              <div className="w-12 h-12 rounded-full silver-node-badge font-extrabold text-sm flex items-center justify-center z-10">
                 05
               </div>
             </div>
 
-            {/* Visual Card */}
+            {/* Visual Photo Card */}
             <div className="md:col-span-6">
-              <div className="editorial-card p-6 rounded-3xl space-y-4 border-2 border-indigo-500/40">
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">10M+ ILS</span>
-                  <span className="text-xs font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-950 px-3 py-1 rounded-full">20-25% Solar OPEX</span>
+              <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-indigo-500/40">
+                <Image
+                  src="/images/landscape.jpg"
+                  alt="Enterprise AI Transformation & High-Tech Horizons"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end">
+                  <span className="text-xs font-bold text-indigo-300 uppercase tracking-widest">Enterprise AI & Solar IoT</span>
+                  <h3 className="text-base font-bold text-white">20-25% Solar OPEX & Autonomous AI Workflows</h3>
                 </div>
-                <h3 className="text-sm font-bold text-zinc-900 dark:text-white">Enterprise AI & Systems Integration</h3>
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Published research on AI autonomous agents replacing monolithic legacy software to increase revenue, profit margins, and labor efficiency.
-                </p>
               </div>
             </div>
           </div>
@@ -329,83 +417,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Multi-Page Promotional Portals */}
-      <section className="max-w-7xl mx-auto px-6 pb-16 space-y-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Portal 1: Enterprise AI Articles */}
-          <div className="editorial-card p-8 rounded-3xl flex flex-col justify-between space-y-6 hover:border-indigo-500 transition-all hover:-translate-y-1 group">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="w-12 h-12 rounded-2xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
-                  <BookOpen className="w-6 h-6" />
-                </div>
-                <span className="text-xs font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-950 px-3 py-1 rounded-full border border-indigo-200 dark:border-indigo-800">
-                  {ARTICLES_DATA.length} Papers Published
-                </span>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors">
-                  Enterprise AI Strategy Research
-                </h3>
-                <p className="text-xs text-indigo-600 dark:text-indigo-400 font-bold mt-1">
-                  Published research on AI agents & executive leadership
-                </p>
-                <p className="text-xs text-zinc-600 dark:text-zinc-300 mt-3 leading-relaxed">
-                  Deep-dive articles examining practical enterprise AI economics, agentic workflows as alternatives to legacy software, and CFO task automation.
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800">
-              <Link
-                href="/articles"
-                className="w-full flex items-center justify-between bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-5 rounded-2xl transition-all text-xs shadow-md"
-              >
-                <span>Go to Enterprise AI Articles Page</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Portal 2: Applications & Case Studies */}
-          <div className="editorial-card p-8 rounded-3xl flex flex-col justify-between space-y-6 hover:border-violet-500 transition-all hover:-translate-y-1 group">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="w-12 h-12 rounded-2xl bg-violet-100 dark:bg-violet-950 text-violet-600 dark:text-violet-400 flex items-center justify-center font-bold">
-                  <Layers className="w-6 h-6" />
-                </div>
-                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
-                  Live Platform
-                </span>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-bold text-zinc-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-300 transition-colors">
-                  Ecosystem Applications & Case Studies
-                </h3>
-                <p className="text-xs text-indigo-600 dark:text-indigo-400 font-bold mt-1">
-                  Web apps & engineering case studies hosted on ponyapp.net
-                </p>
-                <p className="text-xs text-zinc-600 dark:text-zinc-300 mt-3 leading-relaxed">
-                  Interactive applications including <span className="font-bold text-zinc-900 dark:text-white">brain-room</span> (Real-Time AI Collaborative Brainstorming Platform), inventory systems, and shift schedulers.
-                </p>
-              </div>
-            </div>
-
-            <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800">
-              <Link
-                href="/apps"
-                className="w-full flex items-center justify-between bg-violet-600 hover:bg-violet-700 text-white font-bold py-3.5 px-5 rounded-2xl transition-all text-xs shadow-md"
-              >
-                <span>Go to Applications & Projects Page</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Contact Banner */}
+      {/* 4. Contact Banner */}
+      <section className="max-w-7xl mx-auto px-6 pb-16">
         <div className="editorial-card p-8 md:p-12 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-3 max-w-xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
