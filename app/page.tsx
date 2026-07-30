@@ -185,20 +185,20 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* CHAPTER 02: Big Data & Systems Programming */}
+          {/* CHAPTER 02: Big Data & Systems Programming (Updated Wording, No Links) */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Visual Photo Card */}
             <div className="md:col-span-6 md:order-1 order-2">
               <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-blue-500/20">
                 <Image
                   src="/images/server.jpg"
-                  alt="Big Data & Server Infrastructure at Beeri Printers"
+                  alt="Data Programming & Statement Lifecycles at Beeri Printers"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end">
                   <span className="text-xs font-bold text-blue-300 uppercase tracking-widest">Beeri Printers</span>
-                  <h3 className="text-base font-bold text-white">Big Data Ingestion & Server Lifecycles</h3>
+                  <h3 className="text-base font-bold text-white">Bank & Insurance Variable Data Printing</h3>
                 </div>
               </div>
             </div>
@@ -216,24 +216,15 @@ export default function HomePage() {
                 <span>2008 – 2014 • Chapter 02</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white">
-                Big Data Programming & Server Engineering
+                Data Programming & End-to-End Statement Processing Lifecycles
               </h2>
               <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                As a Data Programmer at Beeri Printers, Yarnin managed raw data ingestion across databases and high-scale server environments—controlling the complete end-to-end lifecycle until data exited as automated variable print statement envelopes.
+                As a Data Programmer at Beeri Printers, Yarnin engineered custom software scripts, database queries, and high-scale server pipelines to manage the complete end-to-end lifecycle of bank, financial, and insurance statements—from raw data ingestion into print facilities to automated variable data printing, folding, and delivery in sealed envelopes.
               </p>
-              <div className="pt-2">
-                <Link
-                  href="/apps"
-                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all shadow-md"
-                >
-                  <span>View Data Systems & Apps</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
             </div>
           </div>
 
-          {/* CHAPTER 03: Entrepreneurship & Supply Chain */}
+          {/* CHAPTER 03: Entrepreneurship & Supply Chain (No Links) */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-6 md:text-right space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
@@ -246,15 +237,6 @@ export default function HomePage() {
               <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
                 Owned a technical retail bike store & co-founded PONY Cycling—building a global supply chain with mass production in Asia and specialized manufacturing in Italy (25% profit margin). Later managed motorcycle gear import operations at Ofnoit.
               </p>
-              <div className="pt-2 flex flex-wrap items-center md:justify-end gap-3">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all shadow-md"
-                >
-                  <span>Supply Chain Case Study</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
             </div>
 
             {/* Silver Node Badge Center */}
@@ -281,7 +263,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* CHAPTER 04: National Infrastructure & Tel Aviv Velodrome */}
+          {/* CHAPTER 04: National Infrastructure & Tel Aviv Velodrome (No Links) */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Visual Photo Card */}
             <div className="md:col-span-6 md:order-1 order-2">
@@ -317,15 +299,6 @@ export default function HomePage() {
               <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
                 Directed end-to-end technology setup of Israel's National Olympic Velodrome, managing UCI sporting standards compliance, timing scoring networks, communications, and international RFPs.
               </p>
-              <div className="pt-2">
-                <Link
-                  href="/apps"
-                  className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all shadow-md"
-                >
-                  <span>Velodrome & Infrastructure Case Study</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
             </div>
           </div>
 
