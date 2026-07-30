@@ -46,18 +46,19 @@ export default function RootLayout({
       <head>
         <title>Yarnin Peled | Senior Tech Projects & Operations Leader</title>
         <meta name="description" content="Personal portfolio & editorial innovation portal of Yarnin Peled — Senior Technology Projects & Operations Leader, AI Agent practitioner, and IMBA Candidate." />
-        <link rel="icon" href="/images/ponyapp_logo.jpg" />
+        <link rel="icon" href="/images/ponyapp_logo.jpg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/images/ponyapp_logo.jpg" />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased transition-colors duration-500">
         {/* Navigation Header */}
         <header className="sticky top-0 z-50 w-full border-b border-zinc-200 dark:border-zinc-800 bg-white/85 dark:bg-zinc-950/85 backdrop-blur-xl transition-colors duration-500">
           <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            {/* Brand Logo - ponyapp.net */}
+            {/* Brand Logo - Pure Liquid Silver YP Monogram */}
             <Link href="/" className="flex items-center gap-3.5 group">
               <div className="relative w-11 h-11 rounded-2xl overflow-hidden shadow-lg shadow-indigo-600/20 group-hover:scale-105 transition-all duration-300 border border-indigo-500/30">
                 <Image
                   src="/images/ponyapp_logo.jpg"
-                  alt="ponyapp.net Logo"
+                  alt="Yarnin Peled YP Monogram Logo"
                   fill
                   className="object-cover"
                 />
@@ -128,7 +129,7 @@ export default function RootLayout({
               <div className="relative w-8 h-8 rounded-xl overflow-hidden border border-indigo-500/30">
                 <Image
                   src="/images/ponyapp_logo.jpg"
-                  alt="ponyapp.net Logo"
+                  alt="YP Monogram Logo"
                   fill
                   className="object-cover"
                 />
