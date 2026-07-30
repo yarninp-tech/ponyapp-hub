@@ -3,129 +3,23 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Camera, ChevronLeft, ExternalLink, Sparkles, ArrowUpRight, Filter, Maximize2, X } from 'lucide-react';
+import { Camera, ChevronLeft, ArrowUpRight, Filter, Maximize2, X, Sparkles, Layers } from 'lucide-react';
+import photoManifest from '@/public/images/site_gallery/manifest.json';
 
 interface PhotoItem {
   id: string;
+  originalName: string;
+  filename: string;
+  src: string;
   title: string;
-  category: string;
-  filterTag: 'portraits' | 'landscapes' | 'sports' | 'monochrome';
-  description: string;
-  imageSrc: string;
-  copyright: string;
 }
 
-// 11 Selected Fine Art Photographs by Yarnin Peled
-const YARNIN_AUTHENTIC_11_GALLERY: PhotoItem[] = [
-  {
-    id: 'photo-1',
-    title: 'Expressionist Portrait in B&W',
-    category: 'Fine Art Portraiture',
-    filterTag: 'portraits',
-    description: 'High-contrast monochrome studio portrait capturing spontaneous expression, gesture, and playfulness.',
-    imageSrc: '/images/yarnin_portrait_wink.jpg',
-    copyright: '© Yarnin Peled',
-  },
-  {
-    id: 'photo-2',
-    title: 'The Artisan Craftsman',
-    category: 'Environmental B&W Portraiture',
-    filterTag: 'portraits',
-    description: 'Intimate environmental portrait of a craftsman in his workshop, emphasizing texture, lighting, and focus.',
-    imageSrc: '/images/yarnin_artisan_portrait.jpg',
-    copyright: '© Yarnin Peled',
-  },
-  {
-    id: 'photo-3',
-    title: 'Golden Sea Waves & Jaffa Horizon',
-    category: 'Seascape & Coastal Light',
-    filterTag: 'landscapes',
-    description: 'Dynamic long-exposure seascape capturing foam, golden sea spray, and the historic Jaffa skyline under dramatic storm clouds.',
-    imageSrc: '/images/yarnin_sea_waves.jpg',
-    copyright: '© Yarnin Peled',
-  },
-  {
-    id: 'photo-4',
-    title: 'Tel Aviv Sunset Carousel & Boardwalk',
-    category: 'Urban Dusk Silhouette',
-    filterTag: 'landscapes',
-    description: 'Promenade silhouette featuring illuminated streetlamps and a carousel set against a rich pastel gradient sunset.',
-    imageSrc: '/images/yarnin_carousel_sunset.jpg',
-    copyright: '© Yarnin Peled',
-  },
-  {
-    id: 'photo-5',
-    title: 'PONY Cycling & UCI World Championships',
-    category: 'Sporting Action & Apparel',
-    filterTag: 'sports',
-    description: 'Swiss track cyclist wearing race number 140 under the Tel Aviv Olympic Velodrome space-frame roof structure.',
-    imageSrc: '/images/yarnin_pony_cycling.jpg',
-    copyright: '© Yarnin Peled',
-  },
-  {
-    id: 'photo-6',
-    title: 'Olympic Velodrome Banked Track',
-    category: 'Sports & Architectural Geometry',
-    filterTag: 'sports',
-    description: 'High-contrast monochrome perspective of the 45-degree wooden banked curve during official UCI competition.',
-    imageSrc: '/images/yarnin_velodrome_track.jpg',
-    copyright: '© Yarnin Peled',
-  },
-  {
-    id: 'photo-7',
-    title: 'Golden Anemones in Sunset Light',
-    category: 'Fine Art Macrophotography',
-    filterTag: 'landscapes',
-    description: 'Intimate fine art study of wild anemones bathed in golden hour backlight bokeh.',
-    imageSrc: '/images/yarnin_anemone.jpg',
-    copyright: '© Yarnin Peled',
-  },
-  {
-    id: 'photo-8',
-    title: 'Mountain Summit Path in Monochrome',
-    category: 'High-Contrast B&W Landscape',
-    filterTag: 'monochrome',
-    description: 'Monochrome study of high-altitude mountain trails, dramatic cloud textures, and piercing sunlight.',
-    imageSrc: '/images/yarnin_bw_mountain.jpg',
-    copyright: '© Yarnin Peled',
-  },
-  {
-    id: 'photo-9',
-    title: 'Sunflowers under Storm Sky',
-    category: 'Flora & Ominous Weather',
-    filterTag: 'landscapes',
-    description: 'High-dynamic-range photograph of golden sunflower fields set against ominous grey storm clouds.',
-    imageSrc: '/images/yarnin_sunflowers.jpg',
-    copyright: '© Yarnin Peled',
-  },
-  {
-    id: 'photo-10',
-    title: 'Desert Canyon Valley & Boulder',
-    category: 'Geological B&W Photography',
-    filterTag: 'monochrome',
-    description: 'Expansive black and white desert canyon landscape capturing rock formations and ancient erosion.',
-    imageSrc: '/images/yarnin_bw_desert.jpg',
-    copyright: '© Yarnin Peled',
-  },
-  {
-    id: 'photo-11',
-    title: 'Eucalyptus Forest Stream & Cliff',
-    category: 'Natural Waterways',
-    filterTag: 'landscapes',
-    description: 'Waterfall stream flowing over limestone cliffs amidst ancient eucalyptus tree roots.',
-    imageSrc: '/images/yarnin_forest_stream.jpg',
-    copyright: '© Yarnin Peled',
-  },
-];
-
 export default function PhotographyPage() {
-  const [activeFilter, setActiveFilter] = useState<string>('all');
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoItem | null>(null);
+  const [displayCount, setDisplayCount] = useState<number>(24);
 
-  const filteredPhotos = YARNIN_AUTHENTIC_11_GALLERY.filter((p) => {
-    if (activeFilter === 'all') return true;
-    return p.filterTag === activeFilter;
-  });
+  const photos: PhotoItem[] = photoManifest;
+  const visiblePhotos = photos.slice(0, displayCount);
 
   return (
     <main className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 py-12 px-6 transition-colors duration-500">
@@ -144,13 +38,13 @@ export default function PhotographyPage() {
           <div className="space-y-4 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 text-xs font-bold">
               <Camera className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-              <span>Original Selected Photography Collection</span>
+              <span>Official 94-Photo Portfolio Archive</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-extrabold hero-headline">
-              Fine Art & Photography Gallery
+              Yarnin Peled Photography Collection
             </h1>
             <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
-              Curated fine-art collection featuring portraiture, monochrome landscapes, dusk silhouettes, sports photography, and natural waterways by <span className="font-bold text-zinc-900 dark:text-white">Yarnin Peled</span>. Visit <span className="font-bold text-purple-600 dark:text-purple-400">yarninpeled.com</span> for complete portfolio exhibitions.
+              Complete 94-photo fine art exhibition curated directly from <span className="font-bold text-zinc-900 dark:text-white">Yarnin Peled's</span> master portfolio archive (<span className="font-mono text-xs">/Downloads/Photos to site</span>). Visit <span className="font-bold text-purple-600 dark:text-purple-400">yarninpeled.com</span> for official exhibitions.
             </p>
           </div>
 
@@ -165,42 +59,44 @@ export default function PhotographyPage() {
           </a>
         </div>
 
-        {/* Filter Buttons */}
+        {/* Controls & Count Header */}
         <div className="flex flex-wrap items-center justify-between gap-4 pb-2 border-b border-zinc-200 dark:border-zinc-800">
-          <div className="flex flex-wrap items-center gap-2.5">
-            <div className="flex items-center gap-1.5 text-xs font-bold text-zinc-500 uppercase tracking-wider mr-2">
-              <Filter className="w-4 h-4" />
-              <span>Filter ({filteredPhotos.length} Photos):</span>
-            </div>
-            {[
-              { id: 'all', label: 'All Works' },
-              { id: 'portraits', label: 'Portraits' },
-              { id: 'landscapes', label: 'Landscapes & Seascapes' },
-              { id: 'sports', label: 'Sports & Velodrome' },
-              { id: 'monochrome', label: 'Monochrome Studies' },
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveFilter(tab.id)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                  activeFilter === tab.id
-                    ? 'bg-purple-600 text-white shadow-md'
-                    : 'editorial-card text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+          <div className="flex items-center gap-2 text-xs font-bold text-zinc-600 dark:text-zinc-400">
+            <Sparkles className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+            <span>Master Collection: <strong className="text-zinc-900 dark:text-white">{photos.length} Fine Art Photographs</strong></span>
           </div>
 
-          <span className="text-xs font-semibold text-zinc-500">
-            Showing <strong className="text-zinc-900 dark:text-white">{filteredPhotos.length}</strong> Selected Fine Art Photographs
-          </span>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setDisplayCount(24)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                displayCount === 24 ? 'bg-purple-600 text-white' : 'editorial-card text-zinc-700 dark:text-zinc-300'
+              }`}
+            >
+              24 Works
+            </button>
+            <button
+              onClick={() => setDisplayCount(48)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                displayCount === 48 ? 'bg-purple-600 text-white' : 'editorial-card text-zinc-700 dark:text-zinc-300'
+              }`}
+            >
+              48 Works
+            </button>
+            <button
+              onClick={() => setDisplayCount(photos.length)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                displayCount === photos.length ? 'bg-purple-600 text-white' : 'editorial-card text-zinc-700 dark:text-zinc-300'
+              }`}
+            >
+              All 94 Works
+            </button>
+          </div>
         </div>
 
-        {/* Gallery Grid of 11 Selected Photos */}
+        {/* 94-Photo Responsive Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredPhotos.map((photo) => (
+          {visiblePhotos.map((photo, index) => (
             <div
               key={photo.id}
               onClick={() => setSelectedPhoto(photo)}
@@ -208,33 +104,49 @@ export default function PhotographyPage() {
             >
               <div className="relative h-80 w-full overflow-hidden bg-zinc-900">
                 <Image
-                  src={photo.imageSrc}
-                  alt={photo.title}
+                  src={photo.src}
+                  alt={`Yarnin Peled Fine Art Photograph ${index + 1}`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-4 right-4 bg-black/75 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-[10px] font-mono text-amber-300">
-                  {photo.copyright}
+                  © Yarnin Peled
                 </div>
                 <div className="absolute bottom-4 right-4 bg-black/75 backdrop-blur-md p-2 rounded-full border border-white/20 text-white opacity-0 group-hover:opacity-100 transition-opacity">
                   <Maximize2 className="w-4 h-4" />
                 </div>
               </div>
 
-              <div className="p-6 space-y-3">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 block">
-                  {photo.category}
+              <div className="p-6 flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 block">
+                    Fine Art Work #{index + 1} of {photos.length}
+                  </span>
+                  <h3 className="text-sm font-bold text-zinc-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                    {photo.title}
+                  </h3>
+                </div>
+                <span className="text-xs text-zinc-400 font-mono">
+                  0{index + 1}
                 </span>
-                <h3 className="text-lg font-bold text-zinc-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                  {photo.title}
-                </h3>
-                <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                  {photo.description}
-                </p>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Load More Button if showing subset */}
+        {displayCount < photos.length && (
+          <div className="text-center pt-8">
+            <button
+              onClick={() => setDisplayCount(photos.length)}
+              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-2xl transition-all shadow-xl text-xs inline-flex items-center gap-2"
+            >
+              <Layers className="w-4 h-4" />
+              <span>Show All {photos.length} Master Artworks</span>
+            </button>
+          </div>
+        )}
 
         {/* Fullscreen Lightbox Modal */}
         {selectedPhoto && (
@@ -247,9 +159,9 @@ export default function PhotographyPage() {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="relative h-[65vh] w-full rounded-2xl overflow-hidden bg-black">
+              <div className="relative h-[68vh] w-full rounded-2xl overflow-hidden bg-black">
                 <Image
-                  src={selectedPhoto.imageSrc}
+                  src={selectedPhoto.src}
                   alt={selectedPhoto.title}
                   fill
                   className="object-contain"
@@ -258,11 +170,10 @@ export default function PhotographyPage() {
 
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-2">
                 <div className="space-y-1">
-                  <span className="text-xs font-bold text-purple-400 uppercase tracking-widest">
-                    {selectedPhoto.category} • {selectedPhoto.copyright}
+                  <span className="text-xs font-bold text-purple-400 uppercase tracking-widest font-mono">
+                    Yarnin Peled Master Collection • © Yarnin Peled
                   </span>
                   <h3 className="text-2xl font-bold text-white">{selectedPhoto.title}</h3>
-                  <p className="text-xs text-zinc-300 leading-relaxed">{selectedPhoto.description}</p>
                 </div>
 
                 <a
