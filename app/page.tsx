@@ -224,7 +224,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* CHAPTER 03: Entrepreneurship & Supply Chain */}
+          {/* CHAPTER 03: Entrepreneurship & Global Supply Chains — FEATURING PONY CYCLING PHOTO */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-6 md:text-right space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
@@ -246,18 +246,18 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Visual Photo Card - Yarnin's Authentic Photo 3: Desert Canyon B&W */}
+            {/* Visual Photo Card - Yarnin's Authentic PONY Cycling Photo (Swiss Jersey 140) */}
             <div className="md:col-span-6">
-              <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-emerald-500/20">
+              <div className="relative h-80 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-emerald-500/30">
                 <Image
-                  src="/images/yarnin_bw_desert.jpg"
-                  alt="Desert Canyon Valley B&W Photography by Yarnin Peled"
+                  src="/images/yarnin_pony_cycling.jpg"
+                  alt="PONY Cycling & UCI Track Championship Photography by Yarnin Peled"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end">
-                  <span className="text-xs font-bold text-emerald-300 uppercase tracking-widest">PONY Cycling & Ofnoit Import • Photography by Yarnin Peled</span>
-                  <h3 className="text-base font-bold text-white">Desert Canyon Valley — 25% Margin Global Supply Logistics</h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 flex flex-col justify-end">
+                  <span className="text-xs font-bold text-emerald-300 uppercase tracking-widest">PONY Cycling & UCI World Championships • Photo by Yarnin Peled</span>
+                  <h3 className="text-base font-bold text-white">PONY Cycling — 25% Margin Global Manufacturing & Supply Chains</h3>
                 </div>
               </div>
             </div>
