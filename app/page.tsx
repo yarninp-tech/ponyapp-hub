@@ -168,7 +168,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Visual Photo Card - Featuring Yarnin's Authentic Golden Anemone Fine Art Photo */}
+            {/* Visual Photo Card - Yarnin's Authentic Photo 1: Golden Anemones */}
             <div className="md:col-span-6">
               <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-purple-500/20">
                 <Image
@@ -187,18 +187,18 @@ export default function HomePage() {
 
           {/* CHAPTER 02: Big Data & Systems Programming */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            {/* Visual Photo Card */}
+            {/* Visual Photo Card - Yarnin's Authentic Photo 2: Mountain Summit Path B&W */}
             <div className="md:col-span-6 md:order-1 order-2">
               <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-blue-500/20">
                 <Image
-                  src="/images/server.jpg"
-                  alt="Data Programming & Statement Lifecycles at Beeri Printers"
+                  src="/images/yarnin_bw_mountain.jpg"
+                  alt="Mountain Summit Path B&W Fine Art Photography by Yarnin Peled"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end">
-                  <span className="text-xs font-bold text-blue-300 uppercase tracking-widest">Beeri Printers</span>
-                  <h3 className="text-base font-bold text-white">Bank & Insurance Variable Data Printing</h3>
+                  <span className="text-xs font-bold text-blue-300 uppercase tracking-widest">Beeri Printers • Photography by Yarnin Peled</span>
+                  <h3 className="text-base font-bold text-white">Mountain Summit Path — Bank & Insurance Statement Data Lifecycles</h3>
                 </div>
               </div>
             </div>
@@ -246,18 +246,18 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Visual Photo Card */}
+            {/* Visual Photo Card - Yarnin's Authentic Photo 3: Desert Canyon B&W */}
             <div className="md:col-span-6">
               <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-emerald-500/20">
                 <Image
-                  src="/images/cycling.jpg"
-                  alt="Aerodynamic Cycling & Global Supply Chain Management"
+                  src="/images/yarnin_bw_desert.jpg"
+                  alt="Desert Canyon Valley B&W Photography by Yarnin Peled"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end">
-                  <span className="text-xs font-bold text-emerald-300 uppercase tracking-widest">PONY Cycling & Ofnoit Import</span>
-                  <h3 className="text-base font-bold text-white">25% Margin Global Supply Logistics</h3>
+                  <span className="text-xs font-bold text-emerald-300 uppercase tracking-widest">PONY Cycling & Ofnoit Import • Photography by Yarnin Peled</span>
+                  <h3 className="text-base font-bold text-white">Desert Canyon Valley — 25% Margin Global Supply Logistics</h3>
                 </div>
               </div>
             </div>
@@ -265,18 +265,18 @@ export default function HomePage() {
 
           {/* CHAPTER 04: National Infrastructure & Tel Aviv Velodrome */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            {/* Visual Photo Card */}
+            {/* Visual Photo Card - Yarnin's Authentic Photo 4: Eucalyptus Forest Stream */}
             <div className="md:col-span-6 md:order-1 order-2">
               <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-amber-500/20">
                 <Image
-                  src="/images/velodrome.jpg"
-                  alt="Olympic Velodrome Architecture & Technology Setup"
+                  src="/images/yarnin_forest_stream.jpg"
+                  alt="Eucalyptus Forest Stream Fine Art Photography by Yarnin Peled"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end">
-                  <span className="text-xs font-bold text-amber-300 uppercase tracking-widest">National Sport Center Tel Aviv</span>
-                  <h3 className="text-base font-bold text-white">Olympic Velodrome Infrastructure & UCI Tech</h3>
+                  <span className="text-xs font-bold text-amber-300 uppercase tracking-widest">National Sport Center Tel Aviv • Photography by Yarnin Peled</span>
+                  <h3 className="text-base font-bold text-white">Forest Stream & Limestone Cliff — Olympic Velodrome Setup</h3>
                 </div>
               </div>
             </div>
@@ -341,7 +341,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Visual Photo Card - Featuring Yarnin's Authentic Sunflowers Under Storm Sky Photo */}
+            {/* Visual Photo Card - Yarnin's Authentic Photo 5: Sunflowers under Storm Sky */}
             <div className="md:col-span-6">
               <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-indigo-500/40">
                 <Image
