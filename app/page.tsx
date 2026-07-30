@@ -31,6 +31,7 @@ import {
   BarChart3,
   Compass,
   Milestone,
+  FileText,
 } from 'lucide-react';
 import { ARTICLES_DATA } from '@/lib/articlesData';
 import { PROJECTS_DATA } from '@/lib/projectsData';
@@ -388,7 +389,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. Interactive "Test-Drive AI Playground" Banner */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
+      <section className="max-w-7xl mx-auto px-6 py-10">
         <div className="editorial-card p-8 md:p-12 rounded-3xl border-2 border-indigo-500/40 bg-gradient-to-r from-indigo-900 via-indigo-950 to-slate-900 text-white shadow-2xl space-y-6">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="space-y-3 max-w-2xl">
@@ -417,7 +418,154 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Contact Banner */}
+      {/* 4. COMPREHENSIVE BOTTOM DIRECTORY SECTION (AI, Apps, Photography, About & Contact) */}
+      <section className="max-w-7xl mx-auto px-6 py-16 space-y-12 border-t-2 border-zinc-200 dark:border-zinc-800">
+        <div className="text-center max-w-3xl mx-auto space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs font-bold">
+            <Sparkles className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+            <span>Complete Portal Directory & Section Hub</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-white">
+            Explore All Features, AI Research, Apps & Media
+          </h2>
+          <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            Detailed overview of all primary portals, research papers, ecosystem applications, and creative visual media hosted across <span className="font-bold text-zinc-900 dark:text-white">ponyapp.net</span> and <span className="font-bold text-zinc-900 dark:text-white">yarninpeled.com</span>.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          {/* BOTTOM DIRECTORY 1: Enterprise AI Strategy Research */}
+          <div className="editorial-card p-6 rounded-3xl flex flex-col justify-between space-y-5 hover:border-indigo-500 transition-all hover:-translate-y-1 group">
+            <div className="space-y-3">
+              <div className="w-10 h-10 rounded-2xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
+                <BookOpen className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                Enterprise AI Strategy Articles
+              </h3>
+              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                Published research examining why enterprises should deploy autonomous AI agents instead of procuring expensive legacy SaaS software—including CFO financial task automation and C-suite strategy.
+              </p>
+              
+              <div className="editorial-inner p-3 rounded-xl space-y-1 text-xs">
+                <span className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block">Featured Research</span>
+                <p className="font-semibold text-zinc-900 dark:text-white line-clamp-1">{featuredArticle.title}</p>
+              </div>
+            </div>
+
+            <div className="pt-3 border-t border-zinc-200 dark:border-zinc-800 space-y-2">
+              <Link
+                href="/articles"
+                className="w-full flex items-center justify-between bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow"
+              >
+                <span>Browse All AI Articles</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+
+          {/* BOTTOM DIRECTORY 2: Ecosystem Applications & Playground */}
+          <div className="editorial-card p-6 rounded-3xl flex flex-col justify-between space-y-5 hover:border-violet-500 transition-all hover:-translate-y-1 group">
+            <div className="space-y-3">
+              <div className="w-10 h-10 rounded-2xl bg-violet-100 dark:bg-violet-950 text-violet-600 dark:text-violet-400 flex items-center justify-center font-bold">
+                <Layers className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+                Ecosystem Apps & AI Playground
+              </h3>
+              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                Interactive web applications hosted on ponyapp.net—featuring <span className="font-bold text-zinc-900 dark:text-white">brain-room</span> (Real-Time Gemini 2.5 AI Canvas), document intelligence extractors, StokApp, and MScheduler.
+              </p>
+
+              <div className="editorial-inner p-3 rounded-xl flex items-center justify-between text-xs">
+                <div>
+                  <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block">Live Sub-App</span>
+                  <p className="font-semibold text-zinc-900 dark:text-white">brain-room.ponyapp.net</p>
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
+              </div>
+            </div>
+
+            <div className="pt-3 border-t border-zinc-200 dark:border-zinc-800 space-y-2">
+              <Link
+                href="/apps"
+                className="w-full flex items-center justify-between bg-violet-600 hover:bg-violet-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow"
+              >
+                <span>View All Ecosystem Apps</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+
+          {/* BOTTOM DIRECTORY 3: Photography & Visual Storytelling */}
+          <div className="editorial-card p-6 rounded-3xl flex flex-col justify-between space-y-5 hover:border-purple-500 transition-all hover:-translate-y-1 group">
+            <div className="space-y-3">
+              <div className="w-10 h-10 rounded-2xl bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold">
+                <Camera className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                Photography & Creative Media
+              </h3>
+              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                Visual media portfolio showcasing architectural geometry, urban structural photography, and fine-art landscapes from Yarnin Peled's personal site <span className="font-bold text-purple-600 dark:text-purple-400">yarninpeled.com</span>.
+              </p>
+
+              <div className="editorial-inner p-3 rounded-xl flex items-center justify-between text-xs">
+                <div>
+                  <span className="text-[10px] font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block">Personal Gallery Site</span>
+                  <p className="font-semibold text-zinc-900 dark:text-white">yarninpeled.com</p>
+                </div>
+                <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400" />
+              </div>
+            </div>
+
+            <div className="pt-3 border-t border-zinc-200 dark:border-zinc-800 space-y-2">
+              <Link
+                href="/photography"
+                className="w-full flex items-center justify-between bg-purple-600 hover:bg-purple-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow"
+              >
+                <span>Explore Photography Gallery</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+
+          {/* BOTTOM DIRECTORY 4: Executive About & Direct Contact */}
+          <div className="editorial-card p-6 rounded-3xl flex flex-col justify-between space-y-5 hover:border-emerald-500 transition-all hover:-translate-y-1 group">
+            <div className="space-y-3">
+              <div className="w-10 h-10 rounded-2xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
+                <UserCheck className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                Executive Leadership & Contact
+              </h3>
+              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                Full 5-chapter biography detailing Yarnin's evolution, Head of IT & Tech Projects role at National Sport Center Tel Aviv, IMBA at Bar-Ilan, and direct contact details.
+              </p>
+
+              <div className="editorial-inner p-3 rounded-xl space-y-1 text-xs">
+                <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block">Direct Contact</span>
+                <p className="font-bold text-zinc-900 dark:text-white">Cell: 054-7918818</p>
+                <p className="text-zinc-500 text-[11px]">Email: yarninp@gmail.com</p>
+              </div>
+            </div>
+
+            <div className="pt-3 border-t border-zinc-200 dark:border-zinc-800 space-y-2">
+              <Link
+                href="/about"
+                className="w-full flex items-center justify-between bg-zinc-900 dark:bg-zinc-800 hover:bg-zinc-800 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow"
+              >
+                <span>Read Full Story & CV</span>
+                <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 5. Contact Banner */}
       <section className="max-w-7xl mx-auto px-6 pb-16">
         <div className="editorial-card p-8 md:p-12 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-3 max-w-xl">
