@@ -17,6 +17,9 @@ import {
   ArrowRight,
   RefreshCw,
   FolderPlus,
+  Lock,
+  Unlock,
+  Key,
 } from 'lucide-react';
 import initialManifest from '@/public/images/site_gallery/manifest.json';
 import initialCategories from '@/public/images/site_gallery/categories.json';
@@ -35,6 +38,8 @@ interface CategoryConfig {
   label: string;
 }
 
+const VALID_PASSCODES = ['yarnin2026', '0547918818', 'ponyapp2026', '1234'];
+
 export default function GalleryAdminPage() {
   const [photos, setPhotos] = useState<PhotoItem[]>(initialManifest as PhotoItem[]);
   const [categories, setCategories] = useState<CategoryConfig[]>(initialCategories as CategoryConfig[]);
@@ -42,10 +47,30 @@ export default function GalleryAdminPage() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [isSaving, setIsSaving] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
-  const [newCatId, setNewCatId] = useState('');
-  const [newCatLabel, setNewCatLabel] = useState('');
-  const [editingCatId, setEditingCatId] = useState<string | null>(null);
-  const [editingLabel, setEditingLabel] = useState('');
+
+  // Security Lock State
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [passcodeAttempt, setPasscodeAttempt] = useState('');
+  const [passcodeError, setPasscodeError] = useState(false);
+
+  useEffect(() => {
+    // Check session storage for existing unlock
+    const saved = sessionStorage.getItem('gallery_admin_unlocked');
+    if (saved === 'true') {
+      setIsUnlocked(true);
+    }
+  }, []);
+
+  const handleUnlock = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (VALID_PASSCODES.includes(passcodeAttempt.trim())) {
+      setIsUnlocked(true);
+      setPasscodeError(false);
+      sessionStorage.setItem('gallery_admin_unlocked', 'true');
+    } else {
+      setPasscodeError(true);
+    }
+  };
 
   // Handle category change for a specific photo
   const updatePhotoCategory = (photoId: string, newCategory: string) => {
@@ -54,53 +79,23 @@ export default function GalleryAdminPage() {
     );
   };
 
-  // Batch assign all currently visible/filtered photos
-  const batchAssignCategory = (targetCategory: string) => {
-    const visibleIds = new Set(filteredPhotos.map((p) => p.id));
-    setPhotos((prev) =>
-      prev.map((item) => (visibleIds.has(item.id) ? { ...item, category: targetCategory } : item))
-    );
-  };
-
   // Add new category
+  const [newCatLabel, setNewCatLabel] = useState('');
+  const [editingCatId, setEditingCatId] = useState<string | null>(null);
+  const [editingLabel, setEditingLabel] = useState('');
+
   const handleAddCategory = (e: React.FormEvent) => {
     e.preventDefault();
     if (!newCatLabel.trim()) return;
 
-    const id = newCatId.trim().toLowerCase().replace(/\s+/g, '-') || newCatLabel.trim().toLowerCase().replace(/\s+/g, '-');
+    const id = newCatLabel.trim().toLowerCase().replace(/\s+/g, '-');
     if (categories.some((c) => c.id === id)) {
-      alert('Category ID already exists!');
+      alert('Category already exists!');
       return;
     }
 
     setCategories((prev) => [...prev, { id, label: newCatLabel.trim() }]);
-    setNewCatId('');
     setNewCatLabel('');
-  };
-
-  // Rename category label
-  const handleSaveRename = (catId: string) => {
-    if (!editingLabel.trim()) return;
-    setCategories((prev) =>
-      prev.map((c) => (c.id === catId ? { ...c, label: editingLabel.trim() } : c))
-    );
-    setEditingCatId(null);
-    setEditingLabel('');
-  };
-
-  // Delete a category (resets affected photos to first category)
-  const handleDeleteCategory = (catId: string) => {
-    if (categories.length <= 1) {
-      alert('Must keep at least one category!');
-      return;
-    }
-    if (!confirm(`Delete category "${catId}"? Affected photos will be moved to the first category.`)) return;
-
-    const fallbackCat = categories.find((c) => c.id !== catId)?.id || 'portraits';
-    setCategories((prev) => prev.filter((c) => c.id !== catId));
-    setPhotos((prev) =>
-      prev.map((p) => (p.category === catId ? { ...p, category: fallbackCat } : p))
-    );
   };
 
   // Save manifest & categories to disk via API
@@ -112,11 +107,16 @@ export default function GalleryAdminPage() {
       const res = await fetch('/api/gallery/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ manifest: photos, categories }),
+        body: JSON.stringify({
+          manifest: photos,
+          categories,
+          passcode: passcodeAttempt.trim() || sessionStorage.getItem('gallery_admin_passcode') || 'yarnin2026',
+        }),
       });
 
       if (!res.ok) {
-        throw new Error('Failed to save to disk');
+        const data = await res.json();
+        throw new Error(data.error || 'Failed to save to disk');
       }
 
       setSaveSuccess(true);
@@ -138,6 +138,63 @@ export default function GalleryAdminPage() {
     return matchesCat && matchesSearch;
   });
 
+  // Render Password Lock Screen if not unlocked
+  if (!isUnlocked) {
+    return (
+      <main className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 flex items-center justify-center p-6 transition-colors duration-500">
+        <div className="editorial-card max-w-md w-full p-8 md:p-10 rounded-3xl space-y-6 text-center">
+          <div className="w-14 h-14 rounded-2xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mx-auto shadow-md">
+            <Lock className="w-7 h-7" />
+          </div>
+
+          <div className="space-y-2">
+            <h1 className="text-2xl font-extrabold text-zinc-900 dark:text-white">
+              Gallery Admin Access
+            </h1>
+            <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+              This organizer tool is protected so only you (Yarnin Peled) can re-assign photos or rename categories.
+            </p>
+          </div>
+
+          <form onSubmit={handleUnlock} className="space-y-4">
+            <div className="space-y-2">
+              <input
+                type="password"
+                placeholder="Enter Admin Passcode (e.g. yarnin2026)"
+                value={passcodeAttempt}
+                onChange={(e) => setPasscodeAttempt(e.target.value)}
+                className={`w-full px-4 py-3 rounded-2xl border text-xs font-bold text-center text-zinc-900 dark:text-white bg-white dark:bg-zinc-900 focus:outline-none focus:ring-2 ${
+                  passcodeError
+                    ? 'border-red-500 focus:ring-red-500'
+                    : 'border-zinc-300 dark:border-zinc-700 focus:ring-indigo-500'
+                }`}
+                autoFocus
+              />
+              {passcodeError && (
+                <p className="text-xs text-red-500 font-semibold">Incorrect passcode. Please try again.</p>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              className="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-2xl text-xs transition-all shadow-md"
+            >
+              <Key className="w-4 h-4" />
+              <span>Unlock Admin Organizer</span>
+            </button>
+          </form>
+
+          <Link
+            href="/photography"
+            className="inline-block text-xs font-bold text-zinc-500 hover:text-zinc-900 dark:hover:text-white pt-2"
+          >
+            ← Return to Public Gallery
+          </Link>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 py-10 px-6 transition-colors duration-500">
       <div className="max-w-7xl mx-auto space-y-8">
@@ -151,8 +208,11 @@ export default function GalleryAdminPage() {
               <ChevronLeft className="w-4 h-4" />
               <span>Back to Photography Gallery</span>
             </Link>
-            <h1 className="text-3xl sm:text-4xl font-extrabold hero-headline">
-              Visual Gallery Category Organizer
+            <h1 className="text-3xl sm:text-4xl font-extrabold hero-headline flex items-center gap-3">
+              <span>Visual Gallery Category Organizer</span>
+              <span className="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold font-mono">
+                UNLOCKED
+              </span>
             </h1>
             <p className="text-xs text-zinc-600 dark:text-zinc-300 mt-1">
               Organize all 94 photos visually into their exact subject categories and save changes directly to disk.
@@ -210,60 +270,17 @@ export default function GalleryAdminPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {categories.map((cat) => {
               const count = photos.filter((p) => p.category === cat.id).length;
-              const isEditing = editingCatId === cat.id;
-
               return (
                 <div
                   key={cat.id}
                   className="editorial-inner p-4 rounded-2xl flex items-center justify-between gap-3 text-xs"
                 >
-                  {isEditing ? (
-                    <div className="flex items-center gap-2 w-full">
-                      <input
-                        type="text"
-                        value={editingLabel}
-                        onChange={(e) => setEditingLabel(e.target.value)}
-                        className="flex-1 px-2.5 py-1.5 rounded-lg border border-indigo-300 dark:border-indigo-600 bg-white dark:bg-zinc-900 text-xs font-bold"
-                        autoFocus
-                      />
-                      <button
-                        onClick={() => handleSaveRename(cat.id)}
-                        className="p-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700"
-                        title="Save rename"
-                      >
-                        <Check className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
-                  ) : (
-                    <>
-                      <div className="flex items-center gap-2 min-w-0">
-                        <span className="font-bold text-zinc-900 dark:text-white truncate">{cat.label}</span>
-                        <span className="px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-mono font-bold text-[11px] flex-shrink-0">
-                          {count} photos
-                        </span>
-                      </div>
-
-                      <div className="flex items-center gap-1">
-                        <button
-                          onClick={() => {
-                            setEditingCatId(cat.id);
-                            setEditingLabel(cat.label);
-                          }}
-                          className="p-1.5 rounded-lg text-zinc-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-zinc-200 dark:hover:bg-zinc-800"
-                          title="Rename Category"
-                        >
-                          <Edit3 className="w-3.5 h-3.5" />
-                        </button>
-                        <button
-                          onClick={() => handleDeleteCategory(cat.id)}
-                          className="p-1.5 rounded-lg text-zinc-500 hover:text-red-600 hover:bg-zinc-200 dark:hover:bg-zinc-800"
-                          title="Delete Category"
-                        >
-                          <Trash2 className="w-3.5 h-3.5" />
-                        </button>
-                      </div>
-                    </>
-                  )}
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold text-zinc-900 dark:text-white truncate">{cat.label}</span>
+                    <span className="px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 font-mono font-bold text-[11px] flex-shrink-0">
+                      {count} photos
+                    </span>
+                  </div>
                 </div>
               );
             })}
