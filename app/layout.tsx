@@ -46,8 +46,8 @@ export default function RootLayout({
       <head>
         <title>Yarnin Peled | Senior Tech Projects & Operations Leader</title>
         <meta name="description" content="Personal portfolio & editorial innovation portal of Yarnin Peled — Senior Technology Projects & Operations Leader, AI Agent practitioner, and IMBA Candidate." />
-        <link rel="icon" href="/images/ponyapp_logo.jpg" type="image/jpeg" />
-        <link rel="apple-touch-icon" href="/images/ponyapp_logo.jpg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased transition-colors duration-500">
         {/* Navigation Header */}
