@@ -38,7 +38,6 @@ import { PROJECTS_DATA } from '@/lib/projectsData';
 
 export default function HomePage() {
   const featuredArticle = ARTICLES_DATA[0];
-  const liveApp = PROJECTS_DATA.find((p) => p.isLive) || PROJECTS_DATA[0];
 
   return (
     <main className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 relative overflow-hidden transition-colors duration-500">
@@ -123,7 +122,7 @@ export default function HomePage() {
 
       {/* 2. THE SILVER THREAD JOURNEY PATHWAY (Full-Bleed Winding Flow) */}
       <section className="max-w-6xl mx-auto px-6 py-12 relative">
-        {/* Metallic Silver Thread Line Line */}
+        {/* Metallic Silver Thread Line */}
         <div className="absolute left-6 md:left-1/2 top-10 bottom-10 w-[4px] silver-thread-line -translate-x-1/2 z-0" />
 
         <div className="space-y-28 relative z-10">
@@ -168,7 +167,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Visual Photo Card - Yarnin's Authentic Photo 1: Golden Anemones */}
+            {/* Visual Photo Card */}
             <div className="md:col-span-6">
               <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-purple-500/20">
                 <Image
@@ -187,7 +186,6 @@ export default function HomePage() {
 
           {/* CHAPTER 02: Big Data & Systems Programming */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            {/* Visual Photo Card - Yarnin's Authentic Photo 2: Mountain Summit Path B&W */}
             <div className="md:col-span-6 md:order-1 order-2">
               <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-blue-500/20">
                 <Image
@@ -224,7 +222,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* CHAPTER 03: Entrepreneurship & Supply Chain — FEATURING PONY CYCLING PHOTO */}
+          {/* CHAPTER 03: Entrepreneurship & Supply Chain */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-6 md:text-right space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
@@ -246,7 +244,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Visual Photo Card - Yarnin's Authentic PONY Cycling Photo (Swiss Jersey 140) */}
             <div className="md:col-span-6">
               <div className="relative h-80 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-emerald-500/30">
                 <Image
@@ -263,9 +260,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* CHAPTER 04: National Infrastructure & Tel Aviv Velodrome — FEATURING AUTHENTIC VELODROME TRACK PHOTO */}
+          {/* CHAPTER 04: National Infrastructure & Tel Aviv Velodrome */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            {/* Visual Photo Card - Yarnin's Authentic Photo of Tel Aviv Olympic Velodrome Wooden Track B&W */}
             <div className="md:col-span-6 md:order-1 order-2">
               <div className="relative h-80 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-amber-500/30">
                 <Image
@@ -341,7 +337,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Visual Photo Card - Yarnin's Authentic Photo 5: Sunflowers under Storm Sky */}
             <div className="md:col-span-6">
               <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-indigo-500/40">
                 <Image
@@ -361,32 +356,87 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Interactive "Test-Drive AI Playground" Banner */}
-      <section className="max-w-7xl mx-auto px-6 py-10">
-        <div className="editorial-card p-8 md:p-12 rounded-3xl border-2 border-indigo-500/40 bg-gradient-to-r from-indigo-900 via-indigo-950 to-slate-900 text-white shadow-2xl space-y-6">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/20 border border-indigo-400/40 text-indigo-300 text-xs font-bold">
-                <Play className="w-4 h-4 text-indigo-400 fill-indigo-400" />
-                <span>Interactive Playground — Test Drive Live AI</span>
+      {/* 3. FEATURING BOTH LIVE STANDALONE APPS: BRAIN-ROOM & PDF EDITOR */}
+      <section className="max-w-7xl mx-auto px-6 py-10 space-y-6">
+        <div className="text-center space-y-2">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs font-bold">
+            <Play className="w-4 h-4 text-indigo-600 dark:text-indigo-400 fill-indigo-600 dark:fill-indigo-400" />
+            <span>Interactive Ecosystem Apps — Test Drive Live</span>
+          </div>
+          <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-white">
+            Live Applications Deployed on ponyapp.net
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* APP CARD 1: brain-room */}
+          <div className="editorial-card p-8 rounded-3xl border-2 border-indigo-500/30 bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-900 text-white shadow-2xl space-y-6 flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold font-mono">
+                  ● LIVE APP • brain-room.ponyapp.net
+                </span>
+                <span className="text-xs font-mono text-indigo-300">Gemini 2.5 Flash</span>
               </div>
-              <h2 className="text-3xl font-extrabold text-white">
-                Experience Living AI Applications Hands-On Right Here
-              </h2>
-              <p className="text-sm text-indigo-200 leading-relaxed">
-                Test-drive <span className="text-white font-bold">brain-room</span> (Real-Time Gemini 2.5 AI Canvas) and interactive document extractors live right now on ponyapp.net.
+              <h3 className="text-2xl font-extrabold text-white">brain-room</h3>
+              <p className="text-xs text-indigo-200 leading-relaxed">
+                Real-Time AI Collaborative Brainstorming Platform. Features infinite zoomable canvas sticky notes with live Firebase Firestore sync and Gemini 2.5 Flash AI co-creator.
               </p>
             </div>
 
-            <a
-              href="https://brain-room.ponyapp.net"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2.5 bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-4 px-7 rounded-2xl transition-all shadow-xl text-sm flex-shrink-0"
-            >
-              <span>Launch Live brain-room App</span>
-              <ExternalLink className="w-4 h-4" />
-            </a>
+            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-indigo-800/60">
+              <a
+                href="https://brain-room.ponyapp.net"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all shadow-lg"
+              >
+                <span>Launch brain-room App</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+              <Link
+                href="/projects/brain-room"
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all"
+              >
+                <span>View Architecture</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* APP CARD 2: PDF Editor */}
+          <div className="editorial-card p-8 rounded-3xl border-2 border-purple-500/30 bg-gradient-to-br from-purple-900 via-purple-950 to-slate-900 text-white shadow-2xl space-y-6 flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold font-mono">
+                  ● LIVE APP • pdf-editor.ponyapp.net
+                </span>
+                <span className="text-xs font-mono text-purple-300">PDF.js & Document AI</span>
+              </div>
+              <h3 className="text-2xl font-extrabold text-white">PDF Editor & Document Intelligence</h3>
+              <p className="text-xs text-purple-200 leading-relaxed">
+                Browser-Based PDF Editing, Form Filling & Contract Data Extraction. Autonomous extraction of tenancy terms, legal agreement dates, and automated form fields into SQL.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-purple-800/60">
+              <a
+                href="https://pdf-editor.ponyapp.net"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all shadow-lg"
+              >
+                <span>Launch PDF Editor App</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+              <Link
+                href="/projects/pdf-editor"
+                className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-5 rounded-2xl text-xs transition-all"
+              >
+                <span>View Architecture</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -418,7 +468,7 @@ export default function HomePage() {
                 Enterprise AI Strategy Articles
               </h3>
               <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Published research examining why enterprises should deploy autonomous AI agents instead of procuring expensive legacy SaaS software—including CFO financial task automation and C-suite strategy.
+                Published research examining why enterprises should deploy autonomous AI agents instead of procuring expensive legacy SaaS software—including CFO financial task automation and data governance.
               </p>
               
               <div className="editorial-inner p-3 rounded-xl space-y-1 text-xs">
@@ -432,7 +482,7 @@ export default function HomePage() {
                 href="/articles"
                 className="w-full flex items-center justify-between bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow"
               >
-                <span>Browse All AI Articles</span>
+                <span>Browse All 3 AI Articles</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -448,15 +498,13 @@ export default function HomePage() {
                 Ecosystem Apps & AI Playground
               </h3>
               <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Interactive web applications hosted on ponyapp.net—featuring <span className="font-bold text-zinc-900 dark:text-white">brain-room</span> (Real-Time Gemini 2.5 AI Canvas), document intelligence extractors, StokApp, and MScheduler.
+                Interactive web applications hosted on ponyapp.net—featuring <span className="font-bold text-zinc-900 dark:text-white">brain-room</span>, <span className="font-bold text-zinc-900 dark:text-white">PDF Editor</span>, StokApp, and MScheduler.
               </p>
 
-              <div className="editorial-inner p-3 rounded-xl flex items-center justify-between text-xs">
-                <div>
-                  <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block">Live Sub-App</span>
-                  <p className="font-semibold text-zinc-900 dark:text-white">brain-room.ponyapp.net</p>
-                </div>
-                <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
+              <div className="editorial-inner p-3 rounded-xl space-y-1 text-xs">
+                <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block">2 Live Ecosystem Sub-Apps</span>
+                <p className="font-semibold text-zinc-900 dark:text-white">• brain-room.ponyapp.net</p>
+                <p className="font-semibold text-zinc-900 dark:text-white">• pdf-editor.ponyapp.net</p>
               </div>
             </div>
 
@@ -481,12 +529,12 @@ export default function HomePage() {
                 Photography & Creative Media
               </h3>
               <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Visual media portfolio showcasing architectural geometry, urban structural photography, and fine-art landscapes from Yarnin Peled's personal site <span className="font-bold text-purple-600 dark:text-purple-400">yarninpeled.com</span>.
+                Visual media portfolio showcasing 94 curated fine art photographs from Yarnin Peled's personal gallery site <span className="font-bold text-purple-600 dark:text-purple-400">yarninpeled.com</span>.
               </p>
 
               <div className="editorial-inner p-3 rounded-xl flex items-center justify-between text-xs">
                 <div>
-                  <span className="text-[10px] font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block">Personal Gallery Site</span>
+                  <span className="text-[10px] font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider block">94 Fine Art Works</span>
                   <p className="font-semibold text-zinc-900 dark:text-white">yarninpeled.com</p>
                 </div>
                 <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400" />
@@ -498,7 +546,7 @@ export default function HomePage() {
                 href="/photography"
                 className="w-full flex items-center justify-between bg-purple-600 hover:bg-purple-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow"
               >
-                <span>Explore Photography Gallery</span>
+                <span>Explore 94-Photo Gallery</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
