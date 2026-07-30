@@ -4,257 +4,233 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
+  User,
   UserCheck,
   ChevronLeft,
-  Briefcase,
-  GraduationCap,
   Award,
-  Sparkles,
-  Layers,
-  Cpu,
-  TrendingUp,
-  Mail,
-  Linkedin,
-  Phone,
-  ExternalLink,
-  ShieldCheck,
-  CheckCircle2,
+  BookOpen,
+  Briefcase,
   Building2,
-  FileCode2,
-  Camera,
+  CheckCircle2,
+  Code2,
+  Compass,
+  Cpu,
   Database,
+  ExternalLink,
   Globe,
+  GraduationCap,
+  Layers,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  ShieldCheck,
+  Sparkles,
+  TrendingUp,
   Zap,
-  Workflow,
-  ArrowRight,
+  ArrowUpRight,
+  Camera,
 } from 'lucide-react';
+
+const MILESTONES = [
+  {
+    chapter: '01',
+    years: '1997 – 2005',
+    role: 'Creative Director & Process Automation Specialist',
+    company: 'Independent Creative & Graphic Automation',
+    summary:
+      "Started as a professional photographer and graphic designer. Identified repetitive manual design bottlenecks and pioneered custom automated graphic processing systems, connecting disparate software pipelines to eliminate redundant labor and scale production throughput.",
+    highlights: [
+      'Engineered automated pre-press & graphic processing scripts',
+      'Integrated separate creative design tools into unified workflows',
+      'Achieved up to 70% reduction in manual production time',
+    ],
+    photoSrc: '/images/yarnin_artisan_portrait.jpg',
+    photoCaption: 'The Artisan Craftsman Portrait — © Yarnin Peled',
+  },
+  {
+    chapter: '02',
+    years: '2008 – 2014',
+    role: 'Data Programmer & Statement Processing Lifecycles',
+    company: 'Beeri Printers',
+    summary:
+      'Engineered complex big data processing algorithms, database queries, and automated server pipelines at Beeri Printers. Managed the complete end-to-end lifecycle of bank, financial, and insurance statements—from raw data ingestion into secure servers to variable data printing, automated envelope insertion, and postal dispatch.',
+    highlights: [
+      'Engineered high-scale database scripts for enterprise banking data',
+      'Managed end-to-end variable data print (VDP) workflows for tier-1 banks',
+      'Guaranteed 99.99% data integrity across millions of confidential monthly statements',
+    ],
+    photoSrc: '/images/yarnin_bw_mountain.jpg',
+    photoCaption: 'High-Scale Data Pipelines — © Yarnin Peled',
+  },
+  {
+    chapter: '03',
+    years: '2006 – 2019',
+    role: 'Founder & Supply Chain Director',
+    company: 'PONY Cycling & Ofnoit Import Operations',
+    summary:
+      'Co-founded PONY Cycling, managing end-to-end product design, manufacturing, and global supply chains. Established mass-production partnerships in Asia alongside high-end custom apparel manufacturing in Italy, maintaining a 25% profit margin. Managed motorcycle gear import & distribution at Ofnoit.',
+    highlights: [
+      'Co-founded PONY Cycling with 25% sustained net profit margin',
+      'Architected global supply chain across Italian & Asian manufacturing hubs',
+      'Managed nationwide wholesale distribution & technical retail operations',
+    ],
+    photoSrc: '/images/yarnin_pony_cycling.jpg',
+    photoCaption: 'PONY Cycling & UCI Championship — © Yarnin Peled',
+  },
+  {
+    chapter: '04',
+    years: '2019 – 2024',
+    role: 'Technology Project Manager & Operations Director',
+    company: 'Israel National Olympic Velodrome & National Sport Center Tel Aviv',
+    summary:
+      'Directed end-to-end technology infrastructure setup for Israel’s premier National Olympic Velodrome. Managed international RFPs, UCI compliance, precision timing-scoring networks, LED display systems, and broadcast infrastructure.',
+    highlights: [
+      'Led 10M+ ILS technology infrastructure buildout for National Olympic Velodrome',
+      'Engineered UCI-compliant microsecond timing & live scoring networks',
+      'Managed municipal communications, security, and facility operations',
+    ],
+    photoSrc: '/images/yarnin_velodrome_track.jpg',
+    photoCaption: 'Tel Aviv Olympic Velodrome Wooden Track — © Yarnin Peled',
+  },
+  {
+    chapter: '05',
+    years: '2024 – Present',
+    role: 'Head of IT & Technology Projects | International MBA',
+    company: 'National Sport Center Tel Aviv & Bar-Ilan University',
+    summary:
+      'Spearheading digital transformation and IT strategy across the 250,000 m² National Sport Center. Executing smart facility IoT initiatives, including LED lighting overhauls and PV solar systems yielding 20-25% OPEX savings, alongside published research on AI autonomous agent architectures.',
+    highlights: [
+      'Supervising multi-million ILS annual technology & IT budget roadmaps',
+      'Pioneered PV Solar & Smart Energy IoT saving 20-25% annual facility OPEX',
+      'International MBA Candidate at Bar-Ilan University focusing on AI Strategy',
+    ],
+    photoSrc: '/images/yarnin_sunflowers.jpg',
+    photoCaption: '20-25% Energy OPEX Savings & AI Leadership — © Yarnin Peled',
+  },
+];
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 py-12 px-6 transition-colors duration-500">
-      <div className="max-w-5xl mx-auto space-y-12">
-        {/* Back Link */}
+      <div className="max-w-6xl mx-auto space-y-12">
+        {/* Back Navigation */}
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-xs font-bold text-zinc-500 hover:text-zinc-900 dark:hover:text-white uppercase tracking-wider transition-colors"
         >
           <ChevronLeft className="w-4 h-4" />
-          <span>Back to Home</span>
+          <span>Back to Journey Home</span>
         </Link>
 
-        {/* Executive Profile Header */}
-        <div className="editorial-card p-8 md:p-12 rounded-3xl space-y-6 relative overflow-hidden">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 relative z-10">
-            <div className="space-y-4 max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs font-bold">
-                <Sparkles className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
-                <span>Senior Technology Projects & Operations Leader</span>
+        {/* Hero Card */}
+        <div className="editorial-card p-8 md:p-12 rounded-3xl space-y-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+            <div className="space-y-4 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
+                <UserCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                <span>Executive Leadership Profile</span>
               </div>
-              <h1 className="text-4xl sm:text-6xl font-extrabold hero-headline leading-tight">
+              <h1 className="text-4xl sm:text-5xl font-extrabold hero-headline">
                 Yarnin Peled
               </h1>
-              <p className="text-base text-indigo-600 dark:text-indigo-400 font-bold">
-                Head of IT & Technology Projects | International MBA Candidate (Bar-Ilan)
+              <p className="text-lg font-bold text-zinc-700 dark:text-zinc-300">
+                Head of IT & Technology Projects | Senior Systems Leader | International MBA Candidate
               </p>
-              <p className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed pt-1 font-normal">
-                A multidisciplinary technology and operations leader with decades of experience connecting isolated systems, automating complex workflows, and deploying high-ROI enterprise AI. From big data programming to national infrastructure and AI agent architecture.
+              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                25+ years bridging creative process automation, big data server engineering, international supply chains, Olympic sports infrastructure, and enterprise AI transformation.
               </p>
             </div>
 
-            {/* Quick Contact & Action Card */}
-            <div className="editorial-inner p-6 rounded-2xl space-y-3 w-full md:w-72 flex-shrink-0">
-              <span className="text-[11px] font-extrabold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 block">Direct Contact</span>
-              <a
-                href="tel:0547918818"
-                className="flex items-center gap-2.5 text-xs font-bold text-zinc-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-              >
-                <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                <span>054-7918818</span>
-              </a>
-              <a
-                href="mailto:yarninp@gmail.com"
-                className="flex items-center gap-2.5 text-xs font-bold text-zinc-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
-              >
-                <Mail className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-                <span>yarninp@gmail.com</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/yarnin-peled"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2.5 text-xs font-bold text-zinc-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors pt-2 border-t border-zinc-200 dark:border-zinc-800"
-              >
-                <Linkedin className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                <span>LinkedIn Profile</span>
-                <ExternalLink className="w-3 h-3 text-zinc-400" />
-              </a>
+            {/* Authentic Portrait Card */}
+            <div className="relative w-48 h-48 rounded-3xl overflow-hidden shadow-2xl border-2 border-emerald-500/30 flex-shrink-0">
+              <Image
+                src="/images/yarnin_artisan_portrait.jpg"
+                alt="Yarnin Peled Artisan Craftsman Portrait"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
 
-          {/* Key Impact Stats Bar */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-zinc-200 dark:border-zinc-800 text-center">
-            <div className="p-4 rounded-xl editorial-inner">
-              <span className="text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">10M+ ILS</span>
-              <span className="text-[11px] text-zinc-600 dark:text-zinc-400 font-semibold block mt-0.5">Budget Managed</span>
+          {/* Quick Info Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-zinc-200 dark:border-zinc-800 text-xs font-semibold">
+            <div className="flex items-center gap-3">
+              <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span>054-7918818 (+972 54-7918818)</span>
             </div>
-            <div className="p-4 rounded-xl editorial-inner">
-              <span className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">20-25%</span>
-              <span className="text-[11px] text-zinc-600 dark:text-zinc-400 font-semibold block mt-0.5">OPEX Energy Savings</span>
+            <div className="flex items-center gap-3">
+              <Mail className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+              <span>yarninp@gmail.com</span>
             </div>
-            <div className="p-4 rounded-xl editorial-inner">
-              <span className="text-2xl font-extrabold text-purple-600 dark:text-purple-400">10-15%</span>
-              <span className="text-[11px] text-zinc-600 dark:text-zinc-400 font-semibold block mt-0.5">CRM Friction Reduction</span>
-            </div>
-            <div className="p-4 rounded-xl editorial-inner">
-              <span className="text-2xl font-extrabold text-blue-600 dark:text-blue-400">IMBA</span>
-              <span className="text-[11px] text-zinc-600 dark:text-zinc-400 font-semibold block mt-0.5">Bar-Ilan University</span>
+            <div className="flex items-center gap-3">
+              <Linkedin className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              <a href="https://www.linkedin.com/in/yarnin-peled" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1">
+                <span>linkedin.com/in/yarnin-peled</span>
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
             </div>
           </div>
         </div>
 
-        {/* The Multidisciplinary Story Timeline (5 Chapters) */}
-        <section className="space-y-8">
-          <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs font-bold">
-              <Workflow className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-              <span>Career Journey & Evolution</span>
-            </div>
+        {/* 5-Chapter Story Timeline with Authentic Photographs */}
+        <div className="space-y-12">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
             <h2 className="text-3xl font-extrabold text-zinc-900 dark:text-white">
-              The Journey of Connecting Systems (1997 – Present)
+              The 5-Chapter Leadership Timeline
             </h2>
             <p className="text-xs text-zinc-600 dark:text-zinc-400">
-              How decades of visual design, process automation, big data programming, entrepreneurship, and national infrastructure converged into enterprise AI leadership.
+              Detailed chronological account of Yarnin Peled's professional journey, key achievements, and authentic photography.
             </p>
           </div>
 
-          <div className="space-y-6">
-            {/* Chapter 1: The Creative & Automation Origin */}
-            <div className="editorial-card p-8 rounded-3xl space-y-4">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-200 dark:border-zinc-800 pb-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold">
-                    <Camera className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Chapter 1: The Creative Origin & Process Automation</h3>
-                    <p className="text-xs text-indigo-600 dark:text-indigo-400 font-semibold">Photographer, Designer & Graphic Automation Pioneer • Beeri Printers</p>
-                  </div>
-                </div>
-                <span className="text-xs font-mono font-bold text-zinc-500">1997 – 2005</span>
-              </div>
-              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Started as a photographer and graphic designer. Early on, Yarnin realized that repeating manual creative tasks over and over was inefficient. He pioneered graphic process automation, connecting isolated creative software tools so work flowed seamlessly without manual repetition.
-              </p>
-            </div>
+          <div className="space-y-8">
+            {MILESTONES.map((item) => (
+              <div key={item.chapter} className="editorial-card p-8 rounded-3xl space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                  <div className="md:col-span-7 space-y-4">
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-full bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center">
+                        {item.chapter}
+                      </span>
+                      <span className="text-xs font-bold text-zinc-500">{item.years}</span>
+                    </div>
 
-            {/* Chapter 2: Big Data & Systems Programming */}
-            <div className="editorial-card p-8 rounded-3xl space-y-4">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-200 dark:border-zinc-800 pb-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold">
-                    <Database className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Chapter 2: Big Data Programming & Server Lifecycles</h3>
-                    <p className="text-xs text-indigo-600 dark:text-indigo-400 font-semibold">Data Programmer • Beeri Printers</p>
-                  </div>
-                </div>
-                <span className="text-xs font-mono font-bold text-zinc-500">2008 – 2014</span>
-              </div>
-              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Returned to deep technical execution as a Data Programmer. Managed big data ingestion across databases and high-scale server environments, controlling the complete end-to-end lifecycle—from raw data entry into print facilities until it exited as automated variable data print statements in sealed envelopes.
-              </p>
-            </div>
+                    <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">{item.role}</h3>
+                    <p className="text-xs font-bold text-emerald-600 dark:text-emerald-400">{item.company}</p>
 
-            {/* Chapter 3: Entrepreneurship & Supply Chain */}
-            <div className="editorial-card p-8 rounded-3xl space-y-4">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-200 dark:border-zinc-800 pb-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
-                    <Globe className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Chapter 3: Entrepreneurship & Global Supply Chain</h3>
-                    <p className="text-xs text-indigo-600 dark:text-indigo-400 font-semibold">Retail Bike Shop Owner • Co-Founder PONY Cycling • Operations Manager Ofnoit</p>
-                  </div>
-                </div>
-                <span className="text-xs font-mono font-bold text-zinc-500">2006 – 2019</span>
-              </div>
-              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Owned and operated a technical retail bicycle shop. Co-founded PONY Cycling, building a global supply chain with mass production in Asia and specialized manufacturing in Italy (achieving a 25% profit margin). Later led international vendor procurement and import operations at Ofnoit (motorcycle gear import).
-              </p>
-            </div>
+                    <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                      {item.summary}
+                    </p>
 
-            {/* Chapter 4: National Infrastructure & Tel Aviv Velodrome */}
-            <div className="editorial-card p-8 rounded-3xl space-y-4">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-200 dark:border-zinc-800 pb-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
-                    <Building2 className="w-5 h-5" />
+                    <ul className="space-y-2 pt-2">
+                      {item.highlights.map((h, i) => (
+                        <li key={i} className="flex items-start gap-2 text-xs text-zinc-700 dark:text-zinc-300">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                          <span>{h}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Chapter 4: National Infrastructure & Olympic Velodrome Setup</h3>
-                    <p className="text-xs text-indigo-600 dark:text-indigo-400 font-semibold">Operations & Tech Project Manager • National Sport Center Tel Aviv</p>
-                  </div>
-                </div>
-                <span className="text-xs font-mono font-bold text-zinc-500">2019 – 2024</span>
-              </div>
-              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Appointed Manager of Israel's National Velodrome facility. Rapidly took command of technology and infrastructure—directing end-to-end setup, international UCI sports timing tech localization, international RFPs, and logistics for world championship sporting events.
-              </p>
-            </div>
 
-            {/* Chapter 5: Enterprise AI & Digital Transformation */}
-            <div className="editorial-card p-8 rounded-3xl space-y-4 border-2 border-indigo-500/40">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-200 dark:border-zinc-800 pb-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold">
-                    <Cpu className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Chapter 5: Enterprise AI & Digital Transformation Leader</h3>
-                    <p className="text-xs text-indigo-600 dark:text-indigo-400 font-bold">Head of IT & Technology Projects • International MBA Candidate (Bar-Ilan)</p>
+                  <div className="md:col-span-5">
+                    <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl border border-zinc-200 dark:border-zinc-800">
+                      <Image
+                        src={item.photoSrc}
+                        alt={item.photoCaption}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-4 flex flex-col justify-end">
+                        <span className="text-[10px] font-bold text-amber-300 font-mono">{item.photoCaption}</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <span className="text-xs font-mono font-bold text-indigo-600 dark:text-indigo-400">2024 – Present</span>
               </div>
-              <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Manages multi-year 5M+ ILS technology roadmaps. Spearheaded green energy IoT transformation (LED, PV Solar, command-and-control) reducing annual OPEX by 20%–25%. Partners with Finance/CFO departments on custom CRM implementation, Cloud migration, and published research on replacing monolithic legacy software with autonomous AI agents.
-              </p>
-            </div>
+            ))}
           </div>
-        </section>
-
-        {/* Education & Qualifications */}
-        <section className="space-y-6">
-          <div className="flex items-center gap-2">
-            <GraduationCap className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
-            <h2 className="text-2xl font-extrabold text-zinc-900 dark:text-white">Education & Certifications</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="editorial-card p-6 rounded-2xl space-y-2 border-2 border-indigo-500/30">
-              <span className="text-xs font-extrabold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block">Graduate Degree</span>
-              <h3 className="text-base font-bold text-zinc-900 dark:text-white">International MBA (IMBA)</h3>
-              <p className="text-xs text-zinc-600 dark:text-zinc-400">Bar-Ilan University</p>
-              <span className="text-[11px] text-indigo-600 dark:text-indigo-300 font-bold block pt-2 border-t border-zinc-200 dark:border-zinc-800">2025 – Present</span>
-            </div>
-
-            <div className="editorial-card p-6 rounded-2xl space-y-2">
-              <span className="text-xs font-extrabold text-zinc-500 uppercase tracking-wider block">Undergraduate Degree</span>
-              <h3 className="text-base font-bold text-zinc-900 dark:text-white">B.A. in IT Systems Management</h3>
-              <p className="text-xs text-zinc-600 dark:text-zinc-400">Hadassah Academic College</p>
-              <span className="text-[11px] text-zinc-500 font-semibold block pt-2 border-t border-zinc-200 dark:border-zinc-800">Graduated 2025</span>
-            </div>
-
-            <div className="editorial-card p-6 rounded-2xl space-y-2">
-              <span className="text-xs font-extrabold text-zinc-500 uppercase tracking-wider block">Specialized Certification</span>
-              <h3 className="text-base font-bold text-zinc-900 dark:text-white">Mobile Application Development</h3>
-              <p className="text-xs text-zinc-600 dark:text-zinc-400">John Bryce College</p>
-              <span className="text-[11px] text-zinc-500 font-semibold block pt-2 border-t border-zinc-200 dark:border-zinc-800">Completed 2014</span>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </main>
   );
