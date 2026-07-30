@@ -168,24 +168,24 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Visual Photo Card */}
+            {/* Visual Photo Card - Featuring Yarnin's Authentic Golden Anemone Fine Art Photo */}
             <div className="md:col-span-6">
               <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-purple-500/20">
                 <Image
-                  src="/images/architecture.jpg"
-                  alt="Architecture & Fine Art Photography by Yarnin Peled"
+                  src="/images/yarnin_anemone.jpg"
+                  alt="Golden Anemones Fine Art Photography by Yarnin Peled"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end">
-                  <span className="text-xs font-bold text-purple-300 uppercase tracking-widest">Fine Art Photography</span>
-                  <h3 className="text-base font-bold text-white">Urban Geometry & Visual Process Automation</h3>
+                  <span className="text-xs font-bold text-amber-300 uppercase tracking-widest">Fine Art Photography • © Yarnin Peled</span>
+                  <h3 className="text-base font-bold text-white">Golden Anemones — Visual Media & Process Automation</h3>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* CHAPTER 02: Big Data & Systems Programming (Updated Wording, No Links) */}
+          {/* CHAPTER 02: Big Data & Systems Programming */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Visual Photo Card */}
             <div className="md:col-span-6 md:order-1 order-2">
@@ -224,7 +224,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* CHAPTER 03: Entrepreneurship & Supply Chain (No Links) */}
+          {/* CHAPTER 03: Entrepreneurship & Supply Chain */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-6 md:text-right space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
@@ -263,7 +263,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* CHAPTER 04: National Infrastructure & Tel Aviv Velodrome (No Links) */}
+          {/* CHAPTER 04: National Infrastructure & Tel Aviv Velodrome */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Visual Photo Card */}
             <div className="md:col-span-6 md:order-1 order-2">
@@ -341,17 +341,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Visual Photo Card */}
+            {/* Visual Photo Card - Featuring Yarnin's Authentic Sunflowers Under Storm Sky Photo */}
             <div className="md:col-span-6">
               <div className="relative h-72 rounded-3xl overflow-hidden shadow-2xl group editorial-card border-2 border-indigo-500/40">
                 <Image
-                  src="/images/landscape.jpg"
-                  alt="Enterprise AI Transformation & High-Tech Horizons"
+                  src="/images/yarnin_sunflowers.jpg"
+                  alt="Sunflowers under Storm Sky Fine Art Photography by Yarnin Peled"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-6 flex flex-col justify-end">
-                  <span className="text-xs font-bold text-indigo-300 uppercase tracking-widest">Enterprise AI & Solar IoT</span>
+                  <span className="text-xs font-bold text-amber-300 uppercase tracking-widest">Sunflowers under Storm Sky • Photography by Yarnin Peled</span>
                   <h3 className="text-base font-bold text-white">20-25% Solar OPEX & Autonomous AI Workflows</h3>
                 </div>
               </div>
@@ -391,7 +391,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. COMPREHENSIVE BOTTOM DIRECTORY SECTION (AI, Apps, Photography, About & Contact) */}
+      {/* 4. COMPREHENSIVE BOTTOM DIRECTORY SECTION */}
       <section className="max-w-7xl mx-auto px-6 py-16 space-y-12 border-t-2 border-zinc-200 dark:border-zinc-800">
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 text-xs font-bold">
@@ -408,7 +408,7 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
-          {/* BOTTOM DIRECTORY 1: Enterprise AI Strategy Research */}
+          {/* BOTTOM DIRECTORY 1 */}
           <div className="editorial-card p-6 rounded-3xl flex flex-col justify-between space-y-5 hover:border-indigo-500 transition-all hover:-translate-y-1 group">
             <div className="space-y-3">
               <div className="w-10 h-10 rounded-2xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
@@ -438,7 +438,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* BOTTOM DIRECTORY 2: Ecosystem Applications & Playground */}
+          {/* BOTTOM DIRECTORY 2 */}
           <div className="editorial-card p-6 rounded-3xl flex flex-col justify-between space-y-5 hover:border-violet-500 transition-all hover:-translate-y-1 group">
             <div className="space-y-3">
               <div className="w-10 h-10 rounded-2xl bg-violet-100 dark:bg-violet-950 text-violet-600 dark:text-violet-400 flex items-center justify-center font-bold">
@@ -471,7 +471,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* BOTTOM DIRECTORY 3: Photography & Visual Storytelling */}
+          {/* BOTTOM DIRECTORY 3 */}
           <div className="editorial-card p-6 rounded-3xl flex flex-col justify-between space-y-5 hover:border-purple-500 transition-all hover:-translate-y-1 group">
             <div className="space-y-3">
               <div className="w-10 h-10 rounded-2xl bg-purple-100 dark:bg-purple-950 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold">
@@ -504,7 +504,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* BOTTOM DIRECTORY 4: Executive About & Direct Contact */}
+          {/* BOTTOM DIRECTORY 4 */}
           <div className="editorial-card p-6 rounded-3xl flex flex-col justify-between space-y-5 hover:border-emerald-500 transition-all hover:-translate-y-1 group">
             <div className="space-y-3">
               <div className="w-10 h-10 rounded-2xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
