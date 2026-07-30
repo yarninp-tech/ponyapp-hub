@@ -38,7 +38,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
   },
   {
     id: 'pdf-editor',
-    title: 'PDF Editor & Document Intelligence',
+    title: 'PDF Editor',
     subtitle: 'Browser-Based PDF Editing, Form Filling & Contract Data Extraction',
     category: 'Ecosystem App',
     description: 'Full-featured browser PDF editor and AI document reader deployed at pdf-editor.ponyapp.net (https://pony4app.web.app).',
