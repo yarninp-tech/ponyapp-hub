@@ -4,657 +4,751 @@
     "originalName": "Copy of L1000012.jpg",
     "filename": "yarnin_photo_1.jpg",
     "src": "/images/site_gallery/yarnin_photo_1.jpg",
-    "title": "L1000012"
+    "title": "L1000012",
+    "category": "portraits"
   },
   {
     "id": "photo-2",
     "originalName": "Copy of P1240011.jpg",
     "filename": "yarnin_photo_2.jpg",
     "src": "/images/site_gallery/yarnin_photo_2.jpg",
-    "title": "P1240011"
+    "title": "P1240011",
+    "category": "seascapes"
   },
   {
     "id": "photo-3",
     "originalName": "Copy of P2230392.jpg",
     "filename": "yarnin_photo_3.jpg",
     "src": "/images/site_gallery/yarnin_photo_3.jpg",
-    "title": "P2230392"
+    "title": "P2230392",
+    "category": "portraits"
   },
   {
     "id": "photo-4",
     "originalName": "Copy of P4110030.jpg",
     "filename": "yarnin_photo_4.jpg",
     "src": "/images/site_gallery/yarnin_photo_4.jpg",
-    "title": "P4110030"
+    "title": "P4110030",
+    "category": "architecture"
   },
   {
     "id": "photo-5",
     "originalName": "Copy of P4180120.jpg",
     "filename": "yarnin_photo_5.jpg",
     "src": "/images/site_gallery/yarnin_photo_5.jpg",
-    "title": "P4180120"
+    "title": "P4180120",
+    "category": "monochrome"
   },
   {
     "id": "photo-6",
     "originalName": "Copy of P9290195.jpg",
     "filename": "yarnin_photo_6.jpg",
     "src": "/images/site_gallery/yarnin_photo_6.jpg",
-    "title": "P9290195"
+    "title": "P9290195",
+    "category": "portraits"
   },
   {
     "id": "photo-7",
     "originalName": "Copy of PA040067.jpg",
     "filename": "yarnin_photo_7.jpg",
     "src": "/images/site_gallery/yarnin_photo_7.jpg",
-    "title": "PA040067"
+    "title": "PA040067",
+    "category": "seascapes"
   },
   {
     "id": "photo-8",
     "originalName": "Copy of PB080021.jpg",
     "filename": "yarnin_photo_8.jpg",
     "src": "/images/site_gallery/yarnin_photo_8.jpg",
-    "title": "PB080021"
+    "title": "PB080021",
+    "category": "landscapes"
   },
   {
     "id": "photo-9",
     "originalName": "Copy of PB150037.jpg",
     "filename": "yarnin_photo_9.jpg",
     "src": "/images/site_gallery/yarnin_photo_9.jpg",
-    "title": "PB150037"
+    "title": "PB150037",
+    "category": "architecture"
   },
   {
     "id": "photo-10",
     "originalName": "Copy of PC220029.jpg",
     "filename": "yarnin_photo_10.jpg",
     "src": "/images/site_gallery/yarnin_photo_10.jpg",
-    "title": "PC220029"
+    "title": "PC220029",
+    "category": "monochrome"
   },
   {
     "id": "photo-11",
     "originalName": "Copy of PC220043.jpg",
     "filename": "yarnin_photo_11.jpg",
     "src": "/images/site_gallery/yarnin_photo_11.jpg",
-    "title": "PC220043"
+    "title": "PC220043",
+    "category": "portraits"
   },
   {
     "id": "photo-12",
     "originalName": "Copy of PC220047.jpg",
     "filename": "yarnin_photo_12.jpg",
     "src": "/images/site_gallery/yarnin_photo_12.jpg",
-    "title": "PC220047"
+    "title": "PC220047",
+    "category": "seascapes"
   },
   {
     "id": "photo-13",
     "originalName": "Copy of PC270019.jpg",
     "filename": "yarnin_photo_13.jpg",
     "src": "/images/site_gallery/yarnin_photo_13.jpg",
-    "title": "PC270019"
+    "title": "PC270019",
+    "category": "landscapes"
   },
   {
     "id": "photo-14",
     "originalName": "DO01005235_LowRes.jpg",
     "filename": "yarnin_photo_14.jpg",
     "src": "/images/site_gallery/yarnin_photo_14.jpg",
-    "title": "DO01005235"
+    "title": "DO01005235",
+    "category": "architecture"
   },
   {
     "id": "photo-15",
     "originalName": "DO01005245_LowRes.jpg",
     "filename": "yarnin_photo_15.jpg",
     "src": "/images/site_gallery/yarnin_photo_15.jpg",
-    "title": "DO01005245"
+    "title": "DO01005245",
+    "category": "monochrome"
   },
   {
     "id": "photo-16",
     "originalName": "DO01005300-2_LowRes.jpg",
     "filename": "yarnin_photo_16.jpg",
     "src": "/images/site_gallery/yarnin_photo_16.jpg",
-    "title": "DO01005300-2"
+    "title": "DO01005300-2",
+    "category": "portraits"
   },
   {
     "id": "photo-17",
     "originalName": "L1000021.jpg",
     "filename": "yarnin_photo_17.jpg",
     "src": "/images/site_gallery/yarnin_photo_17.jpg",
-    "title": "L1000021"
+    "title": "L1000021",
+    "category": "seascapes"
   },
   {
     "id": "photo-18",
     "originalName": "L1000040-2.jpg",
     "filename": "yarnin_photo_18.jpg",
     "src": "/images/site_gallery/yarnin_photo_18.jpg",
-    "title": "L1000040-2"
+    "title": "L1000040-2",
+    "category": "landscapes"
   },
   {
     "id": "photo-19",
     "originalName": "L1000125_40_150.jpg",
     "filename": "yarnin_photo_19.jpg",
     "src": "/images/site_gallery/yarnin_photo_19.jpg",
-    "title": "L1000125_40_150"
+    "title": "L1000125_40_150",
+    "category": "architecture"
   },
   {
     "id": "photo-20",
     "originalName": "L1000185-2.jpg",
     "filename": "yarnin_photo_20.jpg",
     "src": "/images/site_gallery/yarnin_photo_20.jpg",
-    "title": "L1000185-2"
+    "title": "L1000185-2",
+    "category": "monochrome"
   },
   {
     "id": "photo-21",
     "originalName": "L1000198.jpg",
     "filename": "yarnin_photo_21.jpg",
     "src": "/images/site_gallery/yarnin_photo_21.jpg",
-    "title": "L1000198"
+    "title": "L1000198",
+    "category": "portraits"
   },
   {
     "id": "photo-22",
     "originalName": "L1000231-Edit.jpg",
     "filename": "yarnin_photo_22.jpg",
     "src": "/images/site_gallery/yarnin_photo_22.jpg",
-    "title": "L1000231-Edit"
+    "title": "L1000231-Edit",
+    "category": "seascapes"
   },
   {
     "id": "photo-23",
     "originalName": "L1000299_LowRes.jpg",
     "filename": "yarnin_photo_23.jpg",
     "src": "/images/site_gallery/yarnin_photo_23.jpg",
-    "title": "L1000299"
+    "title": "L1000299",
+    "category": "landscapes"
   },
   {
     "id": "photo-24",
     "originalName": "L1000316.jpg",
     "filename": "yarnin_photo_24.jpg",
     "src": "/images/site_gallery/yarnin_photo_24.jpg",
-    "title": "L1000316"
+    "title": "L1000316",
+    "category": "architecture"
   },
   {
     "id": "photo-25",
     "originalName": "L1000483-2_LowRes.jpg",
     "filename": "yarnin_photo_25.jpg",
     "src": "/images/site_gallery/yarnin_photo_25.jpg",
-    "title": "L1000483-2"
+    "title": "L1000483-2",
+    "category": "monochrome"
   },
   {
     "id": "photo-26",
     "originalName": "L1000631-2_LowRes.jpg",
     "filename": "yarnin_photo_26.jpg",
     "src": "/images/site_gallery/yarnin_photo_26.jpg",
-    "title": "L1000631-2"
+    "title": "L1000631-2",
+    "category": "portraits"
   },
   {
     "id": "photo-27",
     "originalName": "L1000664_LowRes.jpg",
     "filename": "yarnin_photo_27.jpg",
     "src": "/images/site_gallery/yarnin_photo_27.jpg",
-    "title": "L1000664"
+    "title": "L1000664",
+    "category": "seascapes"
   },
   {
     "id": "photo-28",
     "originalName": "L1000906_LowRes.jpg",
     "filename": "yarnin_photo_28.jpg",
     "src": "/images/site_gallery/yarnin_photo_28.jpg",
-    "title": "L1000906"
+    "title": "L1000906",
+    "category": "landscapes"
   },
   {
     "id": "photo-29",
     "originalName": "L1000938_LowRes.jpg",
     "filename": "yarnin_photo_29.jpg",
     "src": "/images/site_gallery/yarnin_photo_29.jpg",
-    "title": "L1000938"
+    "title": "L1000938",
+    "category": "architecture"
   },
   {
     "id": "photo-30",
     "originalName": "L1000966_LowRes.jpg",
     "filename": "yarnin_photo_30.jpg",
     "src": "/images/site_gallery/yarnin_photo_30.jpg",
-    "title": "L1000966"
+    "title": "L1000966",
+    "category": "monochrome"
   },
   {
     "id": "photo-31",
     "originalName": "L1001004_LowRes.jpg",
     "filename": "yarnin_photo_31.jpg",
     "src": "/images/site_gallery/yarnin_photo_31.jpg",
-    "title": "L1001004"
+    "title": "L1001004",
+    "category": "portraits"
   },
   {
     "id": "photo-32",
     "originalName": "L1001203_LowRes.jpg",
     "filename": "yarnin_photo_32.jpg",
     "src": "/images/site_gallery/yarnin_photo_32.jpg",
-    "title": "L1001203"
+    "title": "L1001203",
+    "category": "seascapes"
   },
   {
     "id": "photo-33",
     "originalName": "L1001668_LowRes.jpg",
     "filename": "yarnin_photo_33.jpg",
     "src": "/images/site_gallery/yarnin_photo_33.jpg",
-    "title": "L1001668"
+    "title": "L1001668",
+    "category": "landscapes"
   },
   {
     "id": "photo-34",
     "originalName": "L1003900_LowRes.jpg",
     "filename": "yarnin_photo_34.jpg",
     "src": "/images/site_gallery/yarnin_photo_34.jpg",
-    "title": "L1003900"
+    "title": "L1003900",
+    "category": "architecture"
   },
   {
     "id": "photo-35",
     "originalName": "L1003953-2_LowRes.jpg",
     "filename": "yarnin_photo_35.jpg",
     "src": "/images/site_gallery/yarnin_photo_35.jpg",
-    "title": "L1003953-2"
+    "title": "L1003953-2",
+    "category": "monochrome"
   },
   {
     "id": "photo-36",
     "originalName": "L1004383_LowRes.jpg",
     "filename": "yarnin_photo_36.jpg",
     "src": "/images/site_gallery/yarnin_photo_36.jpg",
-    "title": "L1004383"
+    "title": "L1004383",
+    "category": "portraits"
   },
   {
     "id": "photo-37",
     "originalName": "L1004675-2_LowRes.jpg",
     "filename": "yarnin_photo_37.jpg",
     "src": "/images/site_gallery/yarnin_photo_37.jpg",
-    "title": "L1004675-2"
+    "title": "L1004675-2",
+    "category": "seascapes"
   },
   {
     "id": "photo-38",
     "originalName": "L1005106_WhiteEdge.jpg",
     "filename": "yarnin_photo_38.jpg",
     "src": "/images/site_gallery/yarnin_photo_38.jpg",
-    "title": "L1005106"
+    "title": "L1005106",
+    "category": "landscapes"
   },
   {
     "id": "photo-39",
     "originalName": "L1005145-2_WhiteEdge.jpg",
     "filename": "yarnin_photo_39.jpg",
     "src": "/images/site_gallery/yarnin_photo_39.jpg",
-    "title": "L1005145-2"
+    "title": "L1005145-2",
+    "category": "architecture"
   },
   {
     "id": "photo-40",
     "originalName": "L1005213-2_WhiteEdge.jpg",
     "filename": "yarnin_photo_40.jpg",
     "src": "/images/site_gallery/yarnin_photo_40.jpg",
-    "title": "L1005213-2"
+    "title": "L1005213-2",
+    "category": "monochrome"
   },
   {
     "id": "photo-41",
     "originalName": "L1005280-2_LowRes.jpg",
     "filename": "yarnin_photo_41.jpg",
     "src": "/images/site_gallery/yarnin_photo_41.jpg",
-    "title": "L1005280-2"
+    "title": "L1005280-2",
+    "category": "portraits"
   },
   {
     "id": "photo-42",
     "originalName": "L1005324_LowRes.jpg",
     "filename": "yarnin_photo_42.jpg",
     "src": "/images/site_gallery/yarnin_photo_42.jpg",
-    "title": "L1005324"
+    "title": "L1005324",
+    "category": "seascapes"
   },
   {
     "id": "photo-43",
     "originalName": "P1030046.jpg",
     "filename": "yarnin_photo_43.jpg",
     "src": "/images/site_gallery/yarnin_photo_43.jpg",
-    "title": "P1030046"
+    "title": "P1030046",
+    "category": "landscapes"
   },
   {
     "id": "photo-44",
     "originalName": "P1310312.jpg",
     "filename": "yarnin_photo_44.jpg",
     "src": "/images/site_gallery/yarnin_photo_44.jpg",
-    "title": "P1310312"
+    "title": "P1310312",
+    "category": "architecture"
   },
   {
     "id": "photo-45",
     "originalName": "P2070002-2.jpg",
     "filename": "yarnin_photo_45.jpg",
     "src": "/images/site_gallery/yarnin_photo_45.jpg",
-    "title": "P2070002-2"
+    "title": "P2070002-2",
+    "category": "monochrome"
   },
   {
     "id": "photo-46",
     "originalName": "P2070083.jpg",
     "filename": "yarnin_photo_46.jpg",
     "src": "/images/site_gallery/yarnin_photo_46.jpg",
-    "title": "P2070083"
+    "title": "P2070083",
+    "category": "portraits"
   },
   {
     "id": "photo-47",
     "originalName": "P2140110-6.jpg",
     "filename": "yarnin_photo_47.jpg",
     "src": "/images/site_gallery/yarnin_photo_47.jpg",
-    "title": "P2140110-6"
+    "title": "P2140110-6",
+    "category": "seascapes"
   },
   {
     "id": "photo-48",
     "originalName": "P2140124-2.jpg",
     "filename": "yarnin_photo_48.jpg",
     "src": "/images/site_gallery/yarnin_photo_48.jpg",
-    "title": "P2140124-2"
+    "title": "P2140124-2",
+    "category": "landscapes"
   },
   {
     "id": "photo-49",
     "originalName": "P2220055.jpg",
     "filename": "yarnin_photo_49.jpg",
     "src": "/images/site_gallery/yarnin_photo_49.jpg",
-    "title": "P2220055"
+    "title": "P2220055",
+    "category": "architecture"
   },
   {
     "id": "photo-50",
     "originalName": "P2280009.jpg",
     "filename": "yarnin_photo_50.jpg",
     "src": "/images/site_gallery/yarnin_photo_50.jpg",
-    "title": "P2280009"
+    "title": "P2280009",
+    "category": "monochrome"
   },
   {
     "id": "photo-51",
     "originalName": "P3020030.jpg",
     "filename": "yarnin_photo_51.jpg",
     "src": "/images/site_gallery/yarnin_photo_51.jpg",
-    "title": "P3020030"
+    "title": "P3020030",
+    "category": "portraits"
   },
   {
     "id": "photo-52",
     "originalName": "P3060028.jpg",
     "filename": "yarnin_photo_52.jpg",
     "src": "/images/site_gallery/yarnin_photo_52.jpg",
-    "title": "P3060028"
+    "title": "P3060028",
+    "category": "seascapes"
   },
   {
     "id": "photo-53",
     "originalName": "P3180077.jpg",
     "filename": "yarnin_photo_53.jpg",
     "src": "/images/site_gallery/yarnin_photo_53.jpg",
-    "title": "P3180077"
+    "title": "P3180077",
+    "category": "landscapes"
   },
   {
     "id": "photo-54",
     "originalName": "P3190016.jpg",
     "filename": "yarnin_photo_54.jpg",
     "src": "/images/site_gallery/yarnin_photo_54.jpg",
-    "title": "P3190016"
+    "title": "P3190016",
+    "category": "architecture"
   },
   {
     "id": "photo-55",
     "originalName": "P3210192.jpg",
     "filename": "yarnin_photo_55.jpg",
     "src": "/images/site_gallery/yarnin_photo_55.jpg",
-    "title": "P3210192"
+    "title": "P3210192",
+    "category": "monochrome"
   },
   {
     "id": "photo-56",
     "originalName": "P3220047_LowRes.jpg",
     "filename": "yarnin_photo_56.jpg",
     "src": "/images/site_gallery/yarnin_photo_56.jpg",
-    "title": "P3220047"
+    "title": "P3220047",
+    "category": "portraits"
   },
   {
     "id": "photo-57",
     "originalName": "P3220056-2_LowRes.jpg",
     "filename": "yarnin_photo_57.jpg",
     "src": "/images/site_gallery/yarnin_photo_57.jpg",
-    "title": "P3220056-2"
+    "title": "P3220056-2",
+    "category": "seascapes"
   },
   {
     "id": "photo-58",
     "originalName": "P3220115-Edit.jpg",
     "filename": "yarnin_photo_58.jpg",
     "src": "/images/site_gallery/yarnin_photo_58.jpg",
-    "title": "P3220115-Edit"
+    "title": "P3220115-Edit",
+    "category": "landscapes"
   },
   {
     "id": "photo-59",
     "originalName": "P3220429.jpg",
     "filename": "yarnin_photo_59.jpg",
     "src": "/images/site_gallery/yarnin_photo_59.jpg",
-    "title": "P3220429"
+    "title": "P3220429",
+    "category": "architecture"
   },
   {
     "id": "photo-60",
     "originalName": "P4110068_LowRes.jpg",
     "filename": "yarnin_photo_60.jpg",
     "src": "/images/site_gallery/yarnin_photo_60.jpg",
-    "title": "P4110068"
+    "title": "P4110068",
+    "category": "monochrome"
   },
   {
     "id": "photo-61",
     "originalName": "P4110117-Edit_LowRes.jpg",
     "filename": "yarnin_photo_61.jpg",
     "src": "/images/site_gallery/yarnin_photo_61.jpg",
-    "title": "P4110117-Edit"
+    "title": "P4110117-Edit",
+    "category": "portraits"
   },
   {
     "id": "photo-62",
     "originalName": "P4300009.jpg",
     "filename": "yarnin_photo_62.jpg",
     "src": "/images/site_gallery/yarnin_photo_62.jpg",
-    "title": "P4300009"
+    "title": "P4300009",
+    "category": "seascapes"
   },
   {
     "id": "photo-63",
     "originalName": "P5060082-2_LowRes.jpg",
     "filename": "yarnin_photo_63.jpg",
     "src": "/images/site_gallery/yarnin_photo_63.jpg",
-    "title": "P5060082-2"
+    "title": "P5060082-2",
+    "category": "landscapes"
   },
   {
     "id": "photo-64",
     "originalName": "P5060694_LowRes.jpg",
     "filename": "yarnin_photo_64.jpg",
     "src": "/images/site_gallery/yarnin_photo_64.jpg",
-    "title": "P5060694"
+    "title": "P5060694",
+    "category": "architecture"
   },
   {
     "id": "photo-65",
     "originalName": "P5080017.jpg",
     "filename": "yarnin_photo_65.jpg",
     "src": "/images/site_gallery/yarnin_photo_65.jpg",
-    "title": "P5080017"
+    "title": "P5080017",
+    "category": "monochrome"
   },
   {
     "id": "photo-66",
     "originalName": "P5230040-Edit.jpg",
     "filename": "yarnin_photo_66.jpg",
     "src": "/images/site_gallery/yarnin_photo_66.jpg",
-    "title": "P5230040-Edit"
+    "title": "P5230040-Edit",
+    "category": "portraits"
   },
   {
     "id": "photo-67",
     "originalName": "P6030081.jpg",
     "filename": "yarnin_photo_67.jpg",
     "src": "/images/site_gallery/yarnin_photo_67.jpg",
-    "title": "P6030081"
+    "title": "P6030081",
+    "category": "seascapes"
   },
   {
     "id": "photo-68",
     "originalName": "P6030215.jpg",
     "filename": "yarnin_photo_68.jpg",
     "src": "/images/site_gallery/yarnin_photo_68.jpg",
-    "title": "P6030215"
+    "title": "P6030215",
+    "category": "landscapes"
   },
   {
     "id": "photo-69",
     "originalName": "P6270004.jpg",
     "filename": "yarnin_photo_69.jpg",
     "src": "/images/site_gallery/yarnin_photo_69.jpg",
-    "title": "P6270004"
+    "title": "P6270004",
+    "category": "architecture"
   },
   {
     "id": "photo-70",
     "originalName": "P7050014.jpg",
     "filename": "yarnin_photo_70.jpg",
     "src": "/images/site_gallery/yarnin_photo_70.jpg",
-    "title": "P7050014"
+    "title": "P7050014",
+    "category": "monochrome"
   },
   {
     "id": "photo-71",
     "originalName": "P7050016.jpg",
     "filename": "yarnin_photo_71.jpg",
     "src": "/images/site_gallery/yarnin_photo_71.jpg",
-    "title": "P7050016"
+    "title": "P7050016",
+    "category": "portraits"
   },
   {
     "id": "photo-72",
     "originalName": "P7260078-2.jpg",
     "filename": "yarnin_photo_72.jpg",
     "src": "/images/site_gallery/yarnin_photo_72.jpg",
-    "title": "P7260078-2"
+    "title": "P7260078-2",
+    "category": "seascapes"
   },
   {
     "id": "photo-73",
     "originalName": "P7270165-2.jpg",
     "filename": "yarnin_photo_73.jpg",
     "src": "/images/site_gallery/yarnin_photo_73.jpg",
-    "title": "P7270165-2"
+    "title": "P7270165-2",
+    "category": "landscapes"
   },
   {
     "id": "photo-74",
     "originalName": "P8230059_LowRes.jpg",
     "filename": "yarnin_photo_74.jpg",
     "src": "/images/site_gallery/yarnin_photo_74.jpg",
-    "title": "P8230059"
+    "title": "P8230059",
+    "category": "architecture"
   },
   {
     "id": "photo-75",
     "originalName": "P8230068_LowRes.jpg",
     "filename": "yarnin_photo_75.jpg",
     "src": "/images/site_gallery/yarnin_photo_75.jpg",
-    "title": "P8230068"
+    "title": "P8230068",
+    "category": "monochrome"
   },
   {
     "id": "photo-76",
     "originalName": "P8230070_LowRes.jpg",
     "filename": "yarnin_photo_76.jpg",
     "src": "/images/site_gallery/yarnin_photo_76.jpg",
-    "title": "P8230070"
+    "title": "P8230070",
+    "category": "portraits"
   },
   {
     "id": "photo-77",
     "originalName": "P8240089_LowRes.jpg",
     "filename": "yarnin_photo_77.jpg",
     "src": "/images/site_gallery/yarnin_photo_77.jpg",
-    "title": "P8240089"
+    "title": "P8240089",
+    "category": "seascapes"
   },
   {
     "id": "photo-78",
     "originalName": "P8250119_LowRes.jpg",
     "filename": "yarnin_photo_78.jpg",
     "src": "/images/site_gallery/yarnin_photo_78.jpg",
-    "title": "P8250119"
+    "title": "P8250119",
+    "category": "landscapes"
   },
   {
     "id": "photo-79",
     "originalName": "P8260019_LowRes.jpg",
     "filename": "yarnin_photo_79.jpg",
     "src": "/images/site_gallery/yarnin_photo_79.jpg",
-    "title": "P8260019"
+    "title": "P8260019",
+    "category": "architecture"
   },
   {
     "id": "photo-80",
     "originalName": "P8260055_LowRes.jpg",
     "filename": "yarnin_photo_80.jpg",
     "src": "/images/site_gallery/yarnin_photo_80.jpg",
-    "title": "P8260055"
+    "title": "P8260055",
+    "category": "monochrome"
   },
   {
     "id": "photo-81",
     "originalName": "P8260070-2_LowRes.jpg",
     "filename": "yarnin_photo_81.jpg",
     "src": "/images/site_gallery/yarnin_photo_81.jpg",
-    "title": "P8260070-2"
+    "title": "P8260070-2",
+    "category": "portraits"
   },
   {
     "id": "photo-82",
     "originalName": "P8270084_LowRes.jpg",
     "filename": "yarnin_photo_82.jpg",
     "src": "/images/site_gallery/yarnin_photo_82.jpg",
-    "title": "P8270084"
+    "title": "P8270084",
+    "category": "seascapes"
   },
   {
     "id": "photo-83",
     "originalName": "PA040074.jpg",
     "filename": "yarnin_photo_83.jpg",
     "src": "/images/site_gallery/yarnin_photo_83.jpg",
-    "title": "PA040074"
+    "title": "PA040074",
+    "category": "landscapes"
   },
   {
     "id": "photo-84",
     "originalName": "PA180107.jpg",
     "filename": "yarnin_photo_84.jpg",
     "src": "/images/site_gallery/yarnin_photo_84.jpg",
-    "title": "PA180107"
+    "title": "PA180107",
+    "category": "architecture"
   },
   {
     "id": "photo-85",
     "originalName": "PA180126.jpg",
     "filename": "yarnin_photo_85.jpg",
     "src": "/images/site_gallery/yarnin_photo_85.jpg",
-    "title": "PA180126"
+    "title": "PA180126",
+    "category": "monochrome"
   },
   {
     "id": "photo-86",
     "originalName": "PA250005.jpg",
     "filename": "yarnin_photo_86.jpg",
     "src": "/images/site_gallery/yarnin_photo_86.jpg",
-    "title": "PA250005"
+    "title": "PA250005",
+    "category": "portraits"
   },
   {
     "id": "photo-87",
     "originalName": "PA300522-2.jpg",
     "filename": "yarnin_photo_87.jpg",
     "src": "/images/site_gallery/yarnin_photo_87.jpg",
-    "title": "PA300522-2"
+    "title": "PA300522-2",
+    "category": "seascapes"
   },
   {
     "id": "photo-88",
     "originalName": "PA301286.jpg",
     "filename": "yarnin_photo_88.jpg",
     "src": "/images/site_gallery/yarnin_photo_88.jpg",
-    "title": "PA301286"
+    "title": "PA301286",
+    "category": "landscapes"
   },
   {
     "id": "photo-89",
     "originalName": "PA301298.jpg",
     "filename": "yarnin_photo_89.jpg",
     "src": "/images/site_gallery/yarnin_photo_89.jpg",
-    "title": "PA301298"
+    "title": "PA301298",
+    "category": "architecture"
   },
   {
     "id": "photo-90",
     "originalName": "PB150034.jpg",
     "filename": "yarnin_photo_90.jpg",
     "src": "/images/site_gallery/yarnin_photo_90.jpg",
-    "title": "PB150034"
+    "title": "PB150034",
+    "category": "monochrome"
   },
   {
     "id": "photo-91",
     "originalName": "PC040238.jpg",
     "filename": "yarnin_photo_91.jpg",
     "src": "/images/site_gallery/yarnin_photo_91.jpg",
-    "title": "PC040238"
+    "title": "PC040238",
+    "category": "portraits"
   },
   {
     "id": "photo-92",
     "originalName": "PC120022-2.jpg",
     "filename": "yarnin_photo_92.jpg",
     "src": "/images/site_gallery/yarnin_photo_92.jpg",
-    "title": "PC120022-2"
+    "title": "PC120022-2",
+    "category": "seascapes"
   },
   {
     "id": "photo-93",
     "originalName": "PC210139.jpg",
     "filename": "yarnin_photo_93.jpg",
     "src": "/images/site_gallery/yarnin_photo_93.jpg",
-    "title": "PC210139"
+    "title": "PC210139",
+    "category": "landscapes"
   },
   {
     "id": "photo-94",
     "originalName": "PC220180.jpg",
     "filename": "yarnin_photo_94.jpg",
     "src": "/images/site_gallery/yarnin_photo_94.jpg",
-    "title": "PC220180"
+    "title": "PC220180",
+    "category": "architecture"
   }
 ]
