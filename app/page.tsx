@@ -60,8 +60,8 @@ export default function HomePage() {
             Senior Technology Projects & Operations Leader
           </p>
 
-          <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto leading-relaxed font-normal">
-            Follow the metallic silver line down the page—a continuous visual journey through 25+ years of graphic process automation, big data server engineering, global supply chains, Olympic Velodrome infrastructure, and enterprise AI transformation.
+          <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-300 max-w-3xl mx-auto leading-relaxed font-normal">
+            Follow the metallic silver line down the page 25+ years in one continuous journey: automating graphic design processes and bridging systems into a workflows that is efficient, flexible and yeild majur savings; programming data pipelines for Israel's largest banks and insurance companies, owning every process end to end—from raw data to the printed statement in the customer's hands; then onward through global supply chains, Olympic Velodrome infrastructure, and enterprise AI transformation.
           </p>
 
           {/* Quick Portal Navigation Buttons */}
