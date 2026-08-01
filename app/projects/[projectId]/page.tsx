@@ -105,6 +105,63 @@ export default function ProjectDetailPage() {
             </div>
           )}
         </div>
+
+        {/* How to Try & Full App Inquiry Section */}
+        <div className="glass-panel p-8 rounded-3xl border border-indigo-500/30 bg-indigo-950/20 space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold">
+              <Sparkles className="w-5 h-5 text-indigo-400" />
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-white">How to Try & Request Full App Implementation</h2>
+              <p className="text-xs text-indigo-300">Guide for visitors, evaluators, and prospective clients</p>
+            </div>
+          </div>
+
+          <div className="space-y-4 text-sm text-slate-300 leading-relaxed border-t border-indigo-900/60 pt-4">
+            <div className="space-y-2">
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider">1. What is this app for?</h3>
+              <p className="text-xs text-slate-300">
+                {project.description} This platform demonstrates automated decision logic, real-time data synchronization, and modern web application architecture.
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider">2. How to try & evaluate it</h3>
+              <p className="text-xs text-slate-300">
+                Click <strong>Launch Live Application</strong> above to test-drive the interactive interface live in your browser. {project.launchUrl ? `Available directly at ${project.launchUrl}.` : ''}
+              </p>
+            </div>
+
+            <div className="space-y-3 pt-2">
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider">3. Request Full App or Custom Engine</h3>
+              <p className="text-xs text-slate-300">
+                Interested in obtaining full desktop / enterprise versions of this software, or building a custom automated application for your business? Contact <strong>Yarnin Peled</strong> directly:
+              </p>
+
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a
+                  href={`mailto:yarninp@gmail.com?subject=Full%20App%20Inquiry%20-%20${encodeURIComponent(project.title)}`}
+                  className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow"
+                >
+                  <span>✉️ Email Yarnin</span>
+                </a>
+                <a
+                  href="tel:0547918818"
+                  className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold py-2.5 px-4 rounded-xl text-xs transition-all"
+                >
+                  <span>📞 054-7918818</span>
+                </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-indigo-400 border border-slate-700 font-bold py-2.5 px-4 rounded-xl text-xs transition-all"
+                >
+                  <span>🌐 Open Contact Page</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
