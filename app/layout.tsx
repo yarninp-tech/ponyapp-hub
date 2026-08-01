@@ -143,7 +143,8 @@ export default function RootLayout({
             <div className="flex items-center gap-6">
               <Link href="/about" className="hover:text-indigo-600 dark:hover:text-white transition-colors">Executive Story & CV</Link>
               <Link href="/articles" className="hover:text-indigo-600 dark:hover:text-white transition-colors">AI Research</Link>
-              <Link href="/photography" className="hover:text-indigo-600 dark:hover:text-white transition-colors">Fine Art Photography</Link>
+              <a href="https://pdf-editor.ponyapp.net/privacy.html" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-white transition-colors">Privacy Policy</a>
+              <a href="https://pdf-editor.ponyapp.net/terms.html" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-white transition-colors">Terms of Service</a>
               <a href="https://yarninpeled.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-white transition-colors">yarninpeled.com</a>
             </div>
 

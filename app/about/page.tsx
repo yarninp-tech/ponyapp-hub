@@ -155,10 +155,10 @@ export default function AboutPage() {
 
           {/* Quick Info Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-zinc-200 dark:border-zinc-800 text-xs font-semibold">
-            <div className="flex items-center gap-3">
+            <a href="tel:+972547918818" className="flex items-center gap-3 hover:text-indigo-600 dark:hover:text-emerald-400 transition-colors" title="Call +972 54-7918818">
               <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <span>054-7918818 (+972 54-7918818)</span>
-            </div>
+              <span>+972 54-7918818</span>
+            </a>
             <div className="flex items-center gap-3">
               <Mail className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
               <span>yarninp@gmail.com</span>
