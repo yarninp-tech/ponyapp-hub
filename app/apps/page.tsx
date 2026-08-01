@@ -99,6 +99,17 @@ export default function AppsPage() {
                     </p>
                   </div>
 
+                  <div className="flex flex-wrap items-center gap-2 pt-2">
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+                      100% Free &amp; Open Access
+                    </span>
+                    {project.id === 'pdf-editor' && (
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-indigo-500/10 border border-indigo-500/30 text-indigo-300">
+                        🛡️ 100% Client-Side Private
+                      </span>
+                    )}
+                  </div>
+
                   <div className="flex flex-wrap gap-1.5 pt-2">
                     {project.tags.map((tag, idx) => (
                       <span

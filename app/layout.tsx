@@ -101,7 +101,8 @@ export default function RootLayout({
               {/* Dark / Light Mode Toggle Button */}
               <button
                 onClick={toggleTheme}
-                className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-200 hover:border-indigo-500/50 transition-all flex items-center gap-1.5 text-xs font-bold"
+                aria-label={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+                className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-200 hover:border-indigo-500/50 focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none transition-all flex items-center gap-1.5 text-xs font-bold min-h-[44px]"
                 title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
               >
                 {isDarkMode ? (
@@ -122,7 +123,8 @@ export default function RootLayout({
             <div className="flex md:hidden items-center gap-2">
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-200"
+                aria-label={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+                className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-200 focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center"
                 title="Toggle Theme"
               >
                 {isDarkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-indigo-600" />}
@@ -130,8 +132,8 @@ export default function RootLayout({
 
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2.5 rounded-xl bg-indigo-600 text-white shadow-md flex items-center justify-center"
-                aria-label="Toggle Mobile Menu"
+                className="p-2.5 rounded-xl bg-indigo-600 text-white shadow-md flex items-center justify-center focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none min-h-[44px] min-w-[44px]"
+                aria-label={isMobileMenuOpen ? "Close Mobile Navigation Menu" : "Open Mobile Navigation Menu"}
               >
                 {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
