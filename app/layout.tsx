@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Sun, Moon, Layers, BookOpen, Camera, ShieldCheck, Mail, Linkedin, Phone } from 'lucide-react';
+import { Sun, Moon, Layers, BookOpen, Camera, ShieldCheck, Mail, Linkedin, Phone, Menu, X } from 'lucide-react';
 import './globals.css';
 
 export default function RootLayout({
@@ -12,6 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Check initial theme preference or local storage
@@ -71,9 +72,9 @@ export default function RootLayout({
               </div>
             </Link>
 
-            {/* Navigation Links */}
-            <div className="flex items-center gap-2 md:gap-5">
-              <nav className="flex items-center gap-1 md:gap-4 text-xs font-bold tracking-wider uppercase text-zinc-700 dark:text-zinc-300">
+            {/* Desktop Navigation Links */}
+            <div className="hidden md:flex items-center gap-5">
+              <nav className="flex items-center gap-4 text-xs font-bold tracking-wider uppercase text-zinc-700 dark:text-zinc-300">
                 <Link href="/" className="px-3 py-2 rounded-xl hover:text-indigo-600 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all">
                   Home
                 </Link>
@@ -100,23 +101,101 @@ export default function RootLayout({
               {/* Dark / Light Mode Toggle Button */}
               <button
                 onClick={toggleTheme}
-                className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-200 hover:border-indigo-500/50 transition-all ml-2 flex items-center gap-1.5 text-xs font-bold"
+                className="p-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-200 hover:border-indigo-500/50 transition-all flex items-center gap-1.5 text-xs font-bold"
                 title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
               >
                 {isDarkMode ? (
                   <>
                     <Sun className="w-4 h-4 text-amber-400" />
-                    <span className="hidden sm:inline text-amber-300">Light</span>
+                    <span className="text-amber-300">Light</span>
                   </>
                 ) : (
                   <>
                     <Moon className="w-4 h-4 text-indigo-600" />
-                    <span className="hidden sm:inline text-indigo-700">Dark</span>
+                    <span className="text-indigo-700">Dark</span>
                   </>
                 )}
               </button>
             </div>
+
+            {/* Mobile Controls: Dark Mode & Hamburger Toggle */}
+            <div className="flex md:hidden items-center gap-2">
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-200"
+                title="Toggle Theme"
+              >
+                {isDarkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-indigo-600" />}
+              </button>
+
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2.5 rounded-xl bg-indigo-600 text-white shadow-md flex items-center justify-center"
+                aria-label="Toggle Mobile Menu"
+              >
+                {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </button>
+            </div>
           </div>
+
+          {/* Mobile Hamburger Drawer Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden border-b border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-2xl px-6 py-6 space-y-4 animate-fadeIn">
+              <nav className="flex flex-col space-y-3 font-bold text-sm tracking-wider uppercase text-zinc-800 dark:text-zinc-200">
+                <Link
+                  href="/"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all flex items-center justify-between"
+                >
+                  <span>Home</span>
+                </Link>
+                <Link
+                  href="/apps"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all flex items-center justify-between"
+                >
+                  <span className="flex items-center gap-2">
+                    <Layers className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+                    Interactive Apps
+                  </span>
+                </Link>
+                <Link
+                  href="/articles"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all flex items-center justify-between"
+                >
+                  <span className="flex items-center gap-2">
+                    <BookOpen className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+                    AI Articles & Research
+                  </span>
+                </Link>
+                <Link
+                  href="/photography"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all flex items-center justify-between"
+                >
+                  <span className="flex items-center gap-2">
+                    <Camera className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+                    Photography Gallery
+                  </span>
+                </Link>
+                <Link
+                  href="/about"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all flex items-center justify-between"
+                >
+                  <span>About & Executive CV</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl bg-indigo-600 text-white text-center font-bold shadow-md"
+                >
+                  Contact & Direct Engagement
+                </Link>
+              </nav>
+            </div>
+          )}
         </header>
 
         {/* Main Content Area */}
@@ -140,7 +219,7 @@ export default function RootLayout({
               </div>
             </div>
 
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-6">
               <Link href="/about" className="hover:text-indigo-600 dark:hover:text-white transition-colors">Executive Story & CV</Link>
               <Link href="/articles" className="hover:text-indigo-600 dark:hover:text-white transition-colors">AI Research</Link>
               <a href="https://pdf-editor.ponyapp.net/privacy.html" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-white transition-colors">Privacy Policy</a>

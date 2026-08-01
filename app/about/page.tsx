@@ -203,6 +203,18 @@ export default function AboutPage() {
                       {item.summary}
                     </p>
 
+                    {item.chapter === '01' && (
+                      <div className="pt-1">
+                        <Link
+                          href="/apps"
+                          className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/30 text-indigo-600 dark:text-indigo-300 hover:bg-indigo-600 hover:text-white font-bold px-4 py-2 rounded-xl text-xs transition-all shadow-sm"
+                        >
+                          <Layers className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
+                          <span>Explore Interactive Applications & Software Engines →</span>
+                        </Link>
+                      </div>
+                    )}
+
                     <ul className="space-y-2 pt-2">
                       {item.highlights.map((h, i) => (
                         <li key={i} className="flex items-start gap-2 text-xs text-zinc-700 dark:text-zinc-300">
