@@ -112,7 +112,7 @@ export default function ArticlesIndexPage() {
           <section className="space-y-4">
             <div className="flex items-center gap-2 border-b border-slate-800 pb-3">
               <Sparkles className="w-5 h-5 text-indigo-400" />
-              <h2 className="text-2xl font-extrabold text-white">מאמר אחרון שפורסם • Latest Published Article</h2>
+              <h2 className="text-2xl font-extrabold text-white">Latest Published Article</h2>
             </div>
 
             <div className="glass-card p-8 md:p-10 rounded-3xl border-2 border-indigo-500/40 bg-indigo-950/20 flex flex-col justify-between space-y-6 hover:border-indigo-500 transition-all shadow-xl group">
@@ -177,7 +177,7 @@ export default function ArticlesIndexPage() {
           <section className="space-y-6 pt-6">
             <div className="flex items-center gap-2 border-b border-slate-800 pb-3">
               <BookOpen className="w-5 h-5 text-indigo-400" />
-              <h2 className="text-2xl font-extrabold text-white">מאמרים נוספים • Additional Articles & Research</h2>
+              <h2 className="text-2xl font-extrabold text-white">Additional Articles & Research</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
