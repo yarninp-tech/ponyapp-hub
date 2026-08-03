@@ -171,9 +171,9 @@ export default function ProjectDetailPage() {
                 <a
                   href="tel:+972547918818"
                   className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold py-2.5 px-4 rounded-xl text-xs transition-all"
-                  title="Call +972 54-7918818"
+                  title="Call Cellular"
                 >
-                  <span>📞 +972 54-7918818</span>
+                  <span>📞 Cellular</span>
                 </a>
                 <Link
                   href="/contact"

@@ -101,9 +101,9 @@ export default function HomePage() {
 
           {/* Quick Contact Ribbon */}
           <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs font-bold text-zinc-700 dark:text-zinc-300 border-t border-zinc-200 dark:border-zinc-800">
-            <a href="tel:+972547918818" className="flex items-center gap-2 hover:text-indigo-600 dark:hover:text-emerald-400 transition-colors" title="Call +972 54-7918818">
+            <a href="tel:+972547918818" className="flex items-center gap-2 hover:text-indigo-600 dark:hover:text-emerald-400 transition-colors" title="Call Cellular">
               <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <span>+972 54-7918818</span>
+              <span>Cellular</span>
             </a>
             <span>•</span>
             <a href="mailto:yarninp@gmail.com" className="flex items-center gap-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
@@ -567,7 +567,7 @@ export default function HomePage() {
 
               <div className="editorial-inner p-3 rounded-xl space-y-1 text-xs">
                 <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block">Direct Contact</span>
-                <a href="tel:+972547918818" className="font-bold text-zinc-900 dark:text-white hover:underline block">Cell: +972 54-7918818</a>
+                <a href="tel:+972547918818" className="font-bold text-zinc-900 dark:text-white hover:underline block">Cellular</a>
                 <p className="text-zinc-500 text-[11px]">Email: yarninp@gmail.com</p>
               </div>
             </div>
@@ -599,9 +599,9 @@ export default function HomePage() {
               Reach out directly for enterprise AI strategy consulting, technology project leadership, software engineering, or photography inquiries.
             </p>
             <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-bold">
-              <a href="tel:+972547918818" className="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1.5" title="Call +972 54-7918818">
+              <a href="tel:+972547918818" className="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1.5" title="Call Cellular">
                 <Phone className="w-3.5 h-3.5" />
-                <span>+972 54-7918818</span>
+                <span>Cellular</span>
               </a>
               <a href="mailto:yarninp@gmail.com" className="text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1.5">
                 <Mail className="w-3.5 h-3.5" />
