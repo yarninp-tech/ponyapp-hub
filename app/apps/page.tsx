@@ -15,6 +15,7 @@ import {
   Code2,
   ChevronLeft,
   Sparkles,
+  Theater,
 } from 'lucide-react';
 import { PROJECTS_DATA } from '@/lib/projectsData';
 
@@ -22,6 +23,7 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   BrainCircuit: <BrainCircuit className="w-6 h-6 text-indigo-400" />,
   FileText: <FileText className="w-6 h-6 text-emerald-400" />,
   Package: <Package className="w-6 h-6 text-amber-400" />,
+  Theater: <Theater className="w-6 h-6 text-rose-400" />,
   Calendar: <Calendar className="w-6 h-6 text-blue-400" />,
   BarChart3: <BarChart3 className="w-6 h-6 text-purple-400" />,
   Workflow: <Workflow className="w-6 h-6 text-cyan-400" />,
@@ -124,7 +126,13 @@ export default function AppsPage() {
 
                 <div className="flex items-center justify-between pt-6 mt-6 border-t border-slate-800/80">
                   <Link
-                    href={project.id === 'stok-app' ? '/apps/stok-app' : `/projects/${project.id}`}
+                    href={
+                      project.id === 'stok-app'
+                        ? '/apps/stok-app'
+                        : project.id === 'book-a-show'
+                        ? '/apps/book-a-show'
+                        : `/projects/${project.id}`
+                    }
                     className="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-1"
                   >
                     <span>Read Details</span>

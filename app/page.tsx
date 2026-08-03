@@ -498,11 +498,13 @@ export default function HomePage() {
                 Ecosystem Apps & AI Playground
               </h3>
               <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-                Interactive web applications hosted on ponyapp.net—featuring <span className="font-bold text-zinc-900 dark:text-white">brain-room</span>, <span className="font-bold text-zinc-900 dark:text-white">PDF Editor</span>, StokApp, and MScheduler.
+                Interactive web applications hosted on ponyapp.net—featuring <span className="font-bold text-zinc-900 dark:text-white">Book a Show</span>, <span className="font-bold text-zinc-900 dark:text-white">StokApp</span>, <span className="font-bold text-zinc-900 dark:text-white">brain-room</span>, and <span className="font-bold text-zinc-900 dark:text-white">PDF Editor</span>.
               </p>
 
               <div className="editorial-inner p-3 rounded-xl space-y-1 text-xs">
-                <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block">2 Live Ecosystem Sub-Apps</span>
+                <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block">4 Live Ecosystem Sub-Apps</span>
+                <p className="font-semibold text-zinc-900 dark:text-white">• book-a-show.ponyapp.net</p>
+                <p className="font-semibold text-zinc-900 dark:text-white">• stokapp.ponyapp.net</p>
                 <p className="font-semibold text-zinc-900 dark:text-white">• brain-room.ponyapp.net</p>
                 <p className="font-semibold text-zinc-900 dark:text-white">• pdf-editor.ponyapp.net</p>
               </div>
