@@ -19,6 +19,7 @@ import {
   ArrowRight,
   GitBranch,
   FileCode,
+  ExternalLink,
 } from 'lucide-react';
 import { STOKAPP_DATA } from '@/lib/stokAppData';
 
@@ -59,22 +60,34 @@ export default function StokAppTechnicalPage() {
               The shape of the app for an engineer getting oriented — architecture, data flow, and integrations at a level that explains the design without doubling as a build spec.
             </p>
 
-            {/* PART 1 / PART 2 TOGGLE BAR */}
-            <div className="pt-4 border-t border-slate-800/80 flex flex-wrap items-center gap-3">
-              <Link
-                href="/apps/stok-app"
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold text-xs transition-all border border-slate-800"
+            {/* PART 1 / PART 2 TOGGLE BAR & LAUNCH APP BUTTON */}
+            <div className="pt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
+              <div className="flex flex-wrap items-center gap-3">
+                <Link
+                  href="/apps/stok-app"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold text-xs transition-all border border-slate-800"
+                >
+                  <BookOpen className="w-4 h-4 text-amber-400" />
+                  <span>Part 1: User Guide & Feature Catalog</span>
+                </Link>
+                <Link
+                  href="/apps/stok-app/technical"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-bold text-xs shadow-md shadow-indigo-600/20 transition-all border border-indigo-500"
+                >
+                  <Code2 className="w-4 h-4" />
+                  <span>Part 2: Technical Overview & Spec</span>
+                </Link>
+              </div>
+
+              <a
+                href="https://stokapp.ponyapp.net"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg shadow-emerald-600/20 transition-all border border-emerald-500"
               >
-                <BookOpen className="w-4 h-4 text-amber-400" />
-                <span>Part 1: User Guide & Feature Catalog</span>
-              </Link>
-              <Link
-                href="/apps/stok-app/technical"
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-bold text-xs shadow-md shadow-indigo-600/20 transition-all border border-indigo-500"
-              >
-                <Code2 className="w-4 h-4" />
-                <span>Part 2: Technical Overview & Spec</span>
-              </Link>
+                <span>Launch Application</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>

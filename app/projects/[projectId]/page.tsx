@@ -60,6 +60,28 @@ export default function ProjectDetailPage() {
             ))}
           </div>
 
+          {/* Banner link for StokApp 2-Part Spec */}
+          {project.id === 'stok-app' && (
+            <div className="p-6 rounded-2xl bg-indigo-950/60 border border-indigo-500/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <h3 className="text-base font-bold text-white flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-amber-400" />
+                  Official 2-Part Specification & User Guide
+                </h3>
+                <p className="text-xs text-slate-300">
+                  Explore Part 1 (User Guide & Screen Catalog) and Part 2 (Technical Architecture & Data Pipelines).
+                </p>
+              </div>
+              <Link
+                href="/apps/stok-app"
+                className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-5 rounded-xl text-xs transition-all shadow-md shadow-indigo-600/20 whitespace-nowrap"
+              >
+                <span>View 2-Part Spec</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          )}
+
           {project.launchUrl && (
             <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
               <a

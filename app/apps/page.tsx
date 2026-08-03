@@ -132,13 +132,15 @@ export default function AppsPage() {
                   </Link>
 
                   {project.launchUrl && (
-                    <Link
+                    <a
                       href={project.launchUrl}
+                      target={project.launchUrl.startsWith('http') ? '_blank' : '_self'}
+                      rel="noopener noreferrer"
                       className="flex items-center gap-1.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 px-3.5 rounded-xl text-xs transition-all shadow-md shadow-indigo-600/20"
                     >
-                      <span>{project.id === 'stok-app' ? 'Explore 2-Part Spec' : 'Launch Application'}</span>
+                      <span>Launch Application</span>
                       <ExternalLink className="w-3.5 h-3.5" />
-                    </Link>
+                    </a>
                   )}
                 </div>
               </div>
