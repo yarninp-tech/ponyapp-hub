@@ -124,7 +124,7 @@ export default function AppsPage() {
 
                 <div className="flex items-center justify-between pt-6 mt-6 border-t border-slate-800/80">
                   <Link
-                    href={`/projects/${project.id}`}
+                    href={project.id === 'stok-app' ? '/apps/stok-app' : `/projects/${project.id}`}
                     className="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-1"
                   >
                     <span>Read Details</span>
@@ -132,15 +132,13 @@ export default function AppsPage() {
                   </Link>
 
                   {project.launchUrl && (
-                    <a
+                    <Link
                       href={project.launchUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
+                      className="flex items-center gap-1.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 px-3.5 rounded-xl text-xs transition-all shadow-md shadow-indigo-600/20"
                     >
-                      <span>Launch App</span>
+                      <span>{project.id === 'stok-app' ? 'Explore 2-Part Spec' : 'Launch Application'}</span>
                       <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
+                    </Link>
                   )}
                 </div>
               </div>
