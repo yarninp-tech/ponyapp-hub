@@ -66,7 +66,7 @@ export default function BookAShowUserGuidePage() {
               {BOOK_A_SHOW_DATA.header.subtitle}
             </p>
 
-            {/* PART 1 / PART 2 TOGGLE BAR & GITHUB BUTTON */}
+            {/* PART 1 / PART 2 TOGGLE BAR & LAUNCH BUTTON */}
             <div className="pt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
               <div className="flex flex-wrap items-center gap-3">
                 <Link

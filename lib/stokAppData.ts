@@ -251,7 +251,7 @@ export const STOKAPP_DATA = {
       { system: 'Market Data Providers (EODHD, Twelve Data, Finnhub, Alpha Vantage, TASE)', usedFor: 'Quotes, historical price data, dividends', notes: 'One credential per provider; auto-detects EOD vs Live capability' },
       { system: 'Gmail SMTP', usedFor: 'Scheduled morning and close briefs', notes: 'App-specific password, direct SMTP, no third-party email server' },
       { system: 'User Webhook', usedFor: 'Optional brief delivery automation', notes: 'Off by default; routes briefs into user\'s personal webhooks' },
-      { system: 'Sparkle Framework', usedFor: 'macOS app updates', notes: 'EdDSA-signed appcast pointing to GitHub Releases binaries' },
+      { system: 'Sparkle Framework', usedFor: 'macOS app updates', notes: 'EdDSA-signed appcast pointing to secure distribution binaries' },
     ] as ExternalIntegration[],
 
     constraintsAndNonGoals: [

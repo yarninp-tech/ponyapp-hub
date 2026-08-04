@@ -59,7 +59,7 @@ export default function BookAShowTechnicalPage() {
               The shape of the app for developers and technical evaluators — database schemas, Next.js App Router architecture, 8-stage bid workflow pipeline, partner API specification, and source-level quality gates.
             </p>
 
-            {/* PART 1 / PART 2 TOGGLE BAR & GITHUB BUTTON */}
+            {/* PART 1 / PART 2 TOGGLE BAR & LAUNCH BUTTON */}
             <div className="pt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
               <div className="flex flex-wrap items-center gap-3">
                 <Link
