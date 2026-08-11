@@ -18,6 +18,7 @@ import {
   Theater,
 } from 'lucide-react';
 import { PROJECTS_DATA } from '@/lib/projectsData';
+import ContactBanner from '@/components/ContactBanner';
 
 const ICON_MAP: Record<string, React.ReactNode> = {
   BrainCircuit: <BrainCircuit className="w-6 h-6 text-indigo-400" />,
@@ -214,6 +215,7 @@ export default function AppsPage() {
             ))}
           </div>
         </section>
+        <ContactBanner />
       </div>
     </main>
   );

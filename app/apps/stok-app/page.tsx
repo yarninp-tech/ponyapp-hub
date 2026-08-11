@@ -26,6 +26,7 @@ import {
   ExternalLink,
 } from 'lucide-react';
 import { STOKAPP_DATA } from '@/lib/stokAppData';
+import ContactBanner from '@/components/ContactBanner';
 
 export default function StokAppUserGuidePage() {
   const [activeScreenTab, setActiveScreenTab] = useState<string>('today');
@@ -280,6 +281,7 @@ export default function StokAppUserGuidePage() {
             {STOKAPP_DATA.disclaimer}
           </p>
         </section>
+        <ContactBanner />
       </div>
     </main>
   );

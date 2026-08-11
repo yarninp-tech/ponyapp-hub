@@ -24,6 +24,7 @@ import {
   FileText,
 } from 'lucide-react';
 import { BOOK_A_SHOW_DATA } from '@/lib/bookAShowData';
+import ContactBanner from '@/components/ContactBanner';
 
 export default function BookAShowUserGuidePage() {
   const [activeRoleTab, setActiveRoleTab] = useState<number>(0);
@@ -257,6 +258,7 @@ export default function BookAShowUserGuidePage() {
             </p>
           </div>
         </section>
+        <ContactBanner />
       </div>
     </main>
   );

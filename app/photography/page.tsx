@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Camera, ChevronLeft, ArrowUpRight, Maximize2, X, Sparkles, Layers, Filter, Grid } from 'lucide-react';
 import photoManifest from '@/public/images/site_gallery/manifest.json';
 import categoryConfig from '@/public/images/site_gallery/categories.json';
+import ContactBanner from '@/components/ContactBanner';
 
 interface PhotoItem {
   id: string;
@@ -206,6 +207,7 @@ export default function PhotographyPage() {
             </div>
           </div>
         )}
+        <ContactBanner />
       </div>
     </main>
   );
