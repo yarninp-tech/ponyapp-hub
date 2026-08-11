@@ -162,7 +162,7 @@ export default function AboutPage() {
                 <ArrowUpRight className="w-3 h-3" />
               </span>
             </a>
-            <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-indigo-600 dark:hover:text-emerald-400 transition-colors">
+            <a href="https://calendly.com/yarninp/30min" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-indigo-600 dark:hover:text-emerald-400 transition-colors">
               <UserCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               <span className="flex items-center gap-1">
                 <span>Book Meeting (Calendly)</span>

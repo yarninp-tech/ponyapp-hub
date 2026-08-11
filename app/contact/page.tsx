@@ -60,7 +60,7 @@ export default function ContactPage() {
 
             {/* Calendly Booking Card */}
             <a
-              href="https://calendly.com/"
+              href="https://calendly.com/yarninp/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="glass-card p-5 rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all flex items-center gap-4 group"
