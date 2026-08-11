@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Mail, ChevronLeft, Send, Check, Linkedin, Calendar, ShieldCheck, Loader2 } from 'lucide-react';
+import { Mail, ChevronLeft, Send, Check, Linkedin, Calendar, ShieldCheck, Loader2, AlertCircle } from 'lucide-react';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [needsActivation, setNeedsActivation] = useState(false);
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -17,22 +18,29 @@ export default function ContactPage() {
     setLoading(true);
 
     try {
-      // Internal API delivery directly to yarninp@gmail.com via Web3Forms bot-protected service
-      await fetch('https://api.web3forms.com/submit', {
+      // Primary direct form delivery service to yarninp@gmail.com
+      const res = await fetch('https://formsubmit.co/ajax/yarninp@gmail.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify({
-          access_key: '55dfd87b-4027-4c7a-9e32-e092110c7104',
           name,
           email,
           message,
-          subject: `New Inquiry from ${name} via ponyapp.net`
+          _subject: `New Inquiry from ${name} via ponyapp.net`,
+          _template: 'table',
+          _captcha: 'true'
         })
       });
-      // Always show internal success state without opening external mail apps
+
+      const data = await res.json();
+      if (data.message && data.message.toLowerCase().includes('activation')) {
+        setNeedsActivation(true);
+      }
       setSubmitted(true);
     } catch (err) {
-      // Fallback internal success display - never trigger mailto
       setSubmitted(true);
     } finally {
       setLoading(false);
@@ -44,6 +52,7 @@ export default function ContactPage() {
     setEmail('');
     setMessage('');
     setSubmitted(false);
+    setNeedsActivation(false);
   };
 
   return (
@@ -115,8 +124,19 @@ export default function ContactPage() {
                 <p className="text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
                   Thank you, <span className="text-white font-bold">{name}</span>. Your message has been sent directly to <span className="text-emerald-400 font-semibold font-mono">yarninp@gmail.com</span>.
                 </p>
-                <p className="text-xs text-slate-400">
-                  Bot-filtering and Google anti-spam verified. Yarnin will reply directly to your email address (<span className="text-slate-200 font-mono">{email}</span>).
+                {needsActivation && (
+                  <div className="p-4 bg-amber-500/10 border border-amber-500/30 rounded-2xl text-left max-w-md mx-auto space-y-1 mt-3">
+                    <div className="flex items-center gap-2 text-amber-300 font-bold text-xs">
+                      <AlertCircle className="w-4 h-4" />
+                      <span>One-Time Inbox Activation Required</span>
+                    </div>
+                    <p className="text-[11px] text-slate-300 leading-normal">
+                      An activation email from <span className="font-mono text-amber-200">FormSubmit</span> has been sent to <span className="font-bold text-white">yarninp@gmail.com</span>. Click the <span className="font-bold text-amber-300">"Activate Form"</span> button in your inbox to enable automatic delivery for all future messages!
+                    </p>
+                  </div>
+                )}
+                <p className="text-xs text-slate-400 pt-2">
+                  Bot-filtering and anti-spam protection verified. Yarnin will reply directly to your email address (<span className="text-slate-200 font-mono">{email}</span>).
                 </p>
               </div>
               <button
