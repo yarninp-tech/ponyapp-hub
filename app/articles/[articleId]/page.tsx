@@ -103,13 +103,13 @@ export default function ArticleDetailPage() {
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 )}
-                <a
-                  href="mailto:yarninp@gmail.com"
+                <Link
+                  href="/contact"
                   className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 text-xs font-medium py-2 px-4 rounded-xl transition-all"
                 >
                   <Mail className="w-3.5 h-3.5 text-indigo-400" />
-                  <span>Email</span>
-                </a>
+                  <span>Contact Form</span>
+                </Link>
               </div>
             </div>
           </div>

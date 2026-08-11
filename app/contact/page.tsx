@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Mail, ChevronLeft, Send, Check, Linkedin, Phone, MapPin, UserCheck, Smartphone } from 'lucide-react';
+import { Mail, ChevronLeft, Send, Check, Linkedin, Calendar, ShieldCheck } from 'lucide-react';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -40,50 +40,37 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Contact Details Cards with Cell Phone */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-            {/* Phone Card */}
-            <a
-              href="tel:+972547918818"
-              className="glass-card p-5 rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all flex items-center gap-3 group"
-              title="Call Cellular"
-            >
-              <div className="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
-                <Smartphone className="w-5 h-5" />
-              </div>
-              <div className="overflow-hidden">
-                <span className="text-[10px] text-slate-400 font-medium uppercase tracking-wider block">Cell Phone</span>
-                <span className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors truncate block">Cellular</span>
-              </div>
-            </a>
-
-            {/* Email Card */}
-            <a
-              href="mailto:yarninp@gmail.com"
-              className="glass-card p-5 rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all flex items-center gap-3 group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center flex-shrink-0">
-                <Mail className="w-5 h-5" />
-              </div>
-              <div className="overflow-hidden">
-                <span className="text-[10px] text-slate-400 font-medium uppercase tracking-wider block">Email</span>
-                <span className="text-xs font-bold text-white group-hover:text-indigo-300 transition-colors truncate block">yarninp@gmail.com</span>
-              </div>
-            </a>
-
+          {/* Professional Channels Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
             {/* LinkedIn Card */}
             <a
               href="https://www.linkedin.com/in/yarnin-peled"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card p-5 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all flex items-center gap-3 group"
+              className="glass-card p-5 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all flex items-center gap-4 group"
             >
               <div className="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center flex-shrink-0">
                 <Linkedin className="w-5 h-5" />
               </div>
               <div className="overflow-hidden">
                 <span className="text-[10px] text-slate-400 font-medium uppercase tracking-wider block">LinkedIn Profile</span>
-                <span className="text-xs font-bold text-white group-hover:text-blue-300 transition-colors truncate block">yarnin-peled</span>
+                <span className="text-xs font-bold text-white group-hover:text-blue-300 transition-colors truncate block">Connect on LinkedIn</span>
+              </div>
+            </a>
+
+            {/* Calendly Booking Card */}
+            <a
+              href="https://calendly.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card p-5 rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all flex items-center gap-4 group"
+            >
+              <div className="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                <Calendar className="w-5 h-5" />
+              </div>
+              <div className="overflow-hidden">
+                <span className="text-[10px] text-slate-400 font-medium uppercase tracking-wider block">Schedule Meeting</span>
+                <span className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors truncate block">Book via Calendly</span>
               </div>
             </a>
           </div>
@@ -95,11 +82,17 @@ export default function ContactPage() {
                 <Check className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white">Message Sent Successfully!</h3>
-              <p className="text-xs text-slate-300">Thank you for reaching out. I will get back to you directly via phone or email.</p>
+              <p className="text-xs text-slate-300">Thank you for reaching out. Your message is protected by Google reCAPTCHA anti-spam verification.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4 border-t border-slate-800/80 pt-6">
-              <h3 className="text-base font-bold text-white">Send a Direct Message</h3>
+              <div className="flex items-center justify-between">
+                <h3 className="text-base font-bold text-white">Send a Direct Message</h3>
+                <span className="inline-flex items-center gap-1.5 text-[11px] text-slate-400 bg-slate-900/80 px-2.5 py-1 rounded-lg border border-slate-800">
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                  Protected by Google reCAPTCHA
+                </span>
+              </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>

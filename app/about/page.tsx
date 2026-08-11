@@ -155,21 +155,24 @@ export default function AboutPage() {
 
           {/* Quick Info Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-zinc-200 dark:border-zinc-800 text-xs font-semibold">
-            <a href="tel:+972547918818" className="flex items-center gap-3 hover:text-indigo-600 dark:hover:text-emerald-400 transition-colors" title="Call Cellular">
-              <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <span>Cellular</span>
-            </a>
-            <div className="flex items-center gap-3">
-              <Mail className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-              <span>yarninp@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-3">
+            <a href="https://www.linkedin.com/in/yarnin-peled" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-indigo-600 dark:hover:text-blue-400 transition-colors">
               <Linkedin className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-              <a href="https://www.linkedin.com/in/yarnin-peled" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1">
-                <span>linkedin.com/in/yarnin-peled</span>
+              <span className="flex items-center gap-1">
+                <span>LinkedIn Profile</span>
                 <ArrowUpRight className="w-3 h-3" />
-              </a>
-            </div>
+              </span>
+            </a>
+            <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-indigo-600 dark:hover:text-emerald-400 transition-colors">
+              <UserCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span className="flex items-center gap-1">
+                <span>Book Meeting (Calendly)</span>
+                <ArrowUpRight className="w-3 h-3" />
+              </span>
+            </a>
+            <Link href="/contact" className="flex items-center gap-3 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+              <Mail className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+              <span>Contact Form &amp; Inquiry</span>
+            </Link>
           </div>
         </div>
 

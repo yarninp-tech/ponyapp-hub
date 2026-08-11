@@ -162,25 +162,20 @@ export default function ProjectDetailPage() {
               </p>
 
               <div className="flex flex-wrap items-center gap-3 pt-2">
-                <a
-                  href={`mailto:yarninp@gmail.com?subject=Full%20App%20Inquiry%20-%20${encodeURIComponent(project.title)}`}
-                  className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow"
-                >
-                  <span>✉️ Email Yarnin</span>
-                </a>
-                <a
-                  href="tel:+972547918818"
-                  className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold py-2.5 px-4 rounded-xl text-xs transition-all"
-                  title="Call Cellular"
-                >
-                  <span>📞 Cellular</span>
-                </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-indigo-400 border border-slate-700 font-bold py-2.5 px-4 rounded-xl text-xs transition-all"
+                  className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all shadow"
                 >
-                  <span>🌐 Open Contact Page</span>
+                  <span>✉️ Contact Form</span>
                 </Link>
+                <a
+                  href="https://www.linkedin.com/in/yarnin-peled"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-blue-400 border border-slate-700 font-bold py-2.5 px-4 rounded-xl text-xs transition-all"
+                >
+                  <span>🔗 LinkedIn Profile</span>
+                </a>
               </div>
             </div>
           </div>

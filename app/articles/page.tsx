@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { BookOpen, Clock, Calendar, ArrowRight, ExternalLink, User, Tag, Plus, Minus, Sparkles } from 'lucide-react';
+import { BookOpen, Clock, Calendar, ArrowRight, ExternalLink, User, Tag, Plus, Minus, Sparkles, Mail } from 'lucide-react';
 import { ARTICLES_DATA } from '@/lib/articlesData';
 
 export default function ArticlesIndexPage() {
@@ -49,8 +49,10 @@ export default function ArticlesIndexPage() {
                 <span>Connect on LinkedIn</span>
                 <ExternalLink className="w-3 h-3" />
               </a>
-              <span>•</span>
-              <span>yarninp@gmail.com</span>
+              <Link href="/contact" className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors">
+                <Mail className="w-3.5 h-3.5" />
+                <span>Contact Form</span>
+              </Link>
             </div>
           </div>
 

@@ -101,21 +101,22 @@ export default function HomePage() {
 
           {/* Quick Contact Ribbon */}
           <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs font-bold text-zinc-700 dark:text-zinc-300 border-t border-zinc-200 dark:border-zinc-800">
-            <a href="tel:+972547918818" className="flex items-center gap-2 hover:text-indigo-600 dark:hover:text-emerald-400 transition-colors" title="Call Cellular">
-              <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <span>Cellular</span>
-            </a>
-            <span>•</span>
-            <a href="mailto:yarninp@gmail.com" className="flex items-center gap-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-              <Mail className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-              <span>yarninp@gmail.com</span>
-            </a>
-            <span>•</span>
             <a href="https://www.linkedin.com/in/yarnin-peled" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-indigo-600 dark:hover:text-blue-400 transition-colors">
               <Linkedin className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-              <span>LinkedIn</span>
+              <span>LinkedIn Profile</span>
               <ArrowUpRight className="w-3 h-3" />
             </a>
+            <span>•</span>
+            <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-indigo-600 dark:hover:text-emerald-400 transition-colors">
+              <UserCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span>Book Meeting (Calendly)</span>
+              <ArrowUpRight className="w-3 h-3" />
+            </a>
+            <span>•</span>
+            <Link href="/contact" className="flex items-center gap-2 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+              <Mail className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+              <span>Contact Form &amp; Inquiry</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -568,9 +569,9 @@ export default function HomePage() {
               </p>
 
               <div className="editorial-inner p-3 rounded-xl space-y-1 text-xs">
-                <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block">Direct Contact</span>
-                <a href="tel:+972547918818" className="font-bold text-zinc-900 dark:text-white hover:underline block">Cellular</a>
-                <p className="text-zinc-500 text-[11px]">Email: yarninp@gmail.com</p>
+                <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block">Direct Engagement</span>
+                <a href="https://www.linkedin.com/in/yarnin-peled" target="_blank" rel="noopener noreferrer" className="font-bold text-zinc-900 dark:text-white hover:underline block">LinkedIn Profile</a>
+                <p className="text-zinc-500 text-[11px]">Protected Contact Form &amp; Calendly Booking</p>
               </div>
             </div>
 
@@ -598,16 +599,16 @@ export default function HomePage() {
             </div>
             <h3 className="text-3xl font-extrabold text-zinc-900 dark:text-white">Contact & Professional Channels</h3>
             <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
-              Reach out directly for enterprise AI strategy consulting, technology project leadership, software engineering, or photography inquiries.
+              Reach out directly via our protected contact form with Google reCAPTCHA bot filtering, connect on LinkedIn, or schedule a meeting via Calendly.
             </p>
             <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-bold">
-              <a href="tel:+972547918818" className="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1.5" title="Call Cellular">
-                <Phone className="w-3.5 h-3.5" />
-                <span>Cellular</span>
+              <a href="https://www.linkedin.com/in/yarnin-peled" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1.5">
+                <Linkedin className="w-3.5 h-3.5" />
+                <span>LinkedIn Profile</span>
               </a>
-              <a href="mailto:yarninp@gmail.com" className="text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1.5">
-                <Mail className="w-3.5 h-3.5" />
-                <span>yarninp@gmail.com</span>
+              <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1.5">
+                <UserCheck className="w-3.5 h-3.5" />
+                <span>Book Meeting (Calendly)</span>
               </a>
             </div>
           </div>
