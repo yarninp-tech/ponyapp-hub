@@ -1,1 +1,6 @@
 # Firebase App Hosting Configuration for ponyapp-hub
+runConfig:
+  concurrency: 80
+  cpu: 1
+  memoryMiB: 512
+  minInstances: 0
