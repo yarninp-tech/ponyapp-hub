@@ -5,14 +5,13 @@
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
-    "postbuild": "cp -r public .next/standalone/ 2>/dev/null || true && cp -r .next/static .next/standalone/.next/ 2>/dev/null || true",
-    "start": "next start -p 3000",
-    "lint": "next lint"
+    "postbuild": "node -e \"const fs=require('fs'); if(fs.existsSync('.next/standalone')){ fs.mkdirSync('.next/standalone/.next', {recursive:true}); try{fs.cpSync('public', '.next/standalone/public', {recursive:true});}catch(e){} try{fs.cpSync('.next/static', '.next/standalone/.next/static', {recursive:true});}catch(e){} }\"",
+    "start": "next start -p 3000"
   },
   "dependencies": {
     "clsx": "^2.1.0",
     "lucide-react": "^0.330.0",
-    "next": "^14.1.0",
+    "next": "^14.2.35",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwind-merge": "^2.2.1"
