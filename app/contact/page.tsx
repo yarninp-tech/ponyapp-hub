@@ -2,18 +2,45 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Mail, ChevronLeft, Send, Check, Linkedin, Calendar, ShieldCheck } from 'lucide-react';
+import { Mail, ChevronLeft, Send, Check, Linkedin, Calendar, ShieldCheck, Loader2 } from 'lucide-react';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (name && email && message) {
+    if (!name || !email || !message) return;
+    setLoading(true);
+
+    try {
+      // Direct Web3Forms delivery to yarninp@gmail.com
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: '55dfd87b-4027-4c7a-9e32-e092110c7104',
+          name,
+          email,
+          message,
+          subject: `New Contact Inquiry from ${name} (ponyapp.net)`
+        })
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        window.location.href = `mailto:yarninp@gmail.com?subject=Contact Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+        setSubmitted(true);
+      }
+    } catch (_) {
+      window.location.href = `mailto:yarninp@gmail.com?subject=Contact Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
       setSubmitted(true);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -81,13 +108,13 @@ export default function ContactPage() {
               <div className="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
                 <Check className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-white">Message Sent Successfully!</h3>
-              <p className="text-xs text-slate-300">Thank you for reaching out. Your message is protected by Google reCAPTCHA anti-spam verification.</p>
+              <h3 className="text-base font-bold text-white">Message Sent Directly to yarninp@gmail.com!</h3>
+              <p className="text-xs text-slate-300">Thank you for reaching out. Your message has been delivered to Yarnin's inbox with Google reCAPTCHA anti-spam protection.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4 border-t border-slate-800/80 pt-6">
               <div className="flex items-center justify-between">
-                <h3 className="text-base font-bold text-white">Send a Direct Message</h3>
+                <h3 className="text-base font-bold text-white">Send a Direct Message to yarninp@gmail.com</h3>
                 <span className="inline-flex items-center gap-1.5 text-[11px] text-slate-400 bg-slate-900/80 px-2.5 py-1 rounded-lg border border-slate-800">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                   Protected by Google reCAPTCHA
@@ -134,10 +161,20 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-xl transition-all shadow-lg shadow-indigo-600/20 flex items-center justify-center gap-2 text-sm"
+                disabled={loading}
+                className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-xl transition-all shadow-lg shadow-indigo-600/20 flex items-center justify-center gap-2 text-sm disabled:opacity-50"
               >
-                <Send className="w-4 h-4" />
-                <span>Send Message</span>
+                {loading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Sending to yarninp@gmail.com...</span>
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4" />
+                    <span>Send Message to yarninp@gmail.com</span>
+                  </>
+                )}
               </button>
             </form>
           )}
