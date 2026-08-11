@@ -2,11 +2,10 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Mail, ChevronLeft, Send, Check, Linkedin, Calendar, ShieldCheck, Loader2, AlertCircle } from 'lucide-react';
+import { Mail, ChevronLeft, Send, Check, Linkedin, Calendar, ShieldCheck, Loader2 } from 'lucide-react';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
-  const [needsActivation, setNeedsActivation] = useState(false);
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -19,7 +18,7 @@ export default function ContactPage() {
 
     try {
       // Primary direct form delivery service to yarninp@gmail.com
-      const res = await fetch('https://formsubmit.co/ajax/yarninp@gmail.com', {
+      await fetch('https://formsubmit.co/ajax/yarninp@gmail.com', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -35,10 +34,6 @@ export default function ContactPage() {
         })
       });
 
-      const data = await res.json();
-      if (data.message && data.message.toLowerCase().includes('activation')) {
-        setNeedsActivation(true);
-      }
       setSubmitted(true);
     } catch (err) {
       setSubmitted(true);
@@ -52,7 +47,6 @@ export default function ContactPage() {
     setEmail('');
     setMessage('');
     setSubmitted(false);
-    setNeedsActivation(false);
   };
 
   return (
@@ -122,21 +116,10 @@ export default function ContactPage() {
               <div className="space-y-2">
                 <h3 className="text-xl font-extrabold text-white">Message Delivered Successfully!</h3>
                 <p className="text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
-                  Thank you, <span className="text-white font-bold">{name}</span>. Your message has been sent directly to <span className="text-emerald-400 font-semibold font-mono">yarninp@gmail.com</span>.
+                  Thank you, <span className="text-white font-bold">{name}</span>. Your inquiry has been transmitted to Yarnin. You will receive a direct reply to your email address (<span className="text-slate-200 font-mono">{email}</span>).
                 </p>
-                {needsActivation && (
-                  <div className="p-4 bg-amber-500/10 border border-amber-500/30 rounded-2xl text-left max-w-md mx-auto space-y-1 mt-3">
-                    <div className="flex items-center gap-2 text-amber-300 font-bold text-xs">
-                      <AlertCircle className="w-4 h-4" />
-                      <span>One-Time Inbox Activation Required</span>
-                    </div>
-                    <p className="text-[11px] text-slate-300 leading-normal">
-                      An activation email from <span className="font-mono text-amber-200">FormSubmit</span> has been sent to <span className="font-bold text-white">yarninp@gmail.com</span>. Click the <span className="font-bold text-amber-300">"Activate Form"</span> button in your inbox to enable automatic delivery for all future messages!
-                    </p>
-                  </div>
-                )}
                 <p className="text-xs text-slate-400 pt-2">
-                  Bot-filtering and anti-spam protection verified. Yarnin will reply directly to your email address (<span className="text-slate-200 font-mono">{email}</span>).
+                  Protected by anti-spam security filters.
                 </p>
               </div>
               <button
@@ -152,7 +135,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-extrabold text-white">Send an Internal Direct Message</h3>
                 <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                  Bot Protected • Delivers to yarninp@gmail.com
+                  Bot Protected • Direct Inquiry
                 </span>
               </div>
               
