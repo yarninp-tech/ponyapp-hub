@@ -1,11 +1,12 @@
 {
   "apphosting": {
     "backendId": "ponyapp-hub",
-    "rootDir": "/",
+    "rootDir": ".",
     "ignore": [
       "node_modules",
       ".git",
       "firebase-debug.log"
-    ]
+    ],
+    "alwaysDeployFromSource": true
   }
 }
