@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { ChevronLeft, Clock, Calendar, Sparkles, BookOpen, ExternalLink, Mail, UserCheck } from 'lucide-react';
+import { ChevronLeft, Clock, Calendar, Sparkles, BookOpen, ExternalLink, Mail, UserCheck, Quote } from 'lucide-react';
 import { ARTICLES_DATA } from '@/lib/articlesData';
 
 export default function ArticleDetailPage() {
@@ -12,6 +12,28 @@ export default function ArticleDetailPage() {
   const articleId = params?.articleId as string;
 
   const article = ARTICLES_DATA.find((a) => a.id === articleId) || ARTICLES_DATA[0];
+
+  // Helper to test if a paragraph string is a section headline
+  const isSectionHeadline = (text: string) => {
+    const trimmed = text.trim();
+    return (
+      (trimmed.length <= 85 &&
+        !['.', '?', '!', ':', ';', ','].includes(trimmed.slice(-1)) &&
+        !trimmed.toLowerCase().startsWith('is the') &&
+        !trimmed.toLowerCase().startsWith('are we') &&
+        !trimmed.toLowerCase().startsWith('and can') &&
+        !trimmed.toLowerCase().startsWith('can an') &&
+        !trimmed.toLowerCase().startsWith('or are')) ||
+      trimmed.startsWith('## ') ||
+      trimmed.startsWith('### ')
+    );
+  };
+
+  // Collect all section headlines for the TOC bar
+  const sectionHeadlines = article.content.filter(isSectionHeadline);
+
+  // Counter to keep track of section IDs for smooth anchor links
+  let headlineCounter = 0;
 
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100 py-12 px-6">
@@ -25,8 +47,9 @@ export default function ArticleDetailPage() {
           <span>Back to All AI Articles</span>
         </button>
 
-        {/* Article Banner */}
+        {/* Article Container */}
         <article className="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 space-y-8">
+          {/* Header Metadata */}
           <div className="space-y-4">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <span className="text-xs font-semibold uppercase tracking-wider text-indigo-400 bg-indigo-950/60 px-3 py-1 rounded-full border border-indigo-800">
@@ -44,10 +67,10 @@ export default function ArticleDetailPage() {
               </div>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight">
               {article.title}
             </h1>
-            <p className="text-base text-indigo-300 font-medium leading-relaxed">
+            <p className="text-base md:text-lg text-indigo-300 font-medium leading-relaxed">
               {article.subtitle}
             </p>
 
@@ -55,7 +78,7 @@ export default function ArticleDetailPage() {
               {article.tags.map((tag, idx) => (
                 <span
                   key={idx}
-                  className="text-xs bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1 rounded-lg"
+                  className="text-xs bg-slate-900 border border-slate-800 text-slate-300 px-3 py-1 rounded-lg font-medium"
                 >
                   #{tag}
                 </span>
@@ -63,13 +86,110 @@ export default function ArticleDetailPage() {
             </div>
           </div>
 
-          {/* Main Content Paragraphs */}
-          <div className="border-t border-slate-800/80 pt-8 text-slate-300 space-y-5 leading-relaxed text-base">
-            {article.content.map((paragraph, idx) => (
-              <p key={idx} className="leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
+          {/* Quick-Jump Table of Contents Bar */}
+          {sectionHeadlines.length > 0 && (
+            <div className="bg-slate-900/90 border border-indigo-500/20 rounded-2xl p-5 space-y-3 shadow-inner">
+              <div className="flex items-center gap-2 text-xs font-extrabold text-indigo-400 uppercase tracking-wider">
+                <BookOpen className="w-4 h-4 text-indigo-400" />
+                <span>Article Outline & Key Sections</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {sectionHeadlines.map((heading, i) => {
+                  const cleanHeading = heading.replace(/^#{2,3}\s*/, '');
+                  return (
+                    <a
+                      key={i}
+                      href={`#section-${i}`}
+                      className="text-xs bg-slate-950 hover:bg-indigo-950/60 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-indigo-200 px-3 py-1.5 rounded-lg transition-all font-medium"
+                    >
+                      {cleanHeading}
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Main Article Body */}
+          <div className="border-t border-slate-800/80 pt-8 text-slate-300 space-y-6 leading-relaxed text-base md:text-lg">
+            {article.content.map((paragraph, idx) => {
+              const trimmed = paragraph.trim();
+
+              // A. Quote / Callout Block
+              if (
+                (trimmed.startsWith('"') || trimmed.startsWith('“') || trimmed.includes('— Geoffrey Hinton') || trimmed.includes('— Sandra Sucher')) &&
+                trimmed.length > 30
+              ) {
+                const parts = trimmed.split('—');
+                const quoteBody = parts[0].replace(/^["“]|["”]$/g, '').trim();
+                const citation = parts[1] ? parts[1].trim() : null;
+
+                return (
+                  <blockquote
+                    key={idx}
+                    className="my-8 p-6 md:p-8 rounded-2xl bg-indigo-950/40 border-l-4 border-indigo-500 text-indigo-100 font-serif text-lg md:text-xl leading-relaxed shadow-xl relative space-y-3"
+                  >
+                    <Quote className="w-8 h-8 text-indigo-500/30 absolute top-4 right-4" />
+                    <p className="italic text-slate-100 font-medium">"{quoteBody}"</p>
+                    {citation && (
+                      <footer className="text-sm font-semibold text-indigo-300 not-italic flex items-center gap-2 pt-1">
+                        <span className="w-4 h-0.5 bg-indigo-500/60 inline-block" />
+                        <span>— {citation}</span>
+                      </footer>
+                    )}
+                  </blockquote>
+                );
+              }
+
+              // B. Bullet Point
+              if (trimmed.startsWith('•') || trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
+                const listText = trimmed.replace(/^[•\-\*]\s*/, '');
+                return (
+                  <div key={idx} className="flex items-start gap-3 my-2 pl-2">
+                    <span className="w-2 h-2 rounded-full bg-indigo-400 mt-2.5 flex-shrink-0" />
+                    <p className="text-slate-300 leading-relaxed text-base md:text-lg">{listText}</p>
+                  </div>
+                );
+              }
+
+              // C. Section Headline (H2)
+              if (isSectionHeadline(trimmed)) {
+                const currentId = `section-${headlineCounter}`;
+                headlineCounter++;
+                const cleanTitle = trimmed.replace(/^#{2,3}\s*/, '');
+
+                return (
+                  <div key={idx} id={currentId} className="pt-10 pb-4 mt-8 border-b border-indigo-500/20 space-y-2 scroll-mt-6">
+                    <div className="flex items-center gap-2 text-indigo-400 text-xs font-mono font-semibold uppercase tracking-wider">
+                      <span className="w-2 h-2 rounded-full bg-indigo-500 inline-block" />
+                      <span>Section</span>
+                    </div>
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight">
+                      {cleanTitle}
+                    </h2>
+                  </div>
+                );
+              }
+
+              // D. Lead Questions (Opening 3 paragraphs if ending with ?)
+              if (idx < 3 && trimmed.endsWith('?')) {
+                return (
+                  <p
+                    key={idx}
+                    className="text-lg md:text-xl font-semibold text-indigo-200 leading-relaxed italic border-l-2 border-indigo-500/50 pl-4 my-4 bg-indigo-950/20 py-3 rounded-r-xl"
+                  >
+                    {trimmed}
+                  </p>
+                );
+              }
+
+              // E. Standard Body Paragraph
+              return (
+                <p key={idx} className="text-slate-300 leading-relaxed text-base md:text-lg">
+                  {trimmed}
+                </p>
+              );
+            })}
           </div>
 
           {/* Author Bio Footer Card */}
