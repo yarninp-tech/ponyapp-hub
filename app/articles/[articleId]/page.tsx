@@ -117,8 +117,8 @@ export default function ArticleDetailPage() {
 
               // A. Quote / Callout Block
               if (
-                (trimmed.startsWith('"') || trimmed.startsWith('“') || trimmed.includes('— Geoffrey Hinton') || trimmed.includes('— Sandra Sucher')) &&
-                trimmed.length > 30
+                (trimmed.startsWith('"') || trimmed.startsWith('“') || trimmed.includes('—')) &&
+                trimmed.length > 25
               ) {
                 const parts = trimmed.split('—');
                 const quoteBody = parts[0].replace(/^["“]|["”]$/g, '').trim();
